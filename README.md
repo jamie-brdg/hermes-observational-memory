@@ -4,6 +4,14 @@ A native Python **Hermes ContextEngine plugin**: background observation, a bound
 
 **Version 0.1.0. Build/test artifact, not automatically activated.** The store supports POSIX systems (tested on macOS); Windows is not supported in this release. This is a deliberately session-scoped first release. It does not replace Hermes's selected long-term memory provider or merge memories between profiles/threads.
 
+## Credits and origin
+
+**Credit to [Tyler Barnes](https://mastra.ai/authors/tyler-barnes) and the [Mastra team and contributors](https://github.com/mastra-ai/mastra) for Mastra's Observational Memory, the original system that inspired this project.** Their published Observer/Reflector approach is the starting point for this work.[1]
+
+This repository is an independent native Python implementation for Hermes, not an official Mastra release, an endorsed integration, or a claim to have invented Observational Memory. Please see the [original announcement](https://mastra.ai/blog/observational-memory), [documentation](https://mastra.ai/docs/memory/observational-memory) and [upstream implementation](https://github.com/mastra-ai/mastra).
+
+The underlying [Hermes Agent](https://github.com/NousResearch/hermes-agent) platform is by **Nous Research and the Hermes contributors**.[2]
+
 ## What it does
 
 1. After a completed turn, capture supported visible conversation text in a private local per-session SQLite file.
@@ -135,3 +143,8 @@ Receipts are create-only so failed runs cannot be overwritten. The replay compar
 - [Hermes context-engine contract](https://hermes-agent.nousresearch.com/docs/developer-guide/context-engine-plugin)
 - [Hermes memory-provider separation](https://hermes-agent.nousresearch.com/docs/developer-guide/memory-provider-plugin)
 - [Mastra Observational Memory](https://mastra.ai/docs/memory/observational-memory), inspiration rather than a dependency
+
+## Sources
+
+[1] https://mastra.ai/blog/observational-memory — Announcing Observational Memory — Tyler Barnes, Mastra
+[2] https://github.com/NousResearch/hermes-agent — Hermes Agent — Nous Research and contributors
