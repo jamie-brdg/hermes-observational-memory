@@ -1,0 +1,40 @@
+{
+  "candidate_files": 27,
+  "tests": 152,
+  "regression_runs": {
+    "red": {
+      "path": "docs/review-regressions-red.log",
+      "tests": 7,
+      "seconds": 0.142,
+      "passed": false,
+      "sha256": "35ceb544e05a53b7c7d36dc079d86b16f68f6074a85053e49eb0b5b802900ba0"
+    },
+    "green": {
+      "path": "docs/review-regressions-green.log",
+      "tests": 7,
+      "seconds": 0.195,
+      "passed": true,
+      "sha256": "9a5148d33a35c8bab8fee71af9a491ece756c326bbfe65c88f1477f40dd3b641"
+    },
+    "all": {
+      "path": "docs/test-run-03.log",
+      "tests": 152,
+      "seconds": 3.388,
+      "passed": true,
+      "sha256": "536e752ea79089ef8bb4bb133fd55b90ca1ff505af32e46499c690dfd72399f3"
+    }
+  },
+  "model_metrics": {
+    "pass": true,
+    "original_chars": 21673,
+    "selected_chars": 3053,
+    "reduction_percent_chars": 85.91,
+    "whole_probe_usage": {
+      "calls": 3,
+      "prompt_tokens": 8577,
+      "completion_tokens": 357,
+      "total_tokens": 8934
+    },
+    "elapsed_seconds": 15.4
+  }
+}

@@ -1,0 +1,4 @@
+name: observational
+description: "Source-linked, session-isolated observational context with read-only recall"
+version: "0.1.0"
+author: "Jamie / Jarvis"

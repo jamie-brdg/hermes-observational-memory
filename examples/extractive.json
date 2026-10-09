@@ -1,0 +1,9 @@
+{
+  "observer_mode": "extractive",
+  "allow_model_calls": false,
+  "observe_min_chars": 12000,
+  "retain_turns": 2,
+  "max_batch_chars": 32000,
+  "observation_budget_chars": 10000,
+  "job_timeout_seconds": 90
+}

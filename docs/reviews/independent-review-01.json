@@ -1,0 +1,1110 @@
+{
+  "format": 1,
+  "verdict": "REQUEST_CHANGES",
+  "review_type": "Independent read-only acceptance/security/reliability review",
+  "reviewer": {
+    "agent": "Hermes independent delegated reviewer",
+    "model": "gpt-6-astra",
+    "provider": "openai-codex",
+    "same_model_as_builder_allowed": true,
+    "claude_or_opus_review_claimed": false,
+    "note": "Preserved build notes state Claude CLI authentication was unavailable. No Claude-specific user gate was required."
+  },
+  "candidate_root": "/Users/mini/workspace/hermes-observational-memory",
+  "candidate_version": "0.1.0",
+  "scope_documents": [
+    "README.md",
+    "docs/BUILD-PLAN.md"
+  ],
+  "source_binding": {
+    "manifest_path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/review-candidate-01.json",
+    "manifest_sha256": "6378c8a928d0b6666a793391e513149a7557a0a4187b012ca6cf3e558523d303",
+    "start": {
+      "time_utc": "2026-10-09T08:32:17.477386+00:00",
+      "files_checked": 26,
+      "declared_count": 26,
+      "mismatches": [],
+      "passed": true
+    },
+    "end": {
+      "time_utc": "2026-10-09T08:40:03.155569+00:00",
+      "files_checked": 26,
+      "mismatches": [],
+      "manifest_sha256": "6378c8a928d0b6666a793391e513149a7557a0a4187b012ca6cf3e558523d303",
+      "passed": true
+    },
+    "source_sha256": {
+      ".gitignore": "0e9433777f243ef802d9f0e44a3f0f261d503d611db1f8e4fadb05a98f207d3d",
+      "README.md": "589ed1a7d305a8b1cadf4c3c0058c7989c85a304529a548c02959a90d5cbd062",
+      "docs/BUILD-PLAN.md": "aaae034ae1b766bd531324f8527d69d477850978781a0e55ba2c5a523edb919c",
+      "examples/extractive.json": "08ddf72b2a8056fb1070d0ab5a6668b1306259f801e1ef0ff783cb6977aa2f83",
+      "examples/model-opt-in.json": "7548ecc17ae01dbea0bbe7fe18b71328bb41c03e04ecb9f1a32184be16bcb481",
+      "observational/__init__.py": "65ece834ea3fb42d45f8b1049bf34bca8422360583dae69cb235bdf1d8bb1440",
+      "observational/backend.py": "0e873a6ce3caa72042639c0d3fb42fc4200e255f4be6074b43192d0cf0860e89",
+      "observational/contracts.py": "4174c6364378a6cd87e77cafff4d5dad7c3cd9b7f4c516404645f6bd44618e58",
+      "observational/engine.py": "19f8357c6f8258424379ff5a940c208658be71ddddfc31e1f34cabd5daa381ef",
+      "observational/observer.py": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+      "observational/plugin.yaml": "a65a4e6696a0b60ea42d565ed742ae2bd7551afd6fa78db29286b13b7eb75af3",
+      "observational/store.py": "31af1d13d49c8b899a47a364715f6937581839e4d87c0e09b135ee4b091b40fb",
+      "tests/test_backend.py": "cc0c339d53cb7844162beb4dfdb7473821df22dbe164b954d7a8b7c15df3361d",
+      "tests/test_contracts.py": "3ca33dbd148c9aaabe342fda170c519fd8b93827892714d345371ff479c6a015",
+      "tests/test_engine.py": "09b5a13f0e3f3445aab46072a791bb4894aebf8c9d5f1d2f73ebe7f87b4d5497",
+      "tests/test_host_integration.py": "031ddf3c6dac5f38bbcad09e41856f08519fece324b1e03bc7aeecd65a236fc7",
+      "tests/test_observer.py": "a531610dffa11053bdd0cb88a36d0060e7f6e54e2ea6d2693d3ee373e5015ceb",
+      "tests/test_publication.py": "b9e4021be92fde9baa810a37fb6545c904393ac8bcac7afb6e7691ab3f764e6f",
+      "tests/test_sqlite_lock_safety.py": "f6230a719bfbebb10add855f20d49f97efb04fd299fd0e63165aec5ad8c0771e",
+      "tests/test_store.py": "3f140f4b62f58cd02175facb7595212287450407c326efc60f0a20887a1daac7",
+      "tools/forget.py": "fb1d4558a362c96c16bdaa8199da1bbb9d6716cbe2d3552753d72eaa4d186671",
+      "tools/install.py": "f6e482606146739148b62c38904f3a2ab0bc20b7766563f0bdfbee36bfb1866e",
+      "tools/package.py": "607474909eb6029ff7bba6001c58c9cf1c03675e0717d79735a18d7b5b944172",
+      "tools/replay.py": "4de49d67c705de61b7edfb9a004fdb36500079a6f8120c8373449dad428a6223",
+      "tools/run_tests.py": "f021b4fa04d7e4510fcfccaa96411e390b28afc252cb4b6d6c27c104a2a7fa80",
+      "tools/runtime.py": "cf63980fe9f748540ea2be47decdf648d95055eff159b03554c03afb6955617d"
+    },
+    "exact_closure_matches_manifest": true,
+    "source_changed_during_review": false,
+    "candidate_git_note": "Candidate source is untracked in the new repository; review is bound to exact manifest bytes, not an invented product commit.",
+    "host_commit": "c8301ea6c9b797184df16a9c5dd462400b264ff4",
+    "host_files_examined_match_commit": true
+  },
+  "exact_files_read": [
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/.gitignore",
+      "relative_path": ".gitignore",
+      "sha256": "0e9433777f243ef802d9f0e44a3f0f261d503d611db1f8e4fadb05a98f207d3d",
+      "ranges": [
+        [
+          1,
+          9
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/README.md",
+      "relative_path": "README.md",
+      "sha256": "589ed1a7d305a8b1cadf4c3c0058c7989c85a304529a548c02959a90d5cbd062",
+      "ranges": [
+        [
+          1,
+          137
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/BUILD-PLAN.md",
+      "relative_path": "docs/BUILD-PLAN.md",
+      "sha256": "aaae034ae1b766bd531324f8527d69d477850978781a0e55ba2c5a523edb919c",
+      "ranges": [
+        [
+          1,
+          74
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/examples/extractive.json",
+      "relative_path": "examples/extractive.json",
+      "sha256": "08ddf72b2a8056fb1070d0ab5a6668b1306259f801e1ef0ff783cb6977aa2f83",
+      "ranges": [
+        [
+          1,
+          9
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/examples/model-opt-in.json",
+      "relative_path": "examples/model-opt-in.json",
+      "sha256": "7548ecc17ae01dbea0bbe7fe18b71328bb41c03e04ecb9f1a32184be16bcb481",
+      "ranges": [
+        [
+          1,
+          11
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/__init__.py",
+      "relative_path": "observational/__init__.py",
+      "sha256": "65ece834ea3fb42d45f8b1049bf34bca8422360583dae69cb235bdf1d8bb1440",
+      "ranges": [
+        [
+          1,
+          14
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/backend.py",
+      "relative_path": "observational/backend.py",
+      "sha256": "0e873a6ce3caa72042639c0d3fb42fc4200e255f4be6074b43192d0cf0860e89",
+      "ranges": [
+        [
+          1,
+          81
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/contracts.py",
+      "relative_path": "observational/contracts.py",
+      "sha256": "4174c6364378a6cd87e77cafff4d5dad7c3cd9b7f4c516404645f6bd44618e58",
+      "ranges": [
+        [
+          1,
+          310
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/engine.py",
+      "relative_path": "observational/engine.py",
+      "sha256": "19f8357c6f8258424379ff5a940c208658be71ddddfc31e1f34cabd5daa381ef",
+      "ranges": [
+        [
+          1,
+          486
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/observer.py",
+      "relative_path": "observational/observer.py",
+      "sha256": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+      "ranges": [
+        [
+          1,
+          226
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/plugin.yaml",
+      "relative_path": "observational/plugin.yaml",
+      "sha256": "a65a4e6696a0b60ea42d565ed742ae2bd7551afd6fa78db29286b13b7eb75af3",
+      "ranges": [
+        [
+          1,
+          4
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/observational/store.py",
+      "relative_path": "observational/store.py",
+      "sha256": "31af1d13d49c8b899a47a364715f6937581839e4d87c0e09b135ee4b091b40fb",
+      "ranges": [
+        [
+          1,
+          474
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_backend.py",
+      "relative_path": "tests/test_backend.py",
+      "sha256": "cc0c339d53cb7844162beb4dfdb7473821df22dbe164b954d7a8b7c15df3361d",
+      "ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_contracts.py",
+      "relative_path": "tests/test_contracts.py",
+      "sha256": "3ca33dbd148c9aaabe342fda170c519fd8b93827892714d345371ff479c6a015",
+      "ranges": [
+        [
+          1,
+          449
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_engine.py",
+      "relative_path": "tests/test_engine.py",
+      "sha256": "09b5a13f0e3f3445aab46072a791bb4894aebf8c9d5f1d2f73ebe7f87b4d5497",
+      "ranges": [
+        [
+          1,
+          271
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_host_integration.py",
+      "relative_path": "tests/test_host_integration.py",
+      "sha256": "031ddf3c6dac5f38bbcad09e41856f08519fece324b1e03bc7aeecd65a236fc7",
+      "ranges": [
+        [
+          1,
+          87
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_observer.py",
+      "relative_path": "tests/test_observer.py",
+      "sha256": "a531610dffa11053bdd0cb88a36d0060e7f6e54e2ea6d2693d3ee373e5015ceb",
+      "ranges": [
+        [
+          1,
+          394
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_publication.py",
+      "relative_path": "tests/test_publication.py",
+      "sha256": "b9e4021be92fde9baa810a37fb6545c904393ac8bcac7afb6e7691ab3f764e6f",
+      "ranges": [
+        [
+          1,
+          40
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_sqlite_lock_safety.py",
+      "relative_path": "tests/test_sqlite_lock_safety.py",
+      "sha256": "f6230a719bfbebb10add855f20d49f97efb04fd299fd0e63165aec5ad8c0771e",
+      "ranges": [
+        [
+          1,
+          132
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_store.py",
+      "relative_path": "tests/test_store.py",
+      "sha256": "3f140f4b62f58cd02175facb7595212287450407c326efc60f0a20887a1daac7",
+      "ranges": [
+        [
+          1,
+          860
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tools/forget.py",
+      "relative_path": "tools/forget.py",
+      "sha256": "fb1d4558a362c96c16bdaa8199da1bbb9d6716cbe2d3552753d72eaa4d186671",
+      "ranges": [
+        [
+          1,
+          47
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tools/install.py",
+      "relative_path": "tools/install.py",
+      "sha256": "f6e482606146739148b62c38904f3a2ab0bc20b7766563f0bdfbee36bfb1866e",
+      "ranges": [
+        [
+          1,
+          63
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tools/package.py",
+      "relative_path": "tools/package.py",
+      "sha256": "607474909eb6029ff7bba6001c58c9cf1c03675e0717d79735a18d7b5b944172",
+      "ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tools/replay.py",
+      "relative_path": "tools/replay.py",
+      "sha256": "4de49d67c705de61b7edfb9a004fdb36500079a6f8120c8373449dad428a6223",
+      "ranges": [
+        [
+          1,
+          119
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tools/run_tests.py",
+      "relative_path": "tools/run_tests.py",
+      "sha256": "f021b4fa04d7e4510fcfccaa96411e390b28afc252cb4b6d6c27c104a2a7fa80",
+      "ranges": [
+        [
+          1,
+          51
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/tools/runtime.py",
+      "relative_path": "tools/runtime.py",
+      "sha256": "cf63980fe9f748540ea2be47decdf648d95055eff159b03554c03afb6955617d",
+      "ranges": [
+        [
+          1,
+          24
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/review-candidate-01.json",
+      "relative_path": "docs/evidence/review-candidate-01.json",
+      "sha256": "6378c8a928d0b6666a793391e513149a7557a0a4187b012ca6cf3e558523d303",
+      "ranges": [
+        [
+          1,
+          38
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/publication-cas-repair.md",
+      "relative_path": "docs/evidence/publication-cas-repair.md",
+      "sha256": "a8f78ee094816b9c9980580804c37bb7895dc1d9928504285418ef3fae7d11aa",
+      "ranges": [
+        [
+          1,
+          9
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/sqlite-lock-repair.md",
+      "relative_path": "docs/sqlite-lock-repair.md",
+      "sha256": "811c4e14ae6eed3a5f8ee1abe2c3e89368eec7eeeb3745440288737aaa630401",
+      "ranges": [
+        [
+          1,
+          150
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/model-replay-02.json",
+      "relative_path": "docs/evidence/model-replay-02.json",
+      "sha256": "4e19f7c4a82382271ee9305ac7161eb83cd9fb7b427261dad81cd5506d26846f",
+      "ranges": [
+        [
+          1,
+          142
+        ]
+      ],
+      "coverage": "full content review; replay receipt long JSON strings additionally parsed and validated by offline analyzer"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/offline-replay-02.json",
+      "relative_path": "docs/evidence/offline-replay-02.json",
+      "sha256": "6f95c92d8923c0cf13d101060cc1978b51d6bd961b66cdb8540940f4e4c423fa",
+      "ranges": [
+        [
+          1,
+          152
+        ]
+      ],
+      "coverage": "full content review; replay receipt long JSON strings additionally parsed and validated by offline analyzer"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/early-findings.md",
+      "relative_path": "docs/evidence/early-findings.md",
+      "sha256": "ff3c0ea3ccc3461e564453079a7832c8fe9ac1e0da164badb03d121930ce9e7a",
+      "ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/store-handoff.md",
+      "relative_path": "docs/store-handoff.md",
+      "sha256": "a3b938de9786ca1310e1afcf7e2bedaffd015d54b18c40b718dd5c1789fe06b8",
+      "ranges": [
+        [
+          1,
+          90
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/observer-handoff.md",
+      "relative_path": "docs/observer-handoff.md",
+      "sha256": "fab38991ca9288a689d067b1dcba44fea5d035541c7ca3e44f50176f1616a06e",
+      "ranges": [
+        [
+          1,
+          57
+        ]
+      ],
+      "coverage": "full content review"
+    },
+    {
+      "path": "/Users/mini/.hermes/hermes-agent/agent/context_engine.py",
+      "relative_to_host": "agent/context_engine.py",
+      "sha256": "1f5a95adf26fc79245566fa3018cf8a3f613a7c837316a4bdaaa43736a56805c",
+      "ranges": [
+        [
+          1,
+          250
+        ]
+      ],
+      "coverage": "targeted installed ABI/host routing source review",
+      "matches_installed_commit": true
+    },
+    {
+      "path": "/Users/mini/.hermes/hermes-agent/plugins/context_engine/__init__.py",
+      "relative_to_host": "plugins/context_engine/__init__.py",
+      "sha256": "dbdcced510f1101146bb72f08e729745487deab0e565d5f042df052f250c184e",
+      "ranges": [
+        [
+          1,
+          121
+        ]
+      ],
+      "coverage": "targeted installed ABI/host routing source review",
+      "matches_installed_commit": true
+    },
+    {
+      "path": "/Users/mini/.hermes/hermes-agent/agent/conversation_loop.py",
+      "relative_to_host": "agent/conversation_loop.py",
+      "sha256": "8b8768c965579121d836d736134661433b1e672f352971fe72b950986d9baca7",
+      "ranges": [
+        [
+          1022,
+          1036
+        ],
+        [
+          1275,
+          1392
+        ]
+      ],
+      "coverage": "targeted installed ABI/host routing source review",
+      "matches_installed_commit": true
+    },
+    {
+      "path": "/Users/mini/.hermes/hermes-agent/agent/auxiliary_client.py",
+      "relative_to_host": "agent/auxiliary_client.py",
+      "sha256": "883087c693f8a032dfa53f4ef2711bb7e0113fa4bdea2e599fcffe644160cdd9",
+      "ranges": [
+        [
+          175,
+          198
+        ],
+        [
+          1010,
+          1091
+        ],
+        [
+          1178,
+          1652
+        ],
+        [
+          2095,
+          2194
+        ],
+        [
+          2930,
+          2995
+        ],
+        [
+          4951,
+          4984
+        ],
+        [
+          5020,
+          5109
+        ],
+        [
+          5410,
+          5674
+        ]
+      ],
+      "coverage": "targeted installed ABI/host routing source review",
+      "matches_installed_commit": true
+    },
+    {
+      "path": "/Users/mini/.hermes/hermes-agent/agent/turn_request_assembly.py",
+      "relative_to_host": "agent/turn_request_assembly.py",
+      "sha256": "c1f003a1e2a4a7645fb1f83cbed3c74a9c3d75164f9e56f15abe0a21b25a5fb4",
+      "ranges": [
+        [
+          1,
+          190
+        ]
+      ],
+      "coverage": "targeted installed ABI/host routing source review",
+      "matches_installed_commit": true
+    },
+    {
+      "path": "/Users/mini/.hermes/hermes-agent/agent/agent_runtime_helpers.py",
+      "relative_to_host": "agent/agent_runtime_helpers.py",
+      "sha256": "5a1d8f87f8904fa84f2df724767da055c03567d96c753d304b1e985fbdbd2755",
+      "ranges": [
+        [
+          1364,
+          1410
+        ],
+        [
+          2286,
+          2315
+        ]
+      ],
+      "coverage": "targeted installed ABI/host routing source review",
+      "matches_installed_commit": true
+    }
+  ],
+  "file_coverage_counts": {
+    "frozen_files_full_review": 26,
+    "supporting_candidate_documents": 8,
+    "host_files_targeted_review": 6,
+    "total_content_reviewed_paths": 40
+  },
+  "hash_only_inputs": [
+    {
+      "path": "/Users/mini/workspace/hermes-observational-memory/docs/test-run-02.log",
+      "sha256": "b4b9a45c5e7ceb0f4ecfdebf65a99f1347282b21b7f676ed2d820ff08474c167",
+      "purpose": "Compare preserved parent log digest with frozen manifest; not substituted for independently executed suite."
+    }
+  ],
+  "tests_actually_executed": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 HERMES_DISABLE_LAZY_INSTALLS=1 python3 tools/run_tests.py --hermes-repo /Users/mini/.hermes/hermes-agent",
+      "cwd": "/Users/mini/workspace/hermes-observational-memory",
+      "runs": [
+        {
+          "ordinal": 1,
+          "tests": 145,
+          "seconds": 3.598,
+          "exit_code": 0,
+          "result": "OK"
+        },
+        {
+          "ordinal": 2,
+          "tests": 145,
+          "seconds": 3.444,
+          "exit_code": 0,
+          "result": "OK"
+        }
+      ],
+      "final_executed_test_ids": [
+        "test_backend.BackendTests.test_auto_unverified_and_whitespace_routes_are_refused",
+        "test_backend.BackendTests.test_exception_is_sanitized_and_profile_reset",
+        "test_backend.BackendTests.test_model_output_bound_and_tool_call_rejection",
+        "test_backend.BackendTests.test_pinned_profile_route_no_tools_and_usage",
+        "test_backend.BackendTests.test_sensitive_payload_is_refused_before_provider_resolution",
+        "test_backend.BackendTests.test_unavailable_or_changed_model_has_no_call_or_fallback",
+        "test_contracts.CanonicalJSONTests.test_canonical_encoding_and_independent_digest",
+        "test_contracts.CanonicalJSONTests.test_digest_requires_a_dict",
+        "test_contracts.CanonicalJSONTests.test_rejects_cycles_and_excessive_nesting",
+        "test_contracts.CanonicalJSONTests.test_rejects_non_json_types_without_coercion",
+        "test_contracts.CanonicalJSONTests.test_rejects_unpaired_unicode_surrogate",
+        "test_contracts.CanonicalJSONTests.test_repeated_noncyclic_container_is_valid",
+        "test_contracts.ObservationValidationTests.test_all_three_roles_have_immutable_attribution",
+        "test_contracts.ObservationValidationTests.test_batch_rejects_duplicates_and_is_atomic_without_mutation",
+        "test_contracts.ObservationValidationTests.test_checks_metadata_on_the_returned_snapshot",
+        "test_contracts.ObservationValidationTests.test_empty_observations_and_invalid_containers",
+        "test_contracts.ObservationValidationTests.test_every_required_field_and_unknown_generated_states",
+        "test_contracts.ObservationValidationTests.test_exact_substrings_and_defensive_copy",
+        "test_contracts.ObservationValidationTests.test_identity_covers_evidence_kind_and_set_of_sources",
+        "test_contracts.ObservationValidationTests.test_identity_does_not_depend_on_priority_or_timestamp",
+        "test_contracts.ObservationValidationTests.test_mixed_role_references_fail_even_when_quote_matches",
+        "test_contracts.ObservationValidationTests.test_quote_normalization_and_whitespace_only_are_forbidden",
+        "test_contracts.ObservationValidationTests.test_references_must_exist_and_each_contain_exact_quote",
+        "test_contracts.ObservationValidationTests.test_reused_text_keeps_distinct_source_identities",
+        "test_contracts.ObservationValidationTests.test_timestamp_requires_valid_explicit_utc_and_seconds",
+        "test_contracts.ObservationValidationTests.test_types_ranges_and_identity_checked",
+        "test_contracts.ReflectionTests.test_actual_utc_recency_not_lexical_timestamp_order",
+        "test_contracts.ReflectionTests.test_budget_counts_full_rendering_including_metadata_and_newlines",
+        "test_contracts.ReflectionTests.test_high_priority_facts_before_low_priority_recent_fact",
+        "test_contracts.ReflectionTests.test_latest_log_entry_breaks_equal_timestamp_ties",
+        "test_contracts.ReflectionTests.test_priority_classes_and_history_preserved",
+        "test_contracts.ReflectionTests.test_reflection_budget_validation_and_zero",
+        "test_contracts.ReflectionTests.test_render_and_reflect_reject_bad_metadata_even_at_zero_budget",
+        "test_contracts.ReflectionTests.test_render_includes_every_metadata_field_and_escapes_hostile_text",
+        "test_contracts.ReflectionTests.test_skip_oversize_item_without_truncating_or_erasing_it",
+        "test_contracts.SourceValidationTests.test_all_source_field_types_are_checked",
+        "test_contracts.SourceValidationTests.test_attachments_hidden_reasoning_and_unknown_wire_fields_fail",
+        "test_contracts.SourceValidationTests.test_checks_the_serialized_snapshot_not_later_caller_mutation",
+        "test_contracts.SourceValidationTests.test_duplicate_identity_or_ordinal_and_reordered_ordinals_fail",
+        "test_contracts.SourceValidationTests.test_errors_do_not_expose_source_text",
+        "test_contracts.SourceValidationTests.test_incremental_slice_can_start_above_zero_and_have_gaps",
+        "test_contracts.SourceValidationTests.test_malformed_tool_calls_fail",
+        "test_contracts.SourceValidationTests.test_null_content_without_assistant_tool_call_fails",
+        "test_contracts.SourceValidationTests.test_required_and_unknown_fields",
+        "test_contracts.SourceValidationTests.test_role_and_text_cannot_be_forged_with_a_valid_digest",
+        "test_contracts.SourceValidationTests.test_sources_require_a_list_of_dicts",
+        "test_contracts.SourceValidationTests.test_supported_tool_call_wire_preserved",
+        "test_contracts.SourceValidationTests.test_tool_fields_are_not_admitted_under_another_role",
+        "test_contracts.SourceValidationTests.test_valid_sources_are_deep_copies_and_not_mutated",
+        "test_contracts.SourceValidationTests.test_wire_digest_must_match_exact_bytes_and_lowercase",
+        "test_engine.EngineTests.test_closed_or_forgotten_session_rejects_late_worker",
+        "test_engine.EngineTests.test_config_model_egress_requires_explicit_pin_and_opt_in",
+        "test_engine.EngineTests.test_duplicate_text_has_distinct_sources",
+        "test_engine.EngineTests.test_expired_observer_result_not_published",
+        "test_engine.EngineTests.test_human_forget_cli_dry_run_confirm_and_restart",
+        "test_engine.EngineTests.test_incremental_observation_appends_coverage_without_duplicates",
+        "test_engine.EngineTests.test_interrupted_turn_does_not_observe",
+        "test_engine.EngineTests.test_mismatched_or_edited_source_never_projects_old_notes",
+        "test_engine.EngineTests.test_native_abc_and_request_only_compaction",
+        "test_engine.EngineTests.test_no_projection_when_evidence_wrapper_would_grow_request",
+        "test_engine.EngineTests.test_observe_project_original_recall_and_restart",
+        "test_engine.EngineTests.test_rendered_observations_fit_the_declared_log_budget",
+        "test_engine.EngineTests.test_scope_tool_arguments_rejected_and_other_session_empty",
+        "test_engine.EngineTests.test_source_revision_during_worker_cannot_publish_stale_evidence",
+        "test_engine.EngineTests.test_system_and_reasoning_not_saved",
+        "test_engine.EngineTests.test_tool_pairs_and_latest_turn_stay_intact",
+        "test_engine.EngineTests.test_unobserved_append_does_not_rewrite_memory_prefix",
+        "test_engine.EngineTests.test_unsupported_attachments_do_not_enter_store_or_observer",
+        "test_host_integration.HostIntegrationTests.test_actual_host_post_turn_and_request_selection_preserve_transcript",
+        "test_host_integration.HostIntegrationTests.test_create_only_install_and_real_user_plugin_discovery",
+        "test_host_integration.HostIntegrationTests.test_installer_refuses_symlink_without_destination_write",
+        "test_observer.ExtractiveObserverTests.test_categories_and_relative_priority_are_conservative",
+        "test_observer.ExtractiveObserverTests.test_duplicate_text_preserves_both_source_identities",
+        "test_observer.ExtractiveObserverTests.test_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence",
+        "test_observer.ExtractiveObserverTests.test_exact_whole_quote_identity_and_attribution_for_each_source",
+        "test_observer.ExtractiveObserverTests.test_invalid_timestamp_or_source_is_rejected_atomically",
+        "test_observer.ExtractiveObserverTests.test_long_unicode_and_negative_qualifiers_are_not_truncated",
+        "test_observer.ExtractiveObserverTests.test_misleading_assistant_claim_stays_an_assistant_statement",
+        "test_observer.ExtractiveObserverTests.test_output_does_not_alias_input_and_repeat_is_stable",
+        "test_observer.ExtractiveObserverTests.test_plans_never_promoted_to_outcome",
+        "test_observer.ExtractiveObserverTests.test_tool_output_cannot_override_role_or_priority",
+        "test_observer.ModelObserverTests.test_callback_mutation_cannot_change_snapshotted_source_attribution",
+        "test_observer.ModelObserverTests.test_completion_error_is_sanitized_and_never_retried_or_falls_back",
+        "test_observer.ModelObserverTests.test_constructor_types_limits_and_callable",
+        "test_observer.ModelObserverTests.test_distinct_sources_with_same_quote_are_not_deduplicated",
+        "test_observer.ModelObserverTests.test_duplicate_keys_are_rejected_at_every_object_depth",
+        "test_observer.ModelObserverTests.test_duplicate_observation_identity_rejects_whole_batch",
+        "test_observer.ModelObserverTests.test_empty_input_or_only_blank_text_never_calls_model",
+        "test_observer.ModelObserverTests.test_empty_result_for_eligible_input_is_a_failure",
+        "test_observer.ModelObserverTests.test_every_item_field_is_required",
+        "test_observer.ModelObserverTests.test_incremental_source_slice_preserves_nonzero_ordinals",
+        "test_observer.ModelObserverTests.test_input_budget_counts_system_payload_metadata_and_json_escaping",
+        "test_observer.ModelObserverTests.test_invalid_later_item_is_atomic_and_sources_remain_unchanged",
+        "test_observer.ModelObserverTests.test_invalid_source_or_timestamp_never_calls_model",
+        "test_observer.ModelObserverTests.test_json_only_no_fences_prose_trailing_objects_or_top_level_arrays",
+        "test_observer.ModelObserverTests.test_kind_and_priority_validation",
+        "test_observer.ModelObserverTests.test_lone_surrogate_response_is_rejected",
+        "test_observer.ModelObserverTests.test_model_cannot_choose_ids_role_timestamp_or_completion_state",
+        "test_observer.ModelObserverTests.test_model_response_errors_do_not_echo_payload_or_exception_details",
+        "test_observer.ModelObserverTests.test_nonfinite_numbers_and_deep_json_are_rejected",
+        "test_observer.ModelObserverTests.test_observers_have_no_network_or_process_side_effects",
+        "test_observer.ModelObserverTests.test_output_budget_enforced_before_json_parsing",
+        "test_observer.ModelObserverTests.test_payload_excludes_wire_arguments_and_internal_metadata",
+        "test_observer.ModelObserverTests.test_prompt_states_untrusted_boundary_and_quote_only_contract",
+        "test_observer.ModelObserverTests.test_response_must_be_nonblank_string",
+        "test_observer.ModelObserverTests.test_substring_matching_is_exact_not_paraphrase_or_normalization",
+        "test_observer.ModelObserverTests.test_top_level_keys_required_and_unknown_keys_rejected",
+        "test_observer.ModelObserverTests.test_unknown_ids_are_never_trimmed_normalized_or_guessed",
+        "test_observer.ModelObserverTests.test_valid_batch_assigns_authoritative_fields",
+        "test_publication.PublicationRaceTests.test_stale_observer_cannot_replace_a_newer_publication",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_second_store_does_not_unlock_first",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_store_preserves_lock_owned_outside_memory_store",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_constructor_sqlite_busy_cleanup_preserves_lock",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_failed_constructor_does_not_unlock_existing_connection",
+        "test_store.MemoryStoreTests.test_append_preserves_coverage_but_old_revision_cannot_publish",
+        "test_store.MemoryStoreTests.test_argument_types_and_no_namespace_rewriting",
+        "test_store.MemoryStoreTests.test_concurrent_first_open_waits_for_complete_publication",
+        "test_store.MemoryStoreTests.test_crash_before_commit_recovers_prior_snapshot",
+        "test_store.MemoryStoreTests.test_creation_rejects_replaced_staging_inode",
+        "test_store.MemoryStoreTests.test_directory_inode_and_private_permissions_rechecked",
+        "test_store.MemoryStoreTests.test_exact_prefix_rejection_and_active_order",
+        "test_store.MemoryStoreTests.test_existing_database_uses_no_raw_file_descriptors",
+        "test_store.MemoryStoreTests.test_forget_tombstone_shared_connections_and_restart",
+        "test_store.MemoryStoreTests.test_initial_state_and_idempotence_restart_and_defensive_copy",
+        "test_store.MemoryStoreTests.test_invalid_observations_and_active_ids_are_atomic",
+        "test_store.MemoryStoreTests.test_invalid_persisted_payload_fails_closed_without_content_in_errors",
+        "test_store.MemoryStoreTests.test_invalid_sources_are_atomic",
+        "test_store.MemoryStoreTests.test_multisource_observation_is_removed_if_one_reference_changes",
+        "test_store.MemoryStoreTests.test_namespace_mismatch_denies_without_altering_owner",
+        "test_store.MemoryStoreTests.test_observation_size_limit_is_atomic",
+        "test_store.MemoryStoreTests.test_private_creation_closes_raw_descriptor_before_publication",
+        "test_store.MemoryStoreTests.test_private_modes_and_symlink_hardlink_refusal",
+        "test_store.MemoryStoreTests.test_real_process_concurrent_initialization_and_writes",
+        "test_store.MemoryStoreTests.test_real_process_stale_worker_cannot_resurrect_forgetting",
+        "test_store.MemoryStoreTests.test_real_sqlite_page_limit_rolls_back_and_connection_remains_usable",
+        "test_store.MemoryStoreTests.test_recall_and_search_bounded_inputs",
+        "test_store.MemoryStoreTests.test_recall_pagination_scope_unicode_and_missing",
+        "test_store.MemoryStoreTests.test_regular_file_inode_replacement_fails_closed",
+        "test_store.MemoryStoreTests.test_removed_source_payload_is_not_retained_on_disk",
+        "test_store.MemoryStoreTests.test_revision_undo_removal_and_reorder_invalidate_exact_prefix",
+        "test_store.MemoryStoreTests.test_search_literal_scoped_bounded_and_deterministic",
+        "test_store.MemoryStoreTests.test_shared_instance_thread_safety_and_closed_lifecycle",
+        "test_store.MemoryStoreTests.test_sidecar_symlink_and_path_replacement_fail_closed",
+        "test_store.MemoryStoreTests.test_size_limit_atomic_rollback_and_reopen",
+        "test_store.MemoryStoreTests.test_unicode_casefold_search_preserves_original_offsets"
+      ],
+      "test_ids_reconciled_against_all_static_test_methods": true,
+      "final_raw_output": "test_auto_unverified_and_whitespace_routes_are_refused (test_backend.BackendTests.test_auto_unverified_and_whitespace_routes_are_refused) ... ok\ntest_exception_is_sanitized_and_profile_reset (test_backend.BackendTests.test_exception_is_sanitized_and_profile_reset) ... ok\ntest_model_output_bound_and_tool_call_rejection (test_backend.BackendTests.test_model_output_bound_and_tool_call_rejection) ... ok\ntest_pinned_profile_route_no_tools_and_usage (test_backend.BackendTests.test_pinned_profile_route_no_tools_and_usage) ... ok\ntest_sensitive_payload_is_refused_before_provider_resolution (test_backend.BackendTests.test_sensitive_payload_is_refused_before_provider_resolution) ... ok\ntest_unavailable_or_changed_model_has_no_call_or_fallback (test_backend.BackendTests.test_unavailable_or_changed_model_has_no_call_or_fallback) ... ok\ntest_canonical_encoding_and_independent_digest (test_contracts.CanonicalJSONTests.test_canonical_encoding_and_independent_digest) ... ok\ntest_digest_requires_a_dict (test_contracts.CanonicalJSONTests.test_digest_requires_a_dict) ... ok\ntest_rejects_cycles_and_excessive_nesting (test_contracts.CanonicalJSONTests.test_rejects_cycles_and_excessive_nesting) ... ok\ntest_rejects_non_json_types_without_coercion (test_contracts.CanonicalJSONTests.test_rejects_non_json_types_without_coercion) ... ok\ntest_rejects_unpaired_unicode_surrogate (test_contracts.CanonicalJSONTests.test_rejects_unpaired_unicode_surrogate) ... ok\ntest_repeated_noncyclic_container_is_valid (test_contracts.CanonicalJSONTests.test_repeated_noncyclic_container_is_valid) ... ok\ntest_all_three_roles_have_immutable_attribution (test_contracts.ObservationValidationTests.test_all_three_roles_have_immutable_attribution) ... ok\ntest_batch_rejects_duplicates_and_is_atomic_without_mutation (test_contracts.ObservationValidationTests.test_batch_rejects_duplicates_and_is_atomic_without_mutation) ... ok\ntest_checks_metadata_on_the_returned_snapshot (test_contracts.ObservationValidationTests.test_checks_metadata_on_the_returned_snapshot) ... ok\ntest_empty_observations_and_invalid_containers (test_contracts.ObservationValidationTests.test_empty_observations_and_invalid_containers) ... ok\ntest_every_required_field_and_unknown_generated_states (test_contracts.ObservationValidationTests.test_every_required_field_and_unknown_generated_states) ... ok\ntest_exact_substrings_and_defensive_copy (test_contracts.ObservationValidationTests.test_exact_substrings_and_defensive_copy) ... ok\ntest_identity_covers_evidence_kind_and_set_of_sources (test_contracts.ObservationValidationTests.test_identity_covers_evidence_kind_and_set_of_sources) ... ok\ntest_identity_does_not_depend_on_priority_or_timestamp (test_contracts.ObservationValidationTests.test_identity_does_not_depend_on_priority_or_timestamp) ... ok\ntest_mixed_role_references_fail_even_when_quote_matches (test_contracts.ObservationValidationTests.test_mixed_role_references_fail_even_when_quote_matches) ... ok\ntest_quote_normalization_and_whitespace_only_are_forbidden (test_contracts.ObservationValidationTests.test_quote_normalization_and_whitespace_only_are_forbidden) ... ok\ntest_references_must_exist_and_each_contain_exact_quote (test_contracts.ObservationValidationTests.test_references_must_exist_and_each_contain_exact_quote) ... ok\ntest_reused_text_keeps_distinct_source_identities (test_contracts.ObservationValidationTests.test_reused_text_keeps_distinct_source_identities) ... ok\ntest_timestamp_requires_valid_explicit_utc_and_seconds (test_contracts.ObservationValidationTests.test_timestamp_requires_valid_explicit_utc_and_seconds) ... ok\ntest_types_ranges_and_identity_checked (test_contracts.ObservationValidationTests.test_types_ranges_and_identity_checked) ... ok\ntest_actual_utc_recency_not_lexical_timestamp_order (test_contracts.ReflectionTests.test_actual_utc_recency_not_lexical_timestamp_order) ... ok\ntest_budget_counts_full_rendering_including_metadata_and_newlines (test_contracts.ReflectionTests.test_budget_counts_full_rendering_including_metadata_and_newlines) ... ok\ntest_high_priority_facts_before_low_priority_recent_fact (test_contracts.ReflectionTests.test_high_priority_facts_before_low_priority_recent_fact) ... ok\ntest_latest_log_entry_breaks_equal_timestamp_ties (test_contracts.ReflectionTests.test_latest_log_entry_breaks_equal_timestamp_ties) ... ok\ntest_priority_classes_and_history_preserved (test_contracts.ReflectionTests.test_priority_classes_and_history_preserved) ... ok\ntest_reflection_budget_validation_and_zero (test_contracts.ReflectionTests.test_reflection_budget_validation_and_zero) ... ok\ntest_render_and_reflect_reject_bad_metadata_even_at_zero_budget (test_contracts.ReflectionTests.test_render_and_reflect_reject_bad_metadata_even_at_zero_budget) ... ok\ntest_render_includes_every_metadata_field_and_escapes_hostile_text (test_contracts.ReflectionTests.test_render_includes_every_metadata_field_and_escapes_hostile_text) ... ok\ntest_skip_oversize_item_without_truncating_or_erasing_it (test_contracts.ReflectionTests.test_skip_oversize_item_without_truncating_or_erasing_it) ... ok\ntest_all_source_field_types_are_checked (test_contracts.SourceValidationTests.test_all_source_field_types_are_checked) ... ok\ntest_attachments_hidden_reasoning_and_unknown_wire_fields_fail (test_contracts.SourceValidationTests.test_attachments_hidden_reasoning_and_unknown_wire_fields_fail) ... ok\ntest_checks_the_serialized_snapshot_not_later_caller_mutation (test_contracts.SourceValidationTests.test_checks_the_serialized_snapshot_not_later_caller_mutation) ... ok\ntest_duplicate_identity_or_ordinal_and_reordered_ordinals_fail (test_contracts.SourceValidationTests.test_duplicate_identity_or_ordinal_and_reordered_ordinals_fail) ... ok\ntest_errors_do_not_expose_source_text (test_contracts.SourceValidationTests.test_errors_do_not_expose_source_text) ... ok\ntest_incremental_slice_can_start_above_zero_and_have_gaps (test_contracts.SourceValidationTests.test_incremental_slice_can_start_above_zero_and_have_gaps) ... ok\ntest_malformed_tool_calls_fail (test_contracts.SourceValidationTests.test_malformed_tool_calls_fail) ... ok\ntest_null_content_without_assistant_tool_call_fails (test_contracts.SourceValidationTests.test_null_content_without_assistant_tool_call_fails) ... ok\ntest_required_and_unknown_fields (test_contracts.SourceValidationTests.test_required_and_unknown_fields) ... ok\ntest_role_and_text_cannot_be_forged_with_a_valid_digest (test_contracts.SourceValidationTests.test_role_and_text_cannot_be_forged_with_a_valid_digest) ... ok\ntest_sources_require_a_list_of_dicts (test_contracts.SourceValidationTests.test_sources_require_a_list_of_dicts) ... ok\ntest_supported_tool_call_wire_preserved (test_contracts.SourceValidationTests.test_supported_tool_call_wire_preserved) ... ok\ntest_tool_fields_are_not_admitted_under_another_role (test_contracts.SourceValidationTests.test_tool_fields_are_not_admitted_under_another_role) ... ok\ntest_valid_sources_are_deep_copies_and_not_mutated (test_contracts.SourceValidationTests.test_valid_sources_are_deep_copies_and_not_mutated) ... ok\ntest_wire_digest_must_match_exact_bytes_and_lowercase (test_contracts.SourceValidationTests.test_wire_digest_must_match_exact_bytes_and_lowercase) ... ok\ntest_closed_or_forgotten_session_rejects_late_worker (test_engine.EngineTests.test_closed_or_forgotten_session_rejects_late_worker) ... ok\ntest_config_model_egress_requires_explicit_pin_and_opt_in (test_engine.EngineTests.test_config_model_egress_requires_explicit_pin_and_opt_in) ... ok\ntest_duplicate_text_has_distinct_sources (test_engine.EngineTests.test_duplicate_text_has_distinct_sources) ... ok\ntest_expired_observer_result_not_published (test_engine.EngineTests.test_expired_observer_result_not_published) ... ok\ntest_human_forget_cli_dry_run_confirm_and_restart (test_engine.EngineTests.test_human_forget_cli_dry_run_confirm_and_restart) ... ok\ntest_incremental_observation_appends_coverage_without_duplicates (test_engine.EngineTests.test_incremental_observation_appends_coverage_without_duplicates) ... ok\ntest_interrupted_turn_does_not_observe (test_engine.EngineTests.test_interrupted_turn_does_not_observe) ... ok\ntest_mismatched_or_edited_source_never_projects_old_notes (test_engine.EngineTests.test_mismatched_or_edited_source_never_projects_old_notes) ... ok\ntest_native_abc_and_request_only_compaction (test_engine.EngineTests.test_native_abc_and_request_only_compaction) ... ok\ntest_no_projection_when_evidence_wrapper_would_grow_request (test_engine.EngineTests.test_no_projection_when_evidence_wrapper_would_grow_request) ... ok\ntest_observe_project_original_recall_and_restart (test_engine.EngineTests.test_observe_project_original_recall_and_restart) ... ok\ntest_rendered_observations_fit_the_declared_log_budget (test_engine.EngineTests.test_rendered_observations_fit_the_declared_log_budget) ... ok\ntest_scope_tool_arguments_rejected_and_other_session_empty (test_engine.EngineTests.test_scope_tool_arguments_rejected_and_other_session_empty) ... ok\ntest_source_revision_during_worker_cannot_publish_stale_evidence (test_engine.EngineTests.test_source_revision_during_worker_cannot_publish_stale_evidence) ... ok\ntest_system_and_reasoning_not_saved (test_engine.EngineTests.test_system_and_reasoning_not_saved) ... ok\ntest_tool_pairs_and_latest_turn_stay_intact (test_engine.EngineTests.test_tool_pairs_and_latest_turn_stay_intact) ... ok\ntest_unobserved_append_does_not_rewrite_memory_prefix (test_engine.EngineTests.test_unobserved_append_does_not_rewrite_memory_prefix) ... ok\ntest_unsupported_attachments_do_not_enter_store_or_observer (test_engine.EngineTests.test_unsupported_attachments_do_not_enter_store_or_observer) ... ok\ntest_actual_host_post_turn_and_request_selection_preserve_transcript (test_host_integration.HostIntegrationTests.test_actual_host_post_turn_and_request_selection_preserve_transcript) ... ok\ntest_create_only_install_and_real_user_plugin_discovery (test_host_integration.HostIntegrationTests.test_create_only_install_and_real_user_plugin_discovery) ... ok\ntest_installer_refuses_symlink_without_destination_write (test_host_integration.HostIntegrationTests.test_installer_refuses_symlink_without_destination_write) ... ok\ntest_categories_and_relative_priority_are_conservative (test_observer.ExtractiveObserverTests.test_categories_and_relative_priority_are_conservative) ... ok\ntest_duplicate_text_preserves_both_source_identities (test_observer.ExtractiveObserverTests.test_duplicate_text_preserves_both_source_identities) ... ok\ntest_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence (test_observer.ExtractiveObserverTests.test_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence) ... ok\ntest_exact_whole_quote_identity_and_attribution_for_each_source (test_observer.ExtractiveObserverTests.test_exact_whole_quote_identity_and_attribution_for_each_source) ... ok\ntest_invalid_timestamp_or_source_is_rejected_atomically (test_observer.ExtractiveObserverTests.test_invalid_timestamp_or_source_is_rejected_atomically) ... ok\ntest_long_unicode_and_negative_qualifiers_are_not_truncated (test_observer.ExtractiveObserverTests.test_long_unicode_and_negative_qualifiers_are_not_truncated) ... ok\ntest_misleading_assistant_claim_stays_an_assistant_statement (test_observer.ExtractiveObserverTests.test_misleading_assistant_claim_stays_an_assistant_statement) ... ok\ntest_output_does_not_alias_input_and_repeat_is_stable (test_observer.ExtractiveObserverTests.test_output_does_not_alias_input_and_repeat_is_stable) ... ok\ntest_plans_never_promoted_to_outcome (test_observer.ExtractiveObserverTests.test_plans_never_promoted_to_outcome) ... ok\ntest_tool_output_cannot_override_role_or_priority (test_observer.ExtractiveObserverTests.test_tool_output_cannot_override_role_or_priority) ... ok\ntest_callback_mutation_cannot_change_snapshotted_source_attribution (test_observer.ModelObserverTests.test_callback_mutation_cannot_change_snapshotted_source_attribution) ... ok\ntest_completion_error_is_sanitized_and_never_retried_or_falls_back (test_observer.ModelObserverTests.test_completion_error_is_sanitized_and_never_retried_or_falls_back) ... ok\ntest_constructor_types_limits_and_callable (test_observer.ModelObserverTests.test_constructor_types_limits_and_callable) ... ok\ntest_distinct_sources_with_same_quote_are_not_deduplicated (test_observer.ModelObserverTests.test_distinct_sources_with_same_quote_are_not_deduplicated) ... ok\ntest_duplicate_keys_are_rejected_at_every_object_depth (test_observer.ModelObserverTests.test_duplicate_keys_are_rejected_at_every_object_depth) ... ok\ntest_duplicate_observation_identity_rejects_whole_batch (test_observer.ModelObserverTests.test_duplicate_observation_identity_rejects_whole_batch) ... ok\ntest_empty_input_or_only_blank_text_never_calls_model (test_observer.ModelObserverTests.test_empty_input_or_only_blank_text_never_calls_model) ... ok\ntest_empty_result_for_eligible_input_is_a_failure (test_observer.ModelObserverTests.test_empty_result_for_eligible_input_is_a_failure) ... ok\ntest_every_item_field_is_required (test_observer.ModelObserverTests.test_every_item_field_is_required) ... ok\ntest_incremental_source_slice_preserves_nonzero_ordinals (test_observer.ModelObserverTests.test_incremental_source_slice_preserves_nonzero_ordinals) ... ok\ntest_input_budget_counts_system_payload_metadata_and_json_escaping (test_observer.ModelObserverTests.test_input_budget_counts_system_payload_metadata_and_json_escaping) ... ok\ntest_invalid_later_item_is_atomic_and_sources_remain_unchanged (test_observer.ModelObserverTests.test_invalid_later_item_is_atomic_and_sources_remain_unchanged) ... ok\ntest_invalid_source_or_timestamp_never_calls_model (test_observer.ModelObserverTests.test_invalid_source_or_timestamp_never_calls_model) ... ok\ntest_json_only_no_fences_prose_trailing_objects_or_top_level_arrays (test_observer.ModelObserverTests.test_json_only_no_fences_prose_trailing_objects_or_top_level_arrays) ... ok\ntest_kind_and_priority_validation (test_observer.ModelObserverTests.test_kind_and_priority_validation) ... ok\ntest_lone_surrogate_response_is_rejected (test_observer.ModelObserverTests.test_lone_surrogate_response_is_rejected) ... ok\ntest_model_cannot_choose_ids_role_timestamp_or_completion_state (test_observer.ModelObserverTests.test_model_cannot_choose_ids_role_timestamp_or_completion_state) ... ok\ntest_model_response_errors_do_not_echo_payload_or_exception_details (test_observer.ModelObserverTests.test_model_response_errors_do_not_echo_payload_or_exception_details) ... ok\ntest_nonfinite_numbers_and_deep_json_are_rejected (test_observer.ModelObserverTests.test_nonfinite_numbers_and_deep_json_are_rejected) ... ok\ntest_observers_have_no_network_or_process_side_effects (test_observer.ModelObserverTests.test_observers_have_no_network_or_process_side_effects) ... ok\ntest_output_budget_enforced_before_json_parsing (test_observer.ModelObserverTests.test_output_budget_enforced_before_json_parsing) ... ok\ntest_payload_excludes_wire_arguments_and_internal_metadata (test_observer.ModelObserverTests.test_payload_excludes_wire_arguments_and_internal_metadata) ... ok\ntest_prompt_states_untrusted_boundary_and_quote_only_contract (test_observer.ModelObserverTests.test_prompt_states_untrusted_boundary_and_quote_only_contract) ... ok\ntest_response_must_be_nonblank_string (test_observer.ModelObserverTests.test_response_must_be_nonblank_string) ... ok\ntest_substring_matching_is_exact_not_paraphrase_or_normalization (test_observer.ModelObserverTests.test_substring_matching_is_exact_not_paraphrase_or_normalization) ... ok\ntest_top_level_keys_required_and_unknown_keys_rejected (test_observer.ModelObserverTests.test_top_level_keys_required_and_unknown_keys_rejected) ... ok\ntest_unknown_ids_are_never_trimmed_normalized_or_guessed (test_observer.ModelObserverTests.test_unknown_ids_are_never_trimmed_normalized_or_guessed) ... ok\ntest_valid_batch_assigns_authoritative_fields (test_observer.ModelObserverTests.test_valid_batch_assigns_authoritative_fields) ... ok\ntest_stale_observer_cannot_replace_a_newer_publication (test_publication.PublicationRaceTests.test_stale_observer_cannot_replace_a_newer_publication) ... ok\ntest_closing_second_store_does_not_unlock_first (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_second_store_does_not_unlock_first) ... ok\ntest_closing_store_preserves_lock_owned_outside_memory_store (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_store_preserves_lock_owned_outside_memory_store) ... ok\ntest_constructor_sqlite_busy_cleanup_preserves_lock (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_constructor_sqlite_busy_cleanup_preserves_lock) ... ok\ntest_failed_constructor_does_not_unlock_existing_connection (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_failed_constructor_does_not_unlock_existing_connection) ... ok\ntest_append_preserves_coverage_but_old_revision_cannot_publish (test_store.MemoryStoreTests.test_append_preserves_coverage_but_old_revision_cannot_publish) ... ok\ntest_argument_types_and_no_namespace_rewriting (test_store.MemoryStoreTests.test_argument_types_and_no_namespace_rewriting) ... ok\ntest_concurrent_first_open_waits_for_complete_publication (test_store.MemoryStoreTests.test_concurrent_first_open_waits_for_complete_publication) ... ok\ntest_crash_before_commit_recovers_prior_snapshot (test_store.MemoryStoreTests.test_crash_before_commit_recovers_prior_snapshot) ... ok\ntest_creation_rejects_replaced_staging_inode (test_store.MemoryStoreTests.test_creation_rejects_replaced_staging_inode) ... ok\ntest_directory_inode_and_private_permissions_rechecked (test_store.MemoryStoreTests.test_directory_inode_and_private_permissions_rechecked) ... ok\ntest_exact_prefix_rejection_and_active_order (test_store.MemoryStoreTests.test_exact_prefix_rejection_and_active_order) ... ok\ntest_existing_database_uses_no_raw_file_descriptors (test_store.MemoryStoreTests.test_existing_database_uses_no_raw_file_descriptors) ... ok\ntest_forget_tombstone_shared_connections_and_restart (test_store.MemoryStoreTests.test_forget_tombstone_shared_connections_and_restart) ... ok\ntest_initial_state_and_idempotence_restart_and_defensive_copy (test_store.MemoryStoreTests.test_initial_state_and_idempotence_restart_and_defensive_copy) ... ok\ntest_invalid_observations_and_active_ids_are_atomic (test_store.MemoryStoreTests.test_invalid_observations_and_active_ids_are_atomic) ... ok\ntest_invalid_persisted_payload_fails_closed_without_content_in_errors (test_store.MemoryStoreTests.test_invalid_persisted_payload_fails_closed_without_content_in_errors) ... ok\ntest_invalid_sources_are_atomic (test_store.MemoryStoreTests.test_invalid_sources_are_atomic) ... ok\ntest_multisource_observation_is_removed_if_one_reference_changes (test_store.MemoryStoreTests.test_multisource_observation_is_removed_if_one_reference_changes) ... ok\ntest_namespace_mismatch_denies_without_altering_owner (test_store.MemoryStoreTests.test_namespace_mismatch_denies_without_altering_owner) ... ok\ntest_observation_size_limit_is_atomic (test_store.MemoryStoreTests.test_observation_size_limit_is_atomic) ... ok\ntest_private_creation_closes_raw_descriptor_before_publication (test_store.MemoryStoreTests.test_private_creation_closes_raw_descriptor_before_publication) ... ok\ntest_private_modes_and_symlink_hardlink_refusal (test_store.MemoryStoreTests.test_private_modes_and_symlink_hardlink_refusal) ... ok\ntest_real_process_concurrent_initialization_and_writes (test_store.MemoryStoreTests.test_real_process_concurrent_initialization_and_writes) ... ok\ntest_real_process_stale_worker_cannot_resurrect_forgetting (test_store.MemoryStoreTests.test_real_process_stale_worker_cannot_resurrect_forgetting) ... ok\ntest_real_sqlite_page_limit_rolls_back_and_connection_remains_usable (test_store.MemoryStoreTests.test_real_sqlite_page_limit_rolls_back_and_connection_remains_usable) ... ok\ntest_recall_and_search_bounded_inputs (test_store.MemoryStoreTests.test_recall_and_search_bounded_inputs) ... ok\ntest_recall_pagination_scope_unicode_and_missing (test_store.MemoryStoreTests.test_recall_pagination_scope_unicode_and_missing) ... ok\ntest_regular_file_inode_replacement_fails_closed (test_store.MemoryStoreTests.test_regular_file_inode_replacement_fails_closed) ... ok\ntest_removed_source_payload_is_not_retained_on_disk (test_store.MemoryStoreTests.test_removed_source_payload_is_not_retained_on_disk) ... ok\ntest_revision_undo_removal_and_reorder_invalidate_exact_prefix (test_store.MemoryStoreTests.test_revision_undo_removal_and_reorder_invalidate_exact_prefix) ... ok\ntest_search_literal_scoped_bounded_and_deterministic (test_store.MemoryStoreTests.test_search_literal_scoped_bounded_and_deterministic) ... ok\ntest_shared_instance_thread_safety_and_closed_lifecycle (test_store.MemoryStoreTests.test_shared_instance_thread_safety_and_closed_lifecycle) ... ok\ntest_sidecar_symlink_and_path_replacement_fail_closed (test_store.MemoryStoreTests.test_sidecar_symlink_and_path_replacement_fail_closed) ... ok\ntest_size_limit_atomic_rollback_and_reopen (test_store.MemoryStoreTests.test_size_limit_atomic_rollback_and_reopen) ... ok\ntest_unicode_casefold_search_preserves_original_offsets (test_store.MemoryStoreTests.test_unicode_casefold_search_preserves_original_offsets) ... ok\n\n----------------------------------------------------------------------\nRan 145 tests in 3.444s\n\nOK",
+      "product_test_files_modified": false
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 HERMES_DISABLE_LAZY_INSTALLS=1 python3 /Users/mini/.hermes/cache/scratch/om-independent-review-01-6f9a-probes.py",
+      "cwd": "/Users/mini",
+      "runs": 2,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "meaning": "Characterization assertions reproduced the two blockers and the documented nonblocking lock-wait deadline limit; zero exit does not mean product acceptance.",
+      "final_results": {
+        "receipt_validation": {
+          "model": {
+            "sha256": "4e19f7c4a82382271ee9305ac7161eb83cd9fb7b427261dad81cd5506d26846f",
+            "source_hashes_matched": true,
+            "source_quotes_validated": 5,
+            "rendering_and_reflection_match": true,
+            "mode": "model",
+            "pass_field": true,
+            "model_rerun": false
+          },
+          "offline": {
+            "sha256": "6f95c92d8923c0cf13d101060cc1978b51d6bd961b66cdb8540940f4e4c423fa",
+            "source_hashes_matched": true,
+            "source_quotes_validated": 10,
+            "rendering_and_reflection_match": true,
+            "mode": "extractive",
+            "pass_field": true,
+            "model_rerun": false
+          }
+        },
+        "route_queue": {
+          "dispatches": [
+            {
+              "route_mismatch_at_dispatch": false,
+              "actor_provider_at_dispatch": "openai-codex",
+              "requested_model": "gpt-6-astra",
+              "source_count": 8
+            },
+            {
+              "route_mismatch_at_dispatch": true,
+              "actor_provider_at_dispatch": "custom",
+              "requested_model": "gpt-6-astra",
+              "source_count": 10
+            }
+          ],
+          "resolver_calls": 2,
+          "observations_after_mismatch": 1,
+          "covered_after_mismatch": 10,
+          "last_error": null,
+          "discarded": 1,
+          "real_network_calls": 0
+        },
+        "unsupported_replacement": {
+          "revision_before_replacement": 1,
+          "revision_after_rejected_replacement": 1,
+          "revision_after_old_worker": 2,
+          "error_after_replacement": "unsupported_or_sensitive_input",
+          "error_after_worker": null,
+          "current_history_contains_removed_marker": false,
+          "removed_source_recallable": true,
+          "old_observation_published": true,
+          "actor_request_retained": true,
+          "removed_source_recallable_after_restart": true
+        },
+        "lock_deadline_characterization": {
+          "deadline_seconds": 1.0,
+          "observer_return_seconds": 7.09999876562506e-05,
+          "begin_attempt_seconds": 0.0018375829968135804,
+          "unlock_seconds": 1.2568195420026314,
+          "observations_after_deadline": 8,
+          "last_error": null,
+          "interpretation": "Timely observer result can commit after SQL lock waiting exceeds configured job timeout; no late observer return simulated."
+        },
+        "runtime": {
+          "python": "3.14.7",
+          "sqlite": "3.53.1"
+        },
+        "owned_synthetic_state_removed": true
+      },
+      "first_lock_deadline_result": {
+        "deadline_seconds": 1.0,
+        "observer_return_seconds": 6.724998820573092e-05,
+        "begin_attempt_seconds": 0.0018002080032601953,
+        "unlock_seconds": 1.2539207499939948,
+        "observations_after_deadline": 8,
+        "last_error": null
+      },
+      "other_first_run_results": "Route dispatch, unsupported replacement, receipt validation and cleanup predicates matched the final run."
+    }
+  ],
+  "replay_evidence": {
+    "receipt_validation": {
+      "model": {
+        "sha256": "4e19f7c4a82382271ee9305ac7161eb83cd9fb7b427261dad81cd5506d26846f",
+        "source_hashes_matched": true,
+        "source_quotes_validated": 5,
+        "rendering_and_reflection_match": true,
+        "mode": "model",
+        "pass_field": true,
+        "model_rerun": false
+      },
+      "offline": {
+        "sha256": "6f95c92d8923c0cf13d101060cc1978b51d6bd961b66cdb8540940f4e4c423fa",
+        "source_hashes_matched": true,
+        "source_quotes_validated": 10,
+        "rendering_and_reflection_match": true,
+        "mode": "extractive",
+        "pass_field": true,
+        "model_rerun": false
+      }
+    },
+    "checks": [
+      "Receipt bytes match frozen manifest hashes",
+      "All six runtime Python source hashes in both receipts match the current frozen candidate",
+      "Actual source-bound synthetic fixture loaded via isolated AST function extraction, never executed replay module top-level",
+      "Every recorded observation validates against exact fixture source identity and attribution",
+      "Declared source/observation/active counts agree with parsed arrays",
+      "Deterministic reflection and complete active_memory_text exactly match current frozen rendering",
+      "Model baseline, observed and expected answer objects agree",
+      "Whole-probe usage equals observer plus actor usage",
+      "Restart, exact recall, transcript preservation and forgetting claims present in receipts"
+    ],
+    "hosted_models_or_network_rerun": false,
+    "interpretation": "Inspected prior source-bound real-model evidence, not an independently repeated hosted model result. Offline receipt contains no actor accuracy comparison."
+  },
+  "blockers": [
+    {
+      "id": "OM-R1",
+      "severity": "high",
+      "title": "Queued observation dispatch bypasses actor/provider pin mismatch after a model switch",
+      "paths": [
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            240,
+            246
+          ]
+        },
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            283,
+            290
+          ]
+        },
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            317,
+            359
+          ]
+        },
+        {
+          "path": "observational/backend.py",
+          "lines": [
+            38,
+            51
+          ]
+        }
+      ],
+      "contract": "README.md:19 and docs/BUILD-PLAN.md:26 require the acting model/provider to match the explicit observation pins.",
+      "mechanism": "update_model marks _route_mismatch and advances _epoch, but leaves already queued _pending work. _work checks neither the route mismatch nor a pre-switch authorization token when starting each subsequent batch. The next loop captures the post-switch epoch, invokes the old pinned backend and can publish normally.",
+      "reproduction_function": "route_queue",
+      "steps": [
+        "Start a model-mode engine pinned to openai-codex/gpt-6-astra with explicit consent and matching actor. Use the actual ModelObserver and HermesCompletion, replacing only provider resolution with a synthetic client.",
+        "Hold the first synthetic client create call. Notify another completed turn so the source snapshot advances and _pending becomes true.",
+        "Call the actual engine update_model with provider=custom and model=synthetic-local-only. Confirm _route_mismatch is true, then release the already-running call.",
+        "Wait for the worker and read the real SQLite state."
+      ],
+      "observed": {
+        "dispatches": [
+          {
+            "route_mismatch_at_dispatch": false,
+            "actor_provider_at_dispatch": "openai-codex",
+            "requested_model": "gpt-6-astra",
+            "source_count": 8
+          },
+          {
+            "route_mismatch_at_dispatch": true,
+            "actor_provider_at_dispatch": "custom",
+            "requested_model": "gpt-6-astra",
+            "source_count": 10
+          }
+        ],
+        "resolver_calls": 2,
+        "observations_after_mismatch": 1,
+        "covered_after_mismatch": 10,
+        "last_error": null,
+        "discarded": 1,
+        "real_network_calls": 0
+      },
+      "expected": "No new observer completion dispatch while the actor/provider no longer matches the pins; no publication by a newly started mismatched batch. An already-dispatched call need not be retroactively unsent.",
+      "impact": "A route switch intended to stop same-route eligibility does not stop queued observation calls: additional source text reaches the old-route completion boundary and the result is accepted. This is an observed authorization/dispatch defect, not a claim that this review transmitted private data.",
+      "evidence_boundary": "Real engine, ModelObserver, HermesCompletion and SQLite; provider resolver/client replaced by a synthetic test double and socket connect prohibited. Two completion dispatches were observed; no network or credentials were used.",
+      "required_change": "Invalidate pending mismatched work and enforce current route/epoch authorization at each new dispatch and publication. Add a deterministic queued-work/model-switch regression, retaining the no-fallback rule and explicit treatment of calls already in flight."
+    },
+    {
+      "id": "OM-R2",
+      "severity": "medium",
+      "title": "Rejected replacement transcript leaves removed sources recallable and lets its old worker publish",
+      "paths": [
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            266,
+            282
+          ]
+        },
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            317,
+            363
+          ]
+        },
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            437,
+            459
+          ]
+        }
+      ],
+      "contract": "docs/BUILD-PLAN.md:28,57 require source removal to remove the plugin copy/derived observations and recall to expose only current sources. Unsupported attachments may keep the original actor request; that is not authorization to retain and republish removed source identities.",
+      "mechanism": "normalize_sources or pairing failure returns before sync_sources and without invalidating _epoch or pending/in-flight work. The old source revision remains authoritative to the worker and read-only tools. A successful stale commit also clears the previous unsupported-input health error.",
+      "reproduction_function": "unsupported_replacement",
+      "steps": [
+        "Through the actual installed _notify_context_engine_turn_complete hook, start observation of six synthetic supported turns; hold the observer before it returns.",
+        "Deliver a completed replacement history that removes its first turn and appends a supported-host but plugin-unsupported structured-content user turn plus an assistant response.",
+        "Observe the explicit unsupported_or_sensitive_input failure, then release the old worker.",
+        "Read the real SQLite state; invoke om_recall for the removed source; close/reopen the engine and repeat recall. Check the real host request-selection helper separately."
+      ],
+      "observed": {
+        "revision_before_replacement": 1,
+        "revision_after_rejected_replacement": 1,
+        "revision_after_old_worker": 2,
+        "error_after_replacement": "unsupported_or_sensitive_input",
+        "error_after_worker": null,
+        "current_history_contains_removed_marker": false,
+        "removed_source_recallable": true,
+        "old_observation_published": true,
+        "actor_request_retained": true,
+        "removed_source_recallable_after_restart": true
+      },
+      "expected": "A rejected replacement must not authorize the previous worker to publish removed history or keep those IDs available as current source recall. Conservatively invalidate/quarantine/reconcile the plugin snapshot while leaving unsupported new content out of the store and retaining the canonical actor request.",
+      "impact": "The removed synthetic source remains callable via om_recall across restart, and a new derived observation of it is durably published after the replacement hook. The actor request itself correctly falls back unchanged; the defect is stale persistence/recall, not malformed provider context.",
+      "evidence_boundary": "Actual installed host hooks, actual engine/store, held offline ExtractiveObserver, disposable synthetic state. No host transcript was edited; the replacement was supplied as a synthetic completed-turn snapshot.",
+      "required_change": "Make failure of authoritative snapshot normalization/eligibility invalidate stale work and prevent stale current-source/tool exposure; handle source removal conservatively without admitting attachments/secrets or using the human-only permanent forgetting tombstone as a model-controlled action. Regress both already-published and in-flight old data, plus restart and unchanged actor-request fallback."
+    }
+  ],
+  "blocker_count": 2,
+  "nonblocking_limitations": [
+    {
+      "id": "L1",
+      "topic": "Publication deadline is not an end-to-end wall-clock bound",
+      "paths": [
+        {
+          "path": "observational/engine.py",
+          "lines": [
+            353,
+            359
+          ]
+        },
+        {
+          "path": "observational/store.py",
+          "lines": [
+            263,
+            271
+          ]
+        }
+      ],
+      "details": "A timely result can wait in BEGIN IMMEDIATE and commit after job_timeout_seconds. In the final finite probe, the observer returned at 0.000071s, the write began at 0.001838s, and the separate SQLite lock was released at 1.256820s against a 1s configured deadline; eight observations committed with no error. This is retained as a nonblocking characterization, not mislabeled as a late observer return. A strict total publication/request-latency SLA is not certified."
+    },
+    {
+      "id": "L2",
+      "topic": "Model call cancellation/billing",
+      "details": "The shipped adapter has timeout checks but arbitrary injected threads cannot be forcibly killed. Read-only installed Codex guard source uses progress-aware timeouts and a separate ceiling, so job_timeout_seconds is not certified as an absolute network termination or billing-token cap. No hosted timeout/transport experiment was run."
+    },
+    {
+      "id": "L3",
+      "topic": "Attribution versus truth and prompt injection",
+      "details": "Exact quotes, fixed attribution, strict parser and untrusted historical rendering are real controls, not external verification, lossless meaning preservation, complete qualifier retention or perfect actor prompt-injection immunity. Lossy active selection and misleading-but-exact model substrings are explicitly accepted scope limits, not new blockers."
+    },
+    {
+      "id": "L4",
+      "topic": "Privacy and filesystem threat model",
+      "details": "Plain visible text only, heuristic secret rejection, private local POSIX files rather than encryption or comprehensive PII/DLP protection. Static symlink/hardlink/inode replacement protections are tested; racing privileged/same-UID sabotage, network filesystems and Windows are not certified. SQLite creation crashes may require offline orphan inspection as already documented."
+    },
+    {
+      "id": "L5",
+      "topic": "Host and scale limits",
+      "details": "Only installed Hermes c8301ea6c9b797184df16a9c5dd462400b264ff4 and this managed macOS Python/SQLite environment are exercised. Session-only scope, best-effort post-turn hooks, no durable/emergency compression, no archive/cross-session system, no LongMemEval or general cost/accuracy claim. Large unsupported requests may still exceed actor context limits."
+    },
+    {
+      "id": "L6",
+      "topic": "Packaging and activation boundaries",
+      "details": "Installer/discovery/forget helpers were exercised by the deterministic suite in disposable homes. Package code and its allowlist were reviewed; final ZIP creation, extraction and disposable installed-ZIP execution are the parent lane and are not certified by this verdict. No live installation, activation, profile configuration, gateway or credentials were accessed/changed."
+    },
+    {
+      "id": "L7",
+      "topic": "Mutation during selection",
+      "details": "Reviewed request/prefix equality checks and deep-copy construction, validator snapshot-before-check regressions, plus real host request/post-turn clone boundaries. No product write-through to canonical history was observed in the suite. No extra source-only race was promoted to an exploit: hypothetical mutation of caller-owned request objects or data already snapshotted in an in-flight call is not proven live-host reachability."
+    }
+  ],
+  "positive_findings": [
+    "Request-only shaping and no-op durable compression respect the approved v0.1 separation.",
+    "Strict exact-quote source binding, immutable role-derived attribution, unknown-field rejection and deterministic reflection are exercised.",
+    "Read-only om_* tools reject alternate profile/session/path arguments; separate namespaces and disabled tombstones hold under tested restart/process races.",
+    "Source and observation publication CAS repair is present and independently passes its real-SQLite regression.",
+    "SQLite raw-descriptor lock-loss repair is present; all four independent-process lock oracles pass.",
+    "Real installed user-directory loader, ABC and post-turn/request-selection hooks pass with disposable state.",
+    "Source-removal, secure-delete, process crash recovery, page-limit rollback, symlink/hardlink/inode replacement and create-only install cases pass in the existing suite, subject to OM-R2 at the engine ingestion boundary."
+  ],
+  "reproduction": {
+    "historical_script_path": "/Users/mini/.hermes/cache/scratch/om-independent-review-01-6f9a-probes.py",
+    "script_sha256": "848b3cb34a3759b4f41c87e36df5d9a07e34c253b8a5eafb7c4d30158b077df3",
+    "source": "\"\"\"Bounded independent read-only candidate probes; synthetic scratch only.\"\"\"\nimport os\nimport sys\nfrom pathlib import Path\nROOT = Path('/Users/mini/workspace/hermes-observational-memory')\nHOST = Path('/Users/mini/.hermes/hermes-agent')\nsys.dont_write_bytecode = True\nos.environ['PYTHONDONTWRITEBYTECODE'] = '1'\nos.environ['HERMES_DISABLE_LAZY_INSTALLS'] = '1'\nsys.path.insert(0, str(ROOT / 'tools'))\nfrom runtime import bootstrap_hermes\n_, scratch = bootstrap_hermes(str(HOST))\nimport ast\nimport copy\nimport hashlib\nimport json\nimport logging\nimport sqlite3\nimport tempfile\nimport threading\nimport time\nfrom types import SimpleNamespace\nfrom unittest.mock import patch\nfrom observational.engine import EngineConfig, ObservationalEngine, normalize_sources\nfrom observational.observer import ExtractiveObserver\nfrom observational.contracts import canonical_json, reflect, validate_observations\n\n\ndef history(turns=6):\n    rows = []\n    for i in range(turns):\n        rows.extend([{'role': 'user', 'content': 'SYNTHETIC_OLD_SOURCE_%s. Plan not performed. ' % i + 'Background only. ' * 140, 'message_uid': 'u%s' % i}, {'role': 'assistant', 'content': 'Not externally verified.', 'message_uid': 'a%s' % i}])\n    return rows\n\n\ndef config(**kw):\n    return EngineConfig(observe_min_chars=1, max_batch_chars=200000, observation_budget_chars=8000, **kw)\n\n\ndef route_queue(home):\n    entered, release = threading.Event(), threading.Event()\n    calls = []\n    engine = ObservationalEngine(config=config(observer_mode='model', allow_model_calls=True, provider='openai-codex', model='gpt-6-astra'))\n    engine.on_session_start('route-queue', hermes_home=home, model='gpt-6-astra', provider='openai-codex')\n    def create(**kw):\n        payload = json.loads(kw['messages'][1]['content'])\n        calls.append({'route_mismatch_at_dispatch': engine._route_mismatch, 'actor_provider_at_dispatch': engine._actor_provider, 'requested_model': kw['model'], 'source_count': len(payload['sources'])})\n        if len(calls) == 1:\n            entered.set()\n            if not release.wait(10):\n                raise RuntimeError('probe release timed out')\n        s = payload['sources'][0]\n        text = canonical_json({'observations': [{'source_id': s['source_id'], 'quote': s['text'][:50], 'kind': 'other', 'priority': 1}]})\n        return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=text, tool_calls=None))], usage=None)\n    client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)), close=lambda: None)\n    try:\n        engine.update_model('gpt-6-astra', 200000, provider='openai-codex')\n        with patch('agent.auxiliary_client.resolve_provider_client', return_value=(client, 'gpt-6-astra')) as resolver:\n            engine.on_turn_complete(history(6))\n            assert entered.wait(10), 'first observer never entered'\n            engine.on_turn_complete(history(7))  # A real newer snapshot queues another batch.\n            assert engine._pending\n            engine.update_model('synthetic-local-only', 200000, provider='custom')\n            assert engine._route_mismatch\n            release.set()\n            assert engine.wait_until_idle(15)\n            state = engine.store.read()\n            result = {'dispatches': calls, 'resolver_calls': resolver.call_count, 'observations_after_mismatch': len(state['observations']), 'covered_after_mismatch': len(state['covered_ids']), 'last_error': engine.get_status()['last_error'], 'discarded': engine.get_status()['discarded_runs'], 'real_network_calls': 0}\n            assert len(calls) == 2 and calls[1]['route_mismatch_at_dispatch'] and state['observations']\n            return result\n    finally:\n        release.set()\n        engine.wait_until_idle(15)\n        engine.on_session_end('route-queue', [])\n\n\ndef unsupported_replacement(home):\n    from agent.conversation_loop import _notify_context_engine_turn_complete, _apply_context_engine_selection\n    entered, release = threading.Event(), threading.Event()\n    class Held:\n        def observe(self, sources, *, observed_at):\n            entered.set()\n            if not release.wait(10):\n                raise RuntimeError('probe release timed out')\n            return ExtractiveObserver().observe(sources, observed_at=observed_at)\n    engine = ObservationalEngine(config=config(), observer=Held())\n    engine.on_session_start('unsupported-replacement', hermes_home=home, model='synthetic')\n    agent = SimpleNamespace(context_compressor=engine, session_id='unsupported-replacement')\n    logger = logging.getLogger('independent-synthetic-probe')\n    original = history()\n    changed = copy.deepcopy(original[2:]) + [{'role': 'user', 'content': [{'type': 'text', 'text': 'New structured attachment turn.'}]}, {'role': 'assistant', 'content': 'Attachment acknowledged.'}]\n    old_id = normalize_sources(original)[0]['id']\n    try:\n        _notify_context_engine_turn_complete(agent, original, logger=logger, interrupted=False, failed=False)\n        assert entered.wait(10)\n        before = engine.store.read()\n        _notify_context_engine_turn_complete(agent, changed, logger=logger, interrupted=False, failed=False)\n        failed_revision = engine.store.read()['revision']\n        invalid_error = engine.get_status()['last_error']\n        release.set()\n        assert engine.wait_until_idle(15)\n        state = engine.store.read()\n        recall = json.loads(engine.handle_tool_call('om_recall', {'source_id': old_id}))\n        request = changed + [{'role': 'user', 'content': 'Read current history only.'}]\n        selected = _apply_context_engine_selection(agent, request, changed, request[-1], logger=logger)\n        result = {'revision_before_replacement': before['revision'], 'revision_after_rejected_replacement': failed_revision, 'revision_after_old_worker': state['revision'], 'error_after_replacement': invalid_error, 'error_after_worker': engine.get_status()['last_error'], 'current_history_contains_removed_marker': 'SYNTHETIC_OLD_SOURCE_0' in canonical_json(changed), 'removed_source_recallable': 'SYNTHETIC_OLD_SOURCE_0' in recall.get('text', ''), 'old_observation_published': any(old_id in o['source_ids'] for o in state['observations']), 'actor_request_retained': selected == request}\n        assert result['removed_source_recallable'] and result['old_observation_published'] and result['actor_request_retained']\n    finally:\n        release.set()\n        engine.wait_until_idle(15)\n        engine.on_session_end('unsupported-replacement', [])\n    reopened = ObservationalEngine(config=config())\n    reopened.on_session_start('unsupported-replacement', hermes_home=home, model='synthetic')\n    try:\n        result['removed_source_recallable_after_restart'] = 'SYNTHETIC_OLD_SOURCE_0' in json.loads(reopened.handle_tool_call('om_recall', {'source_id': old_id})).get('text', '')\n        assert result['removed_source_recallable_after_restart']\n        return result\n    finally:\n        reopened.on_session_end('unsupported-replacement', [])\n\n\ndef lock_deadline(home):\n    entered, release, begin = threading.Event(), threading.Event(), threading.Event()\n    measurements = {}\n    class Held:\n        def observe(self, sources, *, observed_at):\n            entered.set()\n            if not release.wait(10):\n                raise RuntimeError('probe release timed out')\n            measurements['observer_return'] = time.monotonic()\n            return ExtractiveObserver().observe(sources, observed_at=observed_at)\n    engine = ObservationalEngine(config=config(job_timeout_seconds=1.0), observer=Held())\n    engine.on_session_start('deadline', hermes_home=home, model='synthetic')\n    other = sqlite3.connect(engine.store.path.as_uri() + '?mode=rw', uri=True, isolation_level=None)\n    try:\n        engine.on_turn_complete(history())\n        assert entered.wait(10)\n        start = engine._started_at\n        other.execute('BEGIN IMMEDIATE')\n        def trace(sql):\n            if sql == 'BEGIN IMMEDIATE':\n                measurements['begin'] = time.monotonic()\n                begin.set()\n        engine.store._conn.set_trace_callback(trace)\n        release.set()\n        assert begin.wait(10)\n        assert measurements['begin'] < start + 1.0, 'setup did not reach DB wait before deadline'\n        time.sleep(max(0, start + 1.25 - time.monotonic()))\n        measurements['unlock'] = time.monotonic()\n        other.execute('ROLLBACK')\n        assert engine.wait_until_idle(15)\n        state = engine.store.read()\n        result = {'deadline_seconds': 1.0, 'observer_return_seconds': measurements['observer_return'] - start, 'begin_attempt_seconds': measurements['begin'] - start, 'unlock_seconds': measurements['unlock'] - start, 'observations_after_deadline': len(state['observations']), 'last_error': engine.get_status()['last_error'], 'interpretation': 'Timely observer result can commit after SQL lock waiting exceeds configured job timeout; no late observer return simulated.'}\n        assert state['observations'] and measurements['unlock'] > start + 1.0\n        return result\n    finally:\n        release.set()\n        if other.in_transaction:\n            other.execute('ROLLBACK')\n        other.close()\n        engine.wait_until_idle(15)\n        engine.on_session_end('deadline', [])\n\n\ndef receipts():\n    manifest = json.loads((ROOT / 'docs/evidence/review-candidate-01.json').read_text())\n    module = ast.parse((ROOT / 'tools/replay.py').read_text())\n    fixture_def = next(n for n in module.body if isinstance(n, ast.FunctionDef) and n.name == 'fixture')\n    env = {}\n    exec(compile(ast.Module(body=[fixture_def], type_ignores=[]), '<reviewed-replay-fixture-only>', 'exec'), env)\n    sources = normalize_sources(env['fixture']())\n    output = {}\n    for mode in ('model', 'offline'):\n        path = ROOT / ('docs/evidence/%s-replay-02.json' % mode)\n        data = json.loads(path.read_text())\n        actual_hash = hashlib.sha256(path.read_bytes()).hexdigest()\n        assert actual_hash == manifest['%s_replay_sha256' % mode]\n        assert data['pass'] and data['source_count'] == len(sources)\n        assert data['observation_count'] == len(data['observations'])\n        assert data['active_observation_count'] == len(data['active_ids'])\n        assert data['hermes_commit'] == 'c8301ea6c9b797184df16a9c5dd462400b264ff4'\n        assert len(data['source_sha256']) == 6\n        assert all(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == h == manifest['sha256'][name] for name, h in data['source_sha256'].items())\n        validate_observations(data['observations'], sources[:data['covered_source_count']])\n        assert reflect(data['observations'], 8000) == data['active_ids']\n        assert ObservationalEngine()._render({'observations': data['observations'], 'active_ids': data['active_ids'], 'covered_ids': [s['id'] for s in sources[:data['covered_source_count']]]}) == data['active_memory_text']\n        for key in ('exact_source_recall', 'original_transcript_unchanged', 'repeated_selection_equal', 'restart_equal', 'forgotten_tombstone'):\n            assert data[key] is True\n        if mode == 'model':\n            assert data['expected_answers'] == data['baseline_answers'] == data['observed_answers']\n            for key in ('calls', 'prompt_tokens', 'completion_tokens', 'total_tokens'):\n                assert data['whole_probe_usage'][key] == data['observer_usage'][key] + data['actor_usage'][key]\n        output[mode] = {'sha256': actual_hash, 'source_hashes_matched': True, 'source_quotes_validated': len(data['observations']), 'rendering_and_reflection_match': True, 'mode': data['mode'], 'pass_field': data['pass'], 'model_rerun': False}\n    assert hashlib.sha256((ROOT / 'docs/test-run-02.log').read_bytes()).hexdigest() == manifest['test_log_sha256']\n    return output\n\n\nwith tempfile.TemporaryDirectory(prefix='om-independent-review-01-6f9a-', dir=scratch) as tmp:\n    os.environ['HERMES_HOME'] = tmp\n    os.environ['HERMES_DISABLE_MCP'] = '1'\n    os.environ['TMPDIR'] = tmp\n    tempfile.tempdir = tmp\n    # Safety backstop: no actual socket connect, including provider/network.\n    with patch('socket.socket.connect', side_effect=AssertionError('network forbidden in independent review')), patch('socket.socket.connect_ex', side_effect=AssertionError('network forbidden in independent review')):\n        report = {'receipt_validation': receipts(), 'route_queue': route_queue(tmp), 'unsupported_replacement': unsupported_replacement(tmp), 'lock_deadline_characterization': lock_deadline(tmp), 'runtime': {'python': sys.version.split()[0], 'sqlite': sqlite3.sqlite_version}}\n    owned = Path(tmp)\nreport['owned_synthetic_state_removed'] = not owned.exists()\nprint(json.dumps(report, indent=2))\n",
+    "instructions": "The temporary original script is removed after this report is written. Extract this exact source into a uniquely named .py under /Users/mini/.hermes/cache/scratch and execute with the command environment above against the frozen source. It uses installed Hermes bootstrap with lazy installation disabled, socket-connect denial, synthetic clients and TemporaryDirectory cleanup. Assertions characterize the current defects; a repair should intentionally change their outcomes, then be accepted with new regressions and a new bound verdict.",
+    "synthetic_state_cleaned": true
+  },
+  "changes": {
+    "product_code_or_tests": [],
+    "installed_hermes_source": [],
+    "live_state": [],
+    "permanent_review_artifacts": [
+      "/Users/mini/workspace/hermes-observational-memory/docs/reviews/independent-review-01.md",
+      "/Users/mini/workspace/hermes-observational-memory/docs/reviews/independent-review-01.json"
+    ],
+    "temporary_owned_probe_script_removed_after_report_write": true
+  },
+  "approval_boundary": "This verdict does not approve live activation and does not close the parent delivery task. Resolve OM-R1 and OM-R2 against a newly frozen source, rerun the suite and independent scenarios, and retain this adverse receipt unchanged.",
+  "companion_markdown_sha256": "d603146fda211c0acd839b4a4017e5d127e6c27db1dbf12274509ff1a310e65a"
+}

@@ -1,0 +1,77 @@
+{
+  "synthetic_only": true,
+  "private_history_read": false,
+  "live_configuration_changed": false,
+  "time_utc": "2026-10-09T08:22:01.340048+00:00",
+  "mode": "model",
+  "pass": true,
+  "source_count": 14,
+  "observation_count": 5,
+  "active_observation_count": 5,
+  "covered_source_count": 10,
+  "original_chars": 21673,
+  "selected_chars": 3058,
+  "exact_source_recall": true,
+  "original_transcript_unchanged": true,
+  "repeated_selection_equal": true,
+  "observer_usage": {
+    "provider": "openai-codex",
+    "model": "gpt-6-astra",
+    "calls": 1,
+    "prompt_tokens": 4047,
+    "completion_tokens": 277,
+    "total_tokens": 4324,
+    "elapsed_seconds": 9.142968665983062,
+    "errors": 0
+  },
+  "reduction_percent_chars": 85.89,
+  "expected_answers": {
+    "project": "Cedar",
+    "meeting_date": "2026-10-16",
+    "verified_send": false,
+    "proposed_send_is_done": false,
+    "outbound_authorized": false
+  },
+  "baseline_answers": {
+    "project": "Cedar",
+    "meeting_date": "2026-10-16",
+    "verified_send": false,
+    "proposed_send_is_done": false,
+    "outbound_authorized": false
+  },
+  "observed_answers": {
+    "project": "Cedar",
+    "meeting_date": "2026-10-16",
+    "verified_send": false,
+    "proposed_send_is_done": false,
+    "outbound_authorized": false
+  },
+  "actor_usage": {
+    "provider": "openai-codex",
+    "model": "gpt-6-astra",
+    "calls": 2,
+    "prompt_tokens": 4528,
+    "completion_tokens": 80,
+    "total_tokens": 4608,
+    "elapsed_seconds": 4.974116624973249,
+    "errors": 0
+  },
+  "whole_probe_usage": {
+    "calls": 3,
+    "prompt_tokens": 8575,
+    "completion_tokens": 357,
+    "total_tokens": 8932
+  },
+  "restart_equal": true,
+  "forgotten_tombstone": true,
+  "elapsed_seconds": 14.334,
+  "source_sha256": {
+    "observational/__init__.py": "65ece834ea3fb42d45f8b1049bf34bca8422360583dae69cb235bdf1d8bb1440",
+    "observational/backend.py": "0e873a6ce3caa72042639c0d3fb42fc4200e255f4be6074b43192d0cf0860e89",
+    "observational/contracts.py": "4174c6364378a6cd87e77cafff4d5dad7c3cd9b7f4c516404645f6bd44618e58",
+    "observational/engine.py": "19f8357c6f8258424379ff5a940c208658be71ddddfc31e1f34cabd5daa381ef",
+    "observational/observer.py": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+    "observational/store.py": "898715f242407c66c2c90a76e494ec093ec7882bee5cc81d762f60ef0bb39fdb"
+  },
+  "hermes_commit": "c8301ea6c9b797184df16a9c5dd462400b264ff4"
+}

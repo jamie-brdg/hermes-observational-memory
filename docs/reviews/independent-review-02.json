@@ -1,0 +1,2784 @@
+{
+  "format": 1,
+  "verdict": "PASS",
+  "review_type": "Independent, read-only, narrowly scoped OM-R1/OM-R2 repair closure and regression acceptance",
+  "reviewer": {
+    "agent": "Hermes independent delegated reviewer",
+    "model": "gpt-6-astra",
+    "provider": "openai-codex",
+    "separate_from_implementation_author": true,
+    "same_model_review": true,
+    "claude_or_opus_claimed": false
+  },
+  "candidate_root": "/Users/mini/workspace/hermes-observational-memory",
+  "candidate_version": "0.1.0",
+  "scope": {
+    "original_blockers": [
+      "OM-R1",
+      "OM-R2"
+    ],
+    "includes": [
+      "narrow repair diff",
+      "repair regressions",
+      "full current deterministic suite",
+      "current replay-receipt consistency",
+      "exact source/evidence binding"
+    ],
+    "excludes": [
+      "new product aspirations or unbounded adversarial matrices",
+      "new hosted model calls",
+      "live profiles/configuration/data or credentials",
+      "installation/activation",
+      "release packaging or extracted release-ZIP execution"
+    ]
+  },
+  "source_binding": {
+    "manifest_path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/review-candidate-02.json",
+    "manifest_sha256": "1c76d4ed03ad48820be4d66c4a2803ca5cac7bc56fe42cc3a64dcfd39dec0bfc",
+    "start": {
+      "time_utc": "2026-10-09T08:54:15.340117+00:00",
+      "files_checked": 27,
+      "declared_count": 27,
+      "actual_sha256": {
+        ".gitignore": "0e9433777f243ef802d9f0e44a3f0f261d503d611db1f8e4fadb05a98f207d3d",
+        "README.md": "906f06772b176b8d308162221e39593345b9eecaab361c9f2fc772d871cc0167",
+        "docs/BUILD-PLAN.md": "aaae034ae1b766bd531324f8527d69d477850978781a0e55ba2c5a523edb919c",
+        "examples/extractive.json": "08ddf72b2a8056fb1070d0ab5a6668b1306259f801e1ef0ff783cb6977aa2f83",
+        "examples/model-opt-in.json": "7548ecc17ae01dbea0bbe7fe18b71328bb41c03e04ecb9f1a32184be16bcb481",
+        "observational/__init__.py": "65ece834ea3fb42d45f8b1049bf34bca8422360583dae69cb235bdf1d8bb1440",
+        "observational/backend.py": "15cee7b8a247848d5203525ed0ecf6f065709e42d81c77016e1f311beaf93c79",
+        "observational/contracts.py": "4174c6364378a6cd87e77cafff4d5dad7c3cd9b7f4c516404645f6bd44618e58",
+        "observational/engine.py": "b6085d1c39931069c7a9bb1b1665bd19e4766bb6310ab04bc8811d08b586e80d",
+        "observational/observer.py": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+        "observational/plugin.yaml": "a65a4e6696a0b60ea42d565ed742ae2bd7551afd6fa78db29286b13b7eb75af3",
+        "observational/store.py": "31af1d13d49c8b899a47a364715f6937581839e4d87c0e09b135ee4b091b40fb",
+        "tests/test_backend.py": "cc0c339d53cb7844162beb4dfdb7473821df22dbe164b954d7a8b7c15df3361d",
+        "tests/test_contracts.py": "3ca33dbd148c9aaabe342fda170c519fd8b93827892714d345371ff479c6a015",
+        "tests/test_engine.py": "09b5a13f0e3f3445aab46072a791bb4894aebf8c9d5f1d2f73ebe7f87b4d5497",
+        "tests/test_host_integration.py": "031ddf3c6dac5f38bbcad09e41856f08519fece324b1e03bc7aeecd65a236fc7",
+        "tests/test_observer.py": "a531610dffa11053bdd0cb88a36d0060e7f6e54e2ea6d2693d3ee373e5015ceb",
+        "tests/test_publication.py": "b9e4021be92fde9baa810a37fb6545c904393ac8bcac7afb6e7691ab3f764e6f",
+        "tests/test_review_regressions.py": "962f49c841a7803f3e4a5074639161dbfe578782fe285ee8de3ca1066154f6e2",
+        "tests/test_sqlite_lock_safety.py": "f6230a719bfbebb10add855f20d49f97efb04fd299fd0e63165aec5ad8c0771e",
+        "tests/test_store.py": "3f140f4b62f58cd02175facb7595212287450407c326efc60f0a20887a1daac7",
+        "tools/forget.py": "fb1d4558a362c96c16bdaa8199da1bbb9d6716cbe2d3552753d72eaa4d186671",
+        "tools/install.py": "f6e482606146739148b62c38904f3a2ab0bc20b7766563f0bdfbee36bfb1866e",
+        "tools/package.py": "607474909eb6029ff7bba6001c58c9cf1c03675e0717d79735a18d7b5b944172",
+        "tools/replay.py": "4de49d67c705de61b7edfb9a004fdb36500079a6f8120c8373449dad428a6223",
+        "tools/run_tests.py": "f021b4fa04d7e4510fcfccaa96411e390b28afc252cb4b6d6c27c104a2a7fa80",
+        "tools/runtime.py": "cf63980fe9f748540ea2be47decdf648d95055eff159b03554c03afb6955617d"
+      },
+      "mismatches": [],
+      "exact_membership": [
+        ".gitignore",
+        "README.md",
+        "docs/BUILD-PLAN.md",
+        "examples/extractive.json",
+        "examples/model-opt-in.json",
+        "observational/__init__.py",
+        "observational/backend.py",
+        "observational/contracts.py",
+        "observational/engine.py",
+        "observational/observer.py",
+        "observational/plugin.yaml",
+        "observational/store.py",
+        "tests/test_backend.py",
+        "tests/test_contracts.py",
+        "tests/test_engine.py",
+        "tests/test_host_integration.py",
+        "tests/test_observer.py",
+        "tests/test_publication.py",
+        "tests/test_review_regressions.py",
+        "tests/test_sqlite_lock_safety.py",
+        "tests/test_store.py",
+        "tools/forget.py",
+        "tools/install.py",
+        "tools/package.py",
+        "tools/replay.py",
+        "tools/run_tests.py",
+        "tools/runtime.py"
+      ],
+      "passed": true
+    },
+    "end": {
+      "time_utc": "2026-10-09T09:00:34.795146+00:00",
+      "manifest_sha256": "1c76d4ed03ad48820be4d66c4a2803ca5cac7bc56fe42cc3a64dcfd39dec0bfc",
+      "files_checked": 27,
+      "actual_sha256": {
+        ".gitignore": "0e9433777f243ef802d9f0e44a3f0f261d503d611db1f8e4fadb05a98f207d3d",
+        "README.md": "906f06772b176b8d308162221e39593345b9eecaab361c9f2fc772d871cc0167",
+        "docs/BUILD-PLAN.md": "aaae034ae1b766bd531324f8527d69d477850978781a0e55ba2c5a523edb919c",
+        "examples/extractive.json": "08ddf72b2a8056fb1070d0ab5a6668b1306259f801e1ef0ff783cb6977aa2f83",
+        "examples/model-opt-in.json": "7548ecc17ae01dbea0bbe7fe18b71328bb41c03e04ecb9f1a32184be16bcb481",
+        "observational/__init__.py": "65ece834ea3fb42d45f8b1049bf34bca8422360583dae69cb235bdf1d8bb1440",
+        "observational/backend.py": "15cee7b8a247848d5203525ed0ecf6f065709e42d81c77016e1f311beaf93c79",
+        "observational/contracts.py": "4174c6364378a6cd87e77cafff4d5dad7c3cd9b7f4c516404645f6bd44618e58",
+        "observational/engine.py": "b6085d1c39931069c7a9bb1b1665bd19e4766bb6310ab04bc8811d08b586e80d",
+        "observational/observer.py": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+        "observational/plugin.yaml": "a65a4e6696a0b60ea42d565ed742ae2bd7551afd6fa78db29286b13b7eb75af3",
+        "observational/store.py": "31af1d13d49c8b899a47a364715f6937581839e4d87c0e09b135ee4b091b40fb",
+        "tests/test_backend.py": "cc0c339d53cb7844162beb4dfdb7473821df22dbe164b954d7a8b7c15df3361d",
+        "tests/test_contracts.py": "3ca33dbd148c9aaabe342fda170c519fd8b93827892714d345371ff479c6a015",
+        "tests/test_engine.py": "09b5a13f0e3f3445aab46072a791bb4894aebf8c9d5f1d2f73ebe7f87b4d5497",
+        "tests/test_host_integration.py": "031ddf3c6dac5f38bbcad09e41856f08519fece324b1e03bc7aeecd65a236fc7",
+        "tests/test_observer.py": "a531610dffa11053bdd0cb88a36d0060e7f6e54e2ea6d2693d3ee373e5015ceb",
+        "tests/test_publication.py": "b9e4021be92fde9baa810a37fb6545c904393ac8bcac7afb6e7691ab3f764e6f",
+        "tests/test_review_regressions.py": "962f49c841a7803f3e4a5074639161dbfe578782fe285ee8de3ca1066154f6e2",
+        "tests/test_sqlite_lock_safety.py": "f6230a719bfbebb10add855f20d49f97efb04fd299fd0e63165aec5ad8c0771e",
+        "tests/test_store.py": "3f140f4b62f58cd02175facb7595212287450407c326efc60f0a20887a1daac7",
+        "tools/forget.py": "fb1d4558a362c96c16bdaa8199da1bbb9d6716cbe2d3552753d72eaa4d186671",
+        "tools/install.py": "f6e482606146739148b62c38904f3a2ab0bc20b7766563f0bdfbee36bfb1866e",
+        "tools/package.py": "607474909eb6029ff7bba6001c58c9cf1c03675e0717d79735a18d7b5b944172",
+        "tools/replay.py": "4de49d67c705de61b7edfb9a004fdb36500079a6f8120c8373449dad428a6223",
+        "tools/run_tests.py": "f021b4fa04d7e4510fcfccaa96411e390b28afc252cb4b6d6c27c104a2a7fa80",
+        "tools/runtime.py": "cf63980fe9f748540ea2be47decdf648d95055eff159b03554c03afb6955617d"
+      },
+      "mismatches": [],
+      "exact_membership": [
+        ".gitignore",
+        "README.md",
+        "docs/BUILD-PLAN.md",
+        "examples/extractive.json",
+        "examples/model-opt-in.json",
+        "observational/__init__.py",
+        "observational/backend.py",
+        "observational/contracts.py",
+        "observational/engine.py",
+        "observational/observer.py",
+        "observational/plugin.yaml",
+        "observational/store.py",
+        "tests/test_backend.py",
+        "tests/test_contracts.py",
+        "tests/test_engine.py",
+        "tests/test_host_integration.py",
+        "tests/test_observer.py",
+        "tests/test_publication.py",
+        "tests/test_review_regressions.py",
+        "tests/test_sqlite_lock_safety.py",
+        "tests/test_store.py",
+        "tools/forget.py",
+        "tools/install.py",
+        "tools/package.py",
+        "tools/replay.py",
+        "tools/run_tests.py",
+        "tools/runtime.py"
+      ],
+      "passed": true
+    },
+    "source_changed_during_review": false,
+    "delta_from_predecessor": [
+      "README.md",
+      "observational/backend.py",
+      "observational/engine.py"
+    ],
+    "added_files": [
+      "tests/test_review_regressions.py"
+    ],
+    "removed_files": [],
+    "candidate_git_note": "Candidate is untracked in this new repository; exact manifests rather than an invented candidate commit bind acceptance.",
+    "host_commit": "c8301ea6c9b797184df16a9c5dd462400b264ff4",
+    "host_files_examined_in_prior_review_still_match_commit": [
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/context_engine.py",
+        "relative_to_host": "agent/context_engine.py",
+        "sha256": "1f5a95adf26fc79245566fa3018cf8a3f613a7c837316a4bdaaa43736a56805c",
+        "ranges": [
+          [
+            1,
+            250
+          ]
+        ],
+        "coverage": "targeted installed ABI/host routing source review",
+        "matches_installed_commit": true
+      },
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/plugins/context_engine/__init__.py",
+        "relative_to_host": "plugins/context_engine/__init__.py",
+        "sha256": "dbdcced510f1101146bb72f08e729745487deab0e565d5f042df052f250c184e",
+        "ranges": [
+          [
+            1,
+            121
+          ]
+        ],
+        "coverage": "targeted installed ABI/host routing source review",
+        "matches_installed_commit": true
+      },
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/conversation_loop.py",
+        "relative_to_host": "agent/conversation_loop.py",
+        "sha256": "8b8768c965579121d836d736134661433b1e672f352971fe72b950986d9baca7",
+        "ranges": [
+          [
+            1022,
+            1036
+          ],
+          [
+            1275,
+            1392
+          ]
+        ],
+        "coverage": "targeted installed ABI/host routing source review",
+        "matches_installed_commit": true
+      },
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/auxiliary_client.py",
+        "relative_to_host": "agent/auxiliary_client.py",
+        "sha256": "883087c693f8a032dfa53f4ef2711bb7e0113fa4bdea2e599fcffe644160cdd9",
+        "ranges": [
+          [
+            175,
+            198
+          ],
+          [
+            1010,
+            1091
+          ],
+          [
+            1178,
+            1652
+          ],
+          [
+            2095,
+            2194
+          ],
+          [
+            2930,
+            2995
+          ],
+          [
+            4951,
+            4984
+          ],
+          [
+            5020,
+            5109
+          ],
+          [
+            5410,
+            5674
+          ]
+        ],
+        "coverage": "targeted installed ABI/host routing source review",
+        "matches_installed_commit": true
+      },
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/turn_request_assembly.py",
+        "relative_to_host": "agent/turn_request_assembly.py",
+        "sha256": "c1f003a1e2a4a7645fb1f83cbed3c74a9c3d75164f9e56f15abe0a21b25a5fb4",
+        "ranges": [
+          [
+            1,
+            190
+          ]
+        ],
+        "coverage": "targeted installed ABI/host routing source review",
+        "matches_installed_commit": true
+      },
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/agent_runtime_helpers.py",
+        "relative_to_host": "agent/agent_runtime_helpers.py",
+        "sha256": "5a1d8f87f8904fa84f2df724767da055c03567d96c753d304b1e985fbdbd2755",
+        "ranges": [
+          [
+            1364,
+            1410
+          ],
+          [
+            2286,
+            2315
+          ]
+        ],
+        "coverage": "targeted installed ABI/host routing source review",
+        "matches_installed_commit": true
+      }
+    ]
+  },
+  "preserved_adverse_review": {
+    "verdict": "REQUEST_CHANGES",
+    "preserved_start_sha256": {
+      "docs/reviews/independent-review-01.md": "d603146fda211c0acd839b4a4017e5d127e6c27db1dbf12274509ff1a310e65a",
+      "docs/reviews/independent-review-01.json": "3b930a63f4ce5c25fc6614dd04c5f1507839724566146146ef657b169f949423",
+      "docs/evidence/review-candidate-01.json": "6378c8a928d0b6666a793391e513149a7557a0a4187b012ca6cf3e558523d303",
+      "docs/evidence/pre-review-candidate-01.zip": "cb465f9314ccdb9276710e59e01a2b6bb3782c24c3645c4dd0cab007ac713c97"
+    },
+    "preserved_end_sha256": {
+      "docs/reviews/independent-review-01.md": "d603146fda211c0acd839b4a4017e5d127e6c27db1dbf12274509ff1a310e65a",
+      "docs/reviews/independent-review-01.json": "3b930a63f4ce5c25fc6614dd04c5f1507839724566146146ef657b169f949423",
+      "docs/evidence/review-candidate-01.json": "6378c8a928d0b6666a793391e513149a7557a0a4187b012ca6cf3e558523d303",
+      "docs/evidence/pre-review-candidate-01.zip": "cb465f9314ccdb9276710e59e01a2b6bb3782c24c3645c4dd0cab007ac713c97"
+    },
+    "markdown_companion_seal_verified": true,
+    "json_sha256_matches_candidate_adverse_review_field": true,
+    "predecessor_source_manifest_and_prior_start_end_seals_verified": true,
+    "historical_zip_files_verified": 26,
+    "historical_source_zip_not_executed_again": true,
+    "embedded_prior_probe_source_sha256_verified": "848b3cb34a3759b4f41c87e36df5d9a07e34c253b8a5eafb7c4d30158b077df3",
+    "prior_full_suite_execution_evidence_reconciled": {
+      "preserved_suite_count": 145,
+      "raw_ids_match_historical_source": true,
+      "recorded_suite_runs": [
+        {
+          "ordinal": 1,
+          "tests": 145,
+          "seconds": 3.598,
+          "exit_code": 0,
+          "result": "OK"
+        },
+        {
+          "ordinal": 2,
+          "tests": 145,
+          "seconds": 3.444,
+          "exit_code": 0,
+          "result": "OK"
+        }
+      ],
+      "probe_recorded_runs": 2,
+      "probe_exit_codes": [
+        0,
+        0
+      ],
+      "probe_result_keys": [
+        "receipt_validation",
+        "route_queue",
+        "unsupported_replacement",
+        "lock_deadline_characterization",
+        "runtime",
+        "owned_synthetic_state_removed"
+      ]
+    },
+    "prior_support_evidence_hashes_verified": [
+      "/Users/mini/workspace/hermes-observational-memory/docs/evidence/review-candidate-01.json",
+      "/Users/mini/workspace/hermes-observational-memory/docs/evidence/publication-cas-repair.md",
+      "/Users/mini/workspace/hermes-observational-memory/docs/sqlite-lock-repair.md",
+      "/Users/mini/workspace/hermes-observational-memory/docs/evidence/model-replay-02.json",
+      "/Users/mini/workspace/hermes-observational-memory/docs/evidence/offline-replay-02.json",
+      "/Users/mini/workspace/hermes-observational-memory/docs/evidence/early-findings.md",
+      "/Users/mini/workspace/hermes-observational-memory/docs/store-handoff.md",
+      "/Users/mini/workspace/hermes-observational-memory/docs/observer-handoff.md"
+    ],
+    "adverse_reports_modified": false
+  },
+  "read_coverage": {
+    "fresh_content_reads": [
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/README.md",
+        "relative_path": "README.md",
+        "sha256": "906f06772b176b8d308162221e39593345b9eecaab361c9f2fc772d871cc0167",
+        "ranges": [
+          [
+            1,
+            137
+          ]
+        ],
+        "total_lines": 137,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/engine.py",
+        "relative_path": "observational/engine.py",
+        "sha256": "b6085d1c39931069c7a9bb1b1665bd19e4766bb6310ab04bc8811d08b586e80d",
+        "ranges": [
+          [
+            1,
+            533
+          ]
+        ],
+        "total_lines": 533,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/backend.py",
+        "relative_path": "observational/backend.py",
+        "sha256": "15cee7b8a247848d5203525ed0ecf6f065709e42d81c77016e1f311beaf93c79",
+        "ranges": [
+          [
+            1,
+            88
+          ]
+        ],
+        "total_lines": 88,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_review_regressions.py",
+        "relative_path": "tests/test_review_regressions.py",
+        "sha256": "962f49c841a7803f3e4a5074639161dbfe578782fe285ee8de3ca1066154f6e2",
+        "ranges": [
+          [
+            1,
+            209
+          ]
+        ],
+        "total_lines": 209,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/observer.py",
+        "relative_path": "observational/observer.py",
+        "sha256": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+        "ranges": [
+          [
+            1,
+            226
+          ]
+        ],
+        "total_lines": 226,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/store.py",
+        "relative_path": "observational/store.py",
+        "sha256": "31af1d13d49c8b899a47a364715f6937581839e4d87c0e09b135ee4b091b40fb",
+        "ranges": [
+          [
+            255,
+            467
+          ]
+        ],
+        "total_lines": 474,
+        "coverage": "targeted content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/replay.py",
+        "relative_path": "tools/replay.py",
+        "sha256": "4de49d67c705de61b7edfb9a004fdb36500079a6f8120c8373449dad428a6223",
+        "ranges": [
+          [
+            1,
+            119
+          ]
+        ],
+        "total_lines": 119,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/run_tests.py",
+        "relative_path": "tools/run_tests.py",
+        "sha256": "f021b4fa04d7e4510fcfccaa96411e390b28afc252cb4b6d6c27c104a2a7fa80",
+        "ranges": [
+          [
+            1,
+            51
+          ]
+        ],
+        "total_lines": 51,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/runtime.py",
+        "relative_path": "tools/runtime.py",
+        "sha256": "cf63980fe9f748540ea2be47decdf648d95055eff159b03554c03afb6955617d",
+        "ranges": [
+          [
+            1,
+            24
+          ]
+        ],
+        "total_lines": 24,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_engine.py",
+        "relative_path": "tests/test_engine.py",
+        "sha256": "09b5a13f0e3f3445aab46072a791bb4894aebf8c9d5f1d2f73ebe7f87b4d5497",
+        "ranges": [
+          [
+            1,
+            74
+          ]
+        ],
+        "total_lines": 271,
+        "coverage": "targeted content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/BUILD-PLAN.md",
+        "relative_path": "docs/BUILD-PLAN.md",
+        "sha256": "aaae034ae1b766bd531324f8527d69d477850978781a0e55ba2c5a523edb919c",
+        "ranges": [
+          [
+            1,
+            74
+          ]
+        ],
+        "total_lines": 74,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/reviews/independent-review-01.md",
+        "relative_path": "docs/reviews/independent-review-01.md",
+        "sha256": "d603146fda211c0acd839b4a4017e5d127e6c27db1dbf12274509ff1a310e65a",
+        "ranges": [
+          [
+            1,
+            81
+          ]
+        ],
+        "total_lines": 81,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/reviews/repair-02.md",
+        "relative_path": "docs/reviews/repair-02.md",
+        "sha256": "bafbb1f1affe3ecba877a812a22c8f0d0e8b2640078687e6094c36bcde842f44",
+        "ranges": [
+          [
+            1,
+            35
+          ]
+        ],
+        "total_lines": 35,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/review-candidate-02.json",
+        "relative_path": "docs/evidence/review-candidate-02.json",
+        "sha256": "1c76d4ed03ad48820be4d66c4a2803ca5cac7bc56fe42cc3a64dcfd39dec0bfc",
+        "ranges": [
+          [
+            1,
+            102
+          ]
+        ],
+        "total_lines": 102,
+        "coverage": "full content review"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/review-regressions-red.log",
+        "relative_path": "docs/review-regressions-red.log",
+        "sha256": "35ceb544e05a53b7c7d36dc079d86b16f68f6074a85053e49eb0b5b802900ba0",
+        "ranges": [
+          [
+            1,
+            176
+          ]
+        ],
+        "total_lines": 176,
+        "coverage": "line-numbered adverse log review (long fixture text lines viewer-truncated), plus complete raw-byte hash and machine-parsed failure/count analysis"
+      }
+    ],
+    "fresh_host_reads": [
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/context_engine.py",
+        "sha256": "1f5a95adf26fc79245566fa3018cf8a3f613a7c837316a4bdaaa43736a56805c",
+        "ranges": [
+          [
+            1,
+            250
+          ]
+        ],
+        "coverage": "actual installed ABI/hook reread",
+        "matches_installed_commit": true
+      },
+      {
+        "path": "/Users/mini/.hermes/hermes-agent/agent/conversation_loop.py",
+        "sha256": "8b8768c965579121d836d736134661433b1e672f352971fe72b950986d9baca7",
+        "ranges": [
+          [
+            1275,
+            1392
+          ]
+        ],
+        "coverage": "actual installed ABI/hook reread",
+        "matches_installed_commit": true
+      }
+    ],
+    "programmatic_evidence_reads": [
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/reviews/independent-review-01.json",
+        "relative_path": "docs/reviews/independent-review-01.json",
+        "sha256": "3b930a63f4ce5c25fc6614dd04c5f1507839724566146146ef657b169f949423",
+        "bytes": 88237
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/review-repair-02-results.json",
+        "relative_path": "docs/evidence/review-repair-02-results.json",
+        "sha256": "380be299fb604ba88331e5dec90d2f0761f21001372a130e51657c18b71ffee7",
+        "bytes": 1022
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/model-replay-03.json",
+        "relative_path": "docs/evidence/model-replay-03.json",
+        "sha256": "78d9242bcc5f4fd8934ff9fc213c68708daf1dac9c625ec63e30e01376fa280d",
+        "bytes": 7168
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/evidence/offline-replay-03.json",
+        "relative_path": "docs/evidence/offline-replay-03.json",
+        "sha256": "5ecc4c79c95a9af620fa9e5133098d6e67b29a2bcd9e98bc49e9e9acc5aa361e",
+        "bytes": 31931
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/review-regressions-green.log",
+        "relative_path": "docs/review-regressions-green.log",
+        "sha256": "9a5148d33a35c8bab8fee71af9a491ece756c326bbfe65c88f1477f40dd3b641",
+        "bytes": 1343
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/test-run-03.log",
+        "relative_path": "docs/test-run-03.log",
+        "sha256": "536e752ea79089ef8bb4bb133fd55b90ca1ff505af32e46499c690dfd72399f3",
+        "bytes": 22669
+      }
+    ],
+    "programmatic_methods": [
+      "parse entire prior companion JSON without dumping it",
+      "verify SHA-256 bindings, exact source membership and predecessor ZIP entries",
+      "AST reconcile all test methods with executed test IDs",
+      "parse preserved RED/GREEN/full-suite logs",
+      "AST-extract exact replay fixture only; validate receipt quotes/identities/attribution/rendering/counts/answer oracle and usage without executing replay module top-level"
+    ],
+    "carried_forward_full_file_reviews": [
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/.gitignore",
+        "relative_path": ".gitignore",
+        "sha256": "0e9433777f243ef802d9f0e44a3f0f261d503d611db1f8e4fadb05a98f207d3d",
+        "ranges": [
+          [
+            1,
+            9
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/docs/BUILD-PLAN.md",
+        "relative_path": "docs/BUILD-PLAN.md",
+        "sha256": "aaae034ae1b766bd531324f8527d69d477850978781a0e55ba2c5a523edb919c",
+        "ranges": [
+          [
+            1,
+            74
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/examples/extractive.json",
+        "relative_path": "examples/extractive.json",
+        "sha256": "08ddf72b2a8056fb1070d0ab5a6668b1306259f801e1ef0ff783cb6977aa2f83",
+        "ranges": [
+          [
+            1,
+            9
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/examples/model-opt-in.json",
+        "relative_path": "examples/model-opt-in.json",
+        "sha256": "7548ecc17ae01dbea0bbe7fe18b71328bb41c03e04ecb9f1a32184be16bcb481",
+        "ranges": [
+          [
+            1,
+            11
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/__init__.py",
+        "relative_path": "observational/__init__.py",
+        "sha256": "65ece834ea3fb42d45f8b1049bf34bca8422360583dae69cb235bdf1d8bb1440",
+        "ranges": [
+          [
+            1,
+            14
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/contracts.py",
+        "relative_path": "observational/contracts.py",
+        "sha256": "4174c6364378a6cd87e77cafff4d5dad7c3cd9b7f4c516404645f6bd44618e58",
+        "ranges": [
+          [
+            1,
+            310
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/observer.py",
+        "relative_path": "observational/observer.py",
+        "sha256": "b1a56581efbfeddcb3f0cfc03951228a053ec27c2c4d513945c125b61aab2a88",
+        "ranges": [
+          [
+            1,
+            226
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/plugin.yaml",
+        "relative_path": "observational/plugin.yaml",
+        "sha256": "a65a4e6696a0b60ea42d565ed742ae2bd7551afd6fa78db29286b13b7eb75af3",
+        "ranges": [
+          [
+            1,
+            4
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/observational/store.py",
+        "relative_path": "observational/store.py",
+        "sha256": "31af1d13d49c8b899a47a364715f6937581839e4d87c0e09b135ee4b091b40fb",
+        "ranges": [
+          [
+            1,
+            474
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_backend.py",
+        "relative_path": "tests/test_backend.py",
+        "sha256": "cc0c339d53cb7844162beb4dfdb7473821df22dbe164b954d7a8b7c15df3361d",
+        "ranges": [
+          [
+            1,
+            80
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_contracts.py",
+        "relative_path": "tests/test_contracts.py",
+        "sha256": "3ca33dbd148c9aaabe342fda170c519fd8b93827892714d345371ff479c6a015",
+        "ranges": [
+          [
+            1,
+            449
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_engine.py",
+        "relative_path": "tests/test_engine.py",
+        "sha256": "09b5a13f0e3f3445aab46072a791bb4894aebf8c9d5f1d2f73ebe7f87b4d5497",
+        "ranges": [
+          [
+            1,
+            271
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_host_integration.py",
+        "relative_path": "tests/test_host_integration.py",
+        "sha256": "031ddf3c6dac5f38bbcad09e41856f08519fece324b1e03bc7aeecd65a236fc7",
+        "ranges": [
+          [
+            1,
+            87
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_observer.py",
+        "relative_path": "tests/test_observer.py",
+        "sha256": "a531610dffa11053bdd0cb88a36d0060e7f6e54e2ea6d2693d3ee373e5015ceb",
+        "ranges": [
+          [
+            1,
+            394
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_publication.py",
+        "relative_path": "tests/test_publication.py",
+        "sha256": "b9e4021be92fde9baa810a37fb6545c904393ac8bcac7afb6e7691ab3f764e6f",
+        "ranges": [
+          [
+            1,
+            40
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_sqlite_lock_safety.py",
+        "relative_path": "tests/test_sqlite_lock_safety.py",
+        "sha256": "f6230a719bfbebb10add855f20d49f97efb04fd299fd0e63165aec5ad8c0771e",
+        "ranges": [
+          [
+            1,
+            132
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tests/test_store.py",
+        "relative_path": "tests/test_store.py",
+        "sha256": "3f140f4b62f58cd02175facb7595212287450407c326efc60f0a20887a1daac7",
+        "ranges": [
+          [
+            1,
+            860
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/forget.py",
+        "relative_path": "tools/forget.py",
+        "sha256": "fb1d4558a362c96c16bdaa8199da1bbb9d6716cbe2d3552753d72eaa4d186671",
+        "ranges": [
+          [
+            1,
+            47
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/install.py",
+        "relative_path": "tools/install.py",
+        "sha256": "f6e482606146739148b62c38904f3a2ab0bc20b7766563f0bdfbee36bfb1866e",
+        "ranges": [
+          [
+            1,
+            63
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/package.py",
+        "relative_path": "tools/package.py",
+        "sha256": "607474909eb6029ff7bba6001c58c9cf1c03675e0717d79735a18d7b5b944172",
+        "ranges": [
+          [
+            1,
+            50
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/replay.py",
+        "relative_path": "tools/replay.py",
+        "sha256": "4de49d67c705de61b7edfb9a004fdb36500079a6f8120c8373449dad428a6223",
+        "ranges": [
+          [
+            1,
+            119
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/run_tests.py",
+        "relative_path": "tools/run_tests.py",
+        "sha256": "f021b4fa04d7e4510fcfccaa96411e390b28afc252cb4b6d6c27c104a2a7fa80",
+        "ranges": [
+          [
+            1,
+            51
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      },
+      {
+        "path": "/Users/mini/workspace/hermes-observational-memory/tools/runtime.py",
+        "relative_path": "tools/runtime.py",
+        "sha256": "cf63980fe9f748540ea2be47decdf648d95055eff159b03554c03afb6955617d",
+        "ranges": [
+          [
+            1,
+            24
+          ]
+        ],
+        "coverage": "full content review",
+        "coverage_this_review": "prior full-file findings carried forward after exact unchanged hash verification"
+      }
+    ],
+    "fresh_full_frozen_paths": [
+      "README.md",
+      "observational/engine.py",
+      "observational/backend.py",
+      "tests/test_review_regressions.py",
+      "observational/observer.py",
+      "tools/replay.py",
+      "tools/run_tests.py",
+      "tools/runtime.py",
+      "docs/BUILD-PLAN.md"
+    ],
+    "fresh_full_frozen_count": 9,
+    "unchanged_carried_forward_count": 23,
+    "union_full_review_frozen_count": 27,
+    "scope_closure_complete": true
+  },
+  "blocker_dispositions": [
+    {
+      "id": "OM-R1",
+      "original_severity": "high",
+      "disposition": "CLOSED",
+      "verdict": "PASS",
+      "original_requirement": "No newly admitted queued observer completion under a mismatched actor/provider; invalidate old jobs and guard publication without promising to unsend already-admitted calls.",
+      "source_ranges": [
+        {
+          "path": "observational/engine.py",
+          "ranges": [
+            [
+              245,
+              254
+            ],
+            [
+              337,
+              414
+            ]
+          ]
+        },
+        {
+          "path": "observational/backend.py",
+          "ranges": [
+            [
+              26,
+              88
+            ]
+          ]
+        },
+        {
+          "path": "tests/test_review_regressions.py",
+          "ranges": [
+            [
+              65,
+              134
+            ]
+          ]
+        }
+      ],
+      "source_reasoning": "Route changes clear pending work and increment the epoch under the engine lock. Per-job partials capture immutable epoch/store arguments, not a callback-time current epoch. Authorization checks run before provider resolution and at completion admission. Worker admission/publication check the same current-job predicate. Invalid old success/error paths cannot clear the current guard error.",
+      "test_ids": [
+        "test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch",
+        "test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch",
+        "test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create"
+      ],
+      "execution_evidence": {
+        "queue_switch": "Unmodified regression asserted exactly one already-admitted completion before fresh recovery, no observation published after mismatch, and pinned_model_does_not_match_actor retained. Instrumentation captured pending=True before switch, pending=False and epoch 1->2 at switch, followed by discard=1 and zero observations.",
+        "blocked_resolver": "Unmodified regression asserted create.call_count=0. Captured authorization admitted epoch 1/current 1 before resolver, then denied epoch 1/current 2 with mismatch=true at completion admission.",
+        "away_and_back": "Unmodified regression asserted resolver.call_count=0 and create.call_count=0. Captured epoch 1/current 3, same store, mismatch=false, availability restored: denial therefore depends on captured epoch, not the route Boolean alone.",
+        "recovery": "Returning to matching pins leaves pending false; only a fresh completed snapshot initiates a valid new job, epoch 3/current 3, with successful observation publication.",
+        "authorization_event_records": [
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-queue",
+            "result": "admitted",
+            "captured_epoch": 1,
+            "current_epoch": 1,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-queue",
+            "result": "admitted",
+            "captured_epoch": 1,
+            "current_epoch": 1,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-queue",
+            "result": "admitted",
+            "captured_epoch": 3,
+            "current_epoch": 3,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-queue",
+            "result": "admitted",
+            "captured_epoch": 3,
+            "current_epoch": 3,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-roundtrip",
+            "result": "denied",
+            "captured_epoch": 1,
+            "current_epoch": 3,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-resolve",
+            "result": "admitted",
+            "captured_epoch": 1,
+            "current_epoch": 1,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "instrumented_regressions",
+            "session": "route-resolve",
+            "result": "denied",
+            "captured_epoch": 1,
+            "current_epoch": 2,
+            "same_store": true,
+            "route_mismatch": true,
+            "snapshot_unavailable": false
+          }
+        ]
+      },
+      "remaining_boundary": "Authorization ends at completion admission. A call admitted before a subsequent route change is already in flight; no end-to-end transport revocation or forced cancellation is claimed."
+    },
+    {
+      "id": "OM-R2",
+      "original_severity": "medium",
+      "disposition": "CLOSED",
+      "verdict": "PASS",
+      "original_requirement": "Failed complete-snapshot ingestion must invalidate stale workers and remove/quarantine obsolete current-source recall, preserve the actor transcript and exclude unsupported/sensitive data without model-controlled permanent forgetting.",
+      "source_ranges": [
+        {
+          "path": "observational/engine.py",
+          "ranges": [
+            [
+              274,
+              310
+            ],
+            [
+              337,
+              414
+            ],
+            [
+              440,
+              443
+            ],
+            [
+              484,
+              508
+            ]
+          ]
+        },
+        {
+          "path": "observational/store.py",
+          "ranges": [
+            [
+              337,
+              393
+            ]
+          ]
+        },
+        {
+          "path": "tests/test_review_regressions.py",
+          "ranges": [
+            [
+              135,
+              209
+            ]
+          ]
+        }
+      ],
+      "source_reasoning": "The failure path increments the epoch, clears pending work and marks snapshot unavailable before attempting sync_sources([]). Successful clearing atomically removes sources, dependent observations, coverage and active IDs without setting disabled. The unavailable guard blocks projection and source tools. Current-job checks prevent old successes or failures from clearing ingestion errors. Supported later snapshots can recover.",
+      "test_ids": [
+        "test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error",
+        "test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources",
+        "test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall",
+        "test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone"
+      ],
+      "execution_evidence": {
+        "variants": [
+          "structured replacement with held successful old worker",
+          "structured replacement with already-published observations",
+          "structured replacement with held failing old worker",
+          "incomplete tool pair",
+          "synthetic URL-credential pattern",
+          "oversized transcript",
+          "empty replacement"
+        ],
+        "postconditions": "Real installed post-turn/request-selection hooks and SQLite prove empty sources/observations, disabled=false, old ID unavailable through recall before and after reopen, no stale projection, unchanged canonical input/request and supported-snapshot recovery without removed source resurrection.",
+        "error_preservation": "Both old successful and old failing held workers were discarded (discarded=1); unsupported_or_sensitive_input remained and stored counts were zero.",
+        "same_engine_recovery_probe": {
+          "resolver_calls": 2,
+          "completion_calls": 1,
+          "rejected_snapshot_error": "unsupported_or_sensitive_input",
+          "rejected_snapshot_revision": 2,
+          "final_revision": 4,
+          "final_sources": 10,
+          "final_observations": 1,
+          "old_source_excluded_from_payload": true,
+          "canonical_input_unchanged": true,
+          "fresh_snapshot_admitted_after_old_job_denied": true
+        },
+        "same_engine_recovery_authorization_records": [
+          {
+            "kind": "authorization",
+            "phase": "rejected_model_snapshot_then_same_engine_recovery",
+            "session": "model-recovery",
+            "result": "admitted",
+            "captured_epoch": 1,
+            "current_epoch": 1,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "rejected_model_snapshot_then_same_engine_recovery",
+            "session": "model-recovery",
+            "result": "denied",
+            "captured_epoch": 1,
+            "current_epoch": 2,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "rejected_model_snapshot_then_same_engine_recovery",
+            "session": "model-recovery",
+            "result": "admitted",
+            "captured_epoch": 2,
+            "current_epoch": 2,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          },
+          {
+            "kind": "authorization",
+            "phase": "rejected_model_snapshot_then_same_engine_recovery",
+            "session": "model-recovery",
+            "result": "admitted",
+            "captured_epoch": 2,
+            "current_epoch": 2,
+            "same_store": true,
+            "route_mismatch": false,
+            "snapshot_unavailable": false
+          }
+        ],
+        "storage_invalidation_failure_probe": {
+          "error": "source_invalidation_failed",
+          "retained_sources": 12,
+          "retained_observations": 8,
+          "current_engine_tools_and_selection_blocked": true,
+          "disabled": false,
+          "deletion_claimed": false,
+          "restart_or_recovery_certified": false
+        }
+      },
+      "remaining_boundary": "If SQLite invalidation itself fails, current-engine tools/projection are blocked and source_invalidation_failed is reported, but persisted old bytes may remain. No restart deletion guarantee, storage-failure recovery or forensic erasure is certified."
+    }
+  ],
+  "current_blockers": [],
+  "current_blocker_count": 0,
+  "new_in_scope_regressions_found": [],
+  "tests_actually_executed": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 HERMES_DISABLE_LAZY_INSTALLS=1 python3 tools/run_tests.py --hermes-repo /Users/mini/.hermes/hermes-agent",
+      "cwd": "/Users/mini/workspace/hermes-observational-memory",
+      "exit_code": 0,
+      "count": 152,
+      "seconds": 3.406,
+      "executed_test_ids": [
+        "test_backend.BackendTests.test_auto_unverified_and_whitespace_routes_are_refused",
+        "test_backend.BackendTests.test_exception_is_sanitized_and_profile_reset",
+        "test_backend.BackendTests.test_model_output_bound_and_tool_call_rejection",
+        "test_backend.BackendTests.test_pinned_profile_route_no_tools_and_usage",
+        "test_backend.BackendTests.test_sensitive_payload_is_refused_before_provider_resolution",
+        "test_backend.BackendTests.test_unavailable_or_changed_model_has_no_call_or_fallback",
+        "test_contracts.CanonicalJSONTests.test_canonical_encoding_and_independent_digest",
+        "test_contracts.CanonicalJSONTests.test_digest_requires_a_dict",
+        "test_contracts.CanonicalJSONTests.test_rejects_cycles_and_excessive_nesting",
+        "test_contracts.CanonicalJSONTests.test_rejects_non_json_types_without_coercion",
+        "test_contracts.CanonicalJSONTests.test_rejects_unpaired_unicode_surrogate",
+        "test_contracts.CanonicalJSONTests.test_repeated_noncyclic_container_is_valid",
+        "test_contracts.ObservationValidationTests.test_all_three_roles_have_immutable_attribution",
+        "test_contracts.ObservationValidationTests.test_batch_rejects_duplicates_and_is_atomic_without_mutation",
+        "test_contracts.ObservationValidationTests.test_checks_metadata_on_the_returned_snapshot",
+        "test_contracts.ObservationValidationTests.test_empty_observations_and_invalid_containers",
+        "test_contracts.ObservationValidationTests.test_every_required_field_and_unknown_generated_states",
+        "test_contracts.ObservationValidationTests.test_exact_substrings_and_defensive_copy",
+        "test_contracts.ObservationValidationTests.test_identity_covers_evidence_kind_and_set_of_sources",
+        "test_contracts.ObservationValidationTests.test_identity_does_not_depend_on_priority_or_timestamp",
+        "test_contracts.ObservationValidationTests.test_mixed_role_references_fail_even_when_quote_matches",
+        "test_contracts.ObservationValidationTests.test_quote_normalization_and_whitespace_only_are_forbidden",
+        "test_contracts.ObservationValidationTests.test_references_must_exist_and_each_contain_exact_quote",
+        "test_contracts.ObservationValidationTests.test_reused_text_keeps_distinct_source_identities",
+        "test_contracts.ObservationValidationTests.test_timestamp_requires_valid_explicit_utc_and_seconds",
+        "test_contracts.ObservationValidationTests.test_types_ranges_and_identity_checked",
+        "test_contracts.ReflectionTests.test_actual_utc_recency_not_lexical_timestamp_order",
+        "test_contracts.ReflectionTests.test_budget_counts_full_rendering_including_metadata_and_newlines",
+        "test_contracts.ReflectionTests.test_high_priority_facts_before_low_priority_recent_fact",
+        "test_contracts.ReflectionTests.test_latest_log_entry_breaks_equal_timestamp_ties",
+        "test_contracts.ReflectionTests.test_priority_classes_and_history_preserved",
+        "test_contracts.ReflectionTests.test_reflection_budget_validation_and_zero",
+        "test_contracts.ReflectionTests.test_render_and_reflect_reject_bad_metadata_even_at_zero_budget",
+        "test_contracts.ReflectionTests.test_render_includes_every_metadata_field_and_escapes_hostile_text",
+        "test_contracts.ReflectionTests.test_skip_oversize_item_without_truncating_or_erasing_it",
+        "test_contracts.SourceValidationTests.test_all_source_field_types_are_checked",
+        "test_contracts.SourceValidationTests.test_attachments_hidden_reasoning_and_unknown_wire_fields_fail",
+        "test_contracts.SourceValidationTests.test_checks_the_serialized_snapshot_not_later_caller_mutation",
+        "test_contracts.SourceValidationTests.test_duplicate_identity_or_ordinal_and_reordered_ordinals_fail",
+        "test_contracts.SourceValidationTests.test_errors_do_not_expose_source_text",
+        "test_contracts.SourceValidationTests.test_incremental_slice_can_start_above_zero_and_have_gaps",
+        "test_contracts.SourceValidationTests.test_malformed_tool_calls_fail",
+        "test_contracts.SourceValidationTests.test_null_content_without_assistant_tool_call_fails",
+        "test_contracts.SourceValidationTests.test_required_and_unknown_fields",
+        "test_contracts.SourceValidationTests.test_role_and_text_cannot_be_forged_with_a_valid_digest",
+        "test_contracts.SourceValidationTests.test_sources_require_a_list_of_dicts",
+        "test_contracts.SourceValidationTests.test_supported_tool_call_wire_preserved",
+        "test_contracts.SourceValidationTests.test_tool_fields_are_not_admitted_under_another_role",
+        "test_contracts.SourceValidationTests.test_valid_sources_are_deep_copies_and_not_mutated",
+        "test_contracts.SourceValidationTests.test_wire_digest_must_match_exact_bytes_and_lowercase",
+        "test_engine.EngineTests.test_closed_or_forgotten_session_rejects_late_worker",
+        "test_engine.EngineTests.test_config_model_egress_requires_explicit_pin_and_opt_in",
+        "test_engine.EngineTests.test_duplicate_text_has_distinct_sources",
+        "test_engine.EngineTests.test_expired_observer_result_not_published",
+        "test_engine.EngineTests.test_human_forget_cli_dry_run_confirm_and_restart",
+        "test_engine.EngineTests.test_incremental_observation_appends_coverage_without_duplicates",
+        "test_engine.EngineTests.test_interrupted_turn_does_not_observe",
+        "test_engine.EngineTests.test_mismatched_or_edited_source_never_projects_old_notes",
+        "test_engine.EngineTests.test_native_abc_and_request_only_compaction",
+        "test_engine.EngineTests.test_no_projection_when_evidence_wrapper_would_grow_request",
+        "test_engine.EngineTests.test_observe_project_original_recall_and_restart",
+        "test_engine.EngineTests.test_rendered_observations_fit_the_declared_log_budget",
+        "test_engine.EngineTests.test_scope_tool_arguments_rejected_and_other_session_empty",
+        "test_engine.EngineTests.test_source_revision_during_worker_cannot_publish_stale_evidence",
+        "test_engine.EngineTests.test_system_and_reasoning_not_saved",
+        "test_engine.EngineTests.test_tool_pairs_and_latest_turn_stay_intact",
+        "test_engine.EngineTests.test_unobserved_append_does_not_rewrite_memory_prefix",
+        "test_engine.EngineTests.test_unsupported_attachments_do_not_enter_store_or_observer",
+        "test_host_integration.HostIntegrationTests.test_actual_host_post_turn_and_request_selection_preserve_transcript",
+        "test_host_integration.HostIntegrationTests.test_create_only_install_and_real_user_plugin_discovery",
+        "test_host_integration.HostIntegrationTests.test_installer_refuses_symlink_without_destination_write",
+        "test_observer.ExtractiveObserverTests.test_categories_and_relative_priority_are_conservative",
+        "test_observer.ExtractiveObserverTests.test_duplicate_text_preserves_both_source_identities",
+        "test_observer.ExtractiveObserverTests.test_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence",
+        "test_observer.ExtractiveObserverTests.test_exact_whole_quote_identity_and_attribution_for_each_source",
+        "test_observer.ExtractiveObserverTests.test_invalid_timestamp_or_source_is_rejected_atomically",
+        "test_observer.ExtractiveObserverTests.test_long_unicode_and_negative_qualifiers_are_not_truncated",
+        "test_observer.ExtractiveObserverTests.test_misleading_assistant_claim_stays_an_assistant_statement",
+        "test_observer.ExtractiveObserverTests.test_output_does_not_alias_input_and_repeat_is_stable",
+        "test_observer.ExtractiveObserverTests.test_plans_never_promoted_to_outcome",
+        "test_observer.ExtractiveObserverTests.test_tool_output_cannot_override_role_or_priority",
+        "test_observer.ModelObserverTests.test_callback_mutation_cannot_change_snapshotted_source_attribution",
+        "test_observer.ModelObserverTests.test_completion_error_is_sanitized_and_never_retried_or_falls_back",
+        "test_observer.ModelObserverTests.test_constructor_types_limits_and_callable",
+        "test_observer.ModelObserverTests.test_distinct_sources_with_same_quote_are_not_deduplicated",
+        "test_observer.ModelObserverTests.test_duplicate_keys_are_rejected_at_every_object_depth",
+        "test_observer.ModelObserverTests.test_duplicate_observation_identity_rejects_whole_batch",
+        "test_observer.ModelObserverTests.test_empty_input_or_only_blank_text_never_calls_model",
+        "test_observer.ModelObserverTests.test_empty_result_for_eligible_input_is_a_failure",
+        "test_observer.ModelObserverTests.test_every_item_field_is_required",
+        "test_observer.ModelObserverTests.test_incremental_source_slice_preserves_nonzero_ordinals",
+        "test_observer.ModelObserverTests.test_input_budget_counts_system_payload_metadata_and_json_escaping",
+        "test_observer.ModelObserverTests.test_invalid_later_item_is_atomic_and_sources_remain_unchanged",
+        "test_observer.ModelObserverTests.test_invalid_source_or_timestamp_never_calls_model",
+        "test_observer.ModelObserverTests.test_json_only_no_fences_prose_trailing_objects_or_top_level_arrays",
+        "test_observer.ModelObserverTests.test_kind_and_priority_validation",
+        "test_observer.ModelObserverTests.test_lone_surrogate_response_is_rejected",
+        "test_observer.ModelObserverTests.test_model_cannot_choose_ids_role_timestamp_or_completion_state",
+        "test_observer.ModelObserverTests.test_model_response_errors_do_not_echo_payload_or_exception_details",
+        "test_observer.ModelObserverTests.test_nonfinite_numbers_and_deep_json_are_rejected",
+        "test_observer.ModelObserverTests.test_observers_have_no_network_or_process_side_effects",
+        "test_observer.ModelObserverTests.test_output_budget_enforced_before_json_parsing",
+        "test_observer.ModelObserverTests.test_payload_excludes_wire_arguments_and_internal_metadata",
+        "test_observer.ModelObserverTests.test_prompt_states_untrusted_boundary_and_quote_only_contract",
+        "test_observer.ModelObserverTests.test_response_must_be_nonblank_string",
+        "test_observer.ModelObserverTests.test_substring_matching_is_exact_not_paraphrase_or_normalization",
+        "test_observer.ModelObserverTests.test_top_level_keys_required_and_unknown_keys_rejected",
+        "test_observer.ModelObserverTests.test_unknown_ids_are_never_trimmed_normalized_or_guessed",
+        "test_observer.ModelObserverTests.test_valid_batch_assigns_authoritative_fields",
+        "test_publication.PublicationRaceTests.test_stale_observer_cannot_replace_a_newer_publication",
+        "test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error",
+        "test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources",
+        "test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch",
+        "test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall",
+        "test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone",
+        "test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch",
+        "test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_second_store_does_not_unlock_first",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_store_preserves_lock_owned_outside_memory_store",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_constructor_sqlite_busy_cleanup_preserves_lock",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_failed_constructor_does_not_unlock_existing_connection",
+        "test_store.MemoryStoreTests.test_append_preserves_coverage_but_old_revision_cannot_publish",
+        "test_store.MemoryStoreTests.test_argument_types_and_no_namespace_rewriting",
+        "test_store.MemoryStoreTests.test_concurrent_first_open_waits_for_complete_publication",
+        "test_store.MemoryStoreTests.test_crash_before_commit_recovers_prior_snapshot",
+        "test_store.MemoryStoreTests.test_creation_rejects_replaced_staging_inode",
+        "test_store.MemoryStoreTests.test_directory_inode_and_private_permissions_rechecked",
+        "test_store.MemoryStoreTests.test_exact_prefix_rejection_and_active_order",
+        "test_store.MemoryStoreTests.test_existing_database_uses_no_raw_file_descriptors",
+        "test_store.MemoryStoreTests.test_forget_tombstone_shared_connections_and_restart",
+        "test_store.MemoryStoreTests.test_initial_state_and_idempotence_restart_and_defensive_copy",
+        "test_store.MemoryStoreTests.test_invalid_observations_and_active_ids_are_atomic",
+        "test_store.MemoryStoreTests.test_invalid_persisted_payload_fails_closed_without_content_in_errors",
+        "test_store.MemoryStoreTests.test_invalid_sources_are_atomic",
+        "test_store.MemoryStoreTests.test_multisource_observation_is_removed_if_one_reference_changes",
+        "test_store.MemoryStoreTests.test_namespace_mismatch_denies_without_altering_owner",
+        "test_store.MemoryStoreTests.test_observation_size_limit_is_atomic",
+        "test_store.MemoryStoreTests.test_private_creation_closes_raw_descriptor_before_publication",
+        "test_store.MemoryStoreTests.test_private_modes_and_symlink_hardlink_refusal",
+        "test_store.MemoryStoreTests.test_real_process_concurrent_initialization_and_writes",
+        "test_store.MemoryStoreTests.test_real_process_stale_worker_cannot_resurrect_forgetting",
+        "test_store.MemoryStoreTests.test_real_sqlite_page_limit_rolls_back_and_connection_remains_usable",
+        "test_store.MemoryStoreTests.test_recall_and_search_bounded_inputs",
+        "test_store.MemoryStoreTests.test_recall_pagination_scope_unicode_and_missing",
+        "test_store.MemoryStoreTests.test_regular_file_inode_replacement_fails_closed",
+        "test_store.MemoryStoreTests.test_removed_source_payload_is_not_retained_on_disk",
+        "test_store.MemoryStoreTests.test_revision_undo_removal_and_reorder_invalidate_exact_prefix",
+        "test_store.MemoryStoreTests.test_search_literal_scoped_bounded_and_deterministic",
+        "test_store.MemoryStoreTests.test_shared_instance_thread_safety_and_closed_lifecycle",
+        "test_store.MemoryStoreTests.test_sidecar_symlink_and_path_replacement_fail_closed",
+        "test_store.MemoryStoreTests.test_size_limit_atomic_rollback_and_reopen",
+        "test_store.MemoryStoreTests.test_unicode_casefold_search_preserves_original_offsets"
+      ],
+      "static_ids_match": true,
+      "raw_output": "test_auto_unverified_and_whitespace_routes_are_refused (test_backend.BackendTests.test_auto_unverified_and_whitespace_routes_are_refused) ... ok\ntest_exception_is_sanitized_and_profile_reset (test_backend.BackendTests.test_exception_is_sanitized_and_profile_reset) ... ok\ntest_model_output_bound_and_tool_call_rejection (test_backend.BackendTests.test_model_output_bound_and_tool_call_rejection) ... ok\ntest_pinned_profile_route_no_tools_and_usage (test_backend.BackendTests.test_pinned_profile_route_no_tools_and_usage) ... ok\ntest_sensitive_payload_is_refused_before_provider_resolution (test_backend.BackendTests.test_sensitive_payload_is_refused_before_provider_resolution) ... ok\ntest_unavailable_or_changed_model_has_no_call_or_fallback (test_backend.BackendTests.test_unavailable_or_changed_model_has_no_call_or_fallback) ... ok\ntest_canonical_encoding_and_independent_digest (test_contracts.CanonicalJSONTests.test_canonical_encoding_and_independent_digest) ... ok\ntest_digest_requires_a_dict (test_contracts.CanonicalJSONTests.test_digest_requires_a_dict) ... ok\ntest_rejects_cycles_and_excessive_nesting (test_contracts.CanonicalJSONTests.test_rejects_cycles_and_excessive_nesting) ... ok\ntest_rejects_non_json_types_without_coercion (test_contracts.CanonicalJSONTests.test_rejects_non_json_types_without_coercion) ... ok\ntest_rejects_unpaired_unicode_surrogate (test_contracts.CanonicalJSONTests.test_rejects_unpaired_unicode_surrogate) ... ok\ntest_repeated_noncyclic_container_is_valid (test_contracts.CanonicalJSONTests.test_repeated_noncyclic_container_is_valid) ... ok\ntest_all_three_roles_have_immutable_attribution (test_contracts.ObservationValidationTests.test_all_three_roles_have_immutable_attribution) ... ok\ntest_batch_rejects_duplicates_and_is_atomic_without_mutation (test_contracts.ObservationValidationTests.test_batch_rejects_duplicates_and_is_atomic_without_mutation) ... ok\ntest_checks_metadata_on_the_returned_snapshot (test_contracts.ObservationValidationTests.test_checks_metadata_on_the_returned_snapshot) ... ok\ntest_empty_observations_and_invalid_containers (test_contracts.ObservationValidationTests.test_empty_observations_and_invalid_containers) ... ok\ntest_every_required_field_and_unknown_generated_states (test_contracts.ObservationValidationTests.test_every_required_field_and_unknown_generated_states) ... ok\ntest_exact_substrings_and_defensive_copy (test_contracts.ObservationValidationTests.test_exact_substrings_and_defensive_copy) ... ok\ntest_identity_covers_evidence_kind_and_set_of_sources (test_contracts.ObservationValidationTests.test_identity_covers_evidence_kind_and_set_of_sources) ... ok\ntest_identity_does_not_depend_on_priority_or_timestamp (test_contracts.ObservationValidationTests.test_identity_does_not_depend_on_priority_or_timestamp) ... ok\ntest_mixed_role_references_fail_even_when_quote_matches (test_contracts.ObservationValidationTests.test_mixed_role_references_fail_even_when_quote_matches) ... ok\ntest_quote_normalization_and_whitespace_only_are_forbidden (test_contracts.ObservationValidationTests.test_quote_normalization_and_whitespace_only_are_forbidden) ... ok\ntest_references_must_exist_and_each_contain_exact_quote (test_contracts.ObservationValidationTests.test_references_must_exist_and_each_contain_exact_quote) ... ok\ntest_reused_text_keeps_distinct_source_identities (test_contracts.ObservationValidationTests.test_reused_text_keeps_distinct_source_identities) ... ok\ntest_timestamp_requires_valid_explicit_utc_and_seconds (test_contracts.ObservationValidationTests.test_timestamp_requires_valid_explicit_utc_and_seconds) ... ok\ntest_types_ranges_and_identity_checked (test_contracts.ObservationValidationTests.test_types_ranges_and_identity_checked) ... ok\ntest_actual_utc_recency_not_lexical_timestamp_order (test_contracts.ReflectionTests.test_actual_utc_recency_not_lexical_timestamp_order) ... ok\ntest_budget_counts_full_rendering_including_metadata_and_newlines (test_contracts.ReflectionTests.test_budget_counts_full_rendering_including_metadata_and_newlines) ... ok\ntest_high_priority_facts_before_low_priority_recent_fact (test_contracts.ReflectionTests.test_high_priority_facts_before_low_priority_recent_fact) ... ok\ntest_latest_log_entry_breaks_equal_timestamp_ties (test_contracts.ReflectionTests.test_latest_log_entry_breaks_equal_timestamp_ties) ... ok\ntest_priority_classes_and_history_preserved (test_contracts.ReflectionTests.test_priority_classes_and_history_preserved) ... ok\ntest_reflection_budget_validation_and_zero (test_contracts.ReflectionTests.test_reflection_budget_validation_and_zero) ... ok\ntest_render_and_reflect_reject_bad_metadata_even_at_zero_budget (test_contracts.ReflectionTests.test_render_and_reflect_reject_bad_metadata_even_at_zero_budget) ... ok\ntest_render_includes_every_metadata_field_and_escapes_hostile_text (test_contracts.ReflectionTests.test_render_includes_every_metadata_field_and_escapes_hostile_text) ... ok\ntest_skip_oversize_item_without_truncating_or_erasing_it (test_contracts.ReflectionTests.test_skip_oversize_item_without_truncating_or_erasing_it) ... ok\ntest_all_source_field_types_are_checked (test_contracts.SourceValidationTests.test_all_source_field_types_are_checked) ... ok\ntest_attachments_hidden_reasoning_and_unknown_wire_fields_fail (test_contracts.SourceValidationTests.test_attachments_hidden_reasoning_and_unknown_wire_fields_fail) ... ok\ntest_checks_the_serialized_snapshot_not_later_caller_mutation (test_contracts.SourceValidationTests.test_checks_the_serialized_snapshot_not_later_caller_mutation) ... ok\ntest_duplicate_identity_or_ordinal_and_reordered_ordinals_fail (test_contracts.SourceValidationTests.test_duplicate_identity_or_ordinal_and_reordered_ordinals_fail) ... ok\ntest_errors_do_not_expose_source_text (test_contracts.SourceValidationTests.test_errors_do_not_expose_source_text) ... ok\ntest_incremental_slice_can_start_above_zero_and_have_gaps (test_contracts.SourceValidationTests.test_incremental_slice_can_start_above_zero_and_have_gaps) ... ok\ntest_malformed_tool_calls_fail (test_contracts.SourceValidationTests.test_malformed_tool_calls_fail) ... ok\ntest_null_content_without_assistant_tool_call_fails (test_contracts.SourceValidationTests.test_null_content_without_assistant_tool_call_fails) ... ok\ntest_required_and_unknown_fields (test_contracts.SourceValidationTests.test_required_and_unknown_fields) ... ok\ntest_role_and_text_cannot_be_forged_with_a_valid_digest (test_contracts.SourceValidationTests.test_role_and_text_cannot_be_forged_with_a_valid_digest) ... ok\ntest_sources_require_a_list_of_dicts (test_contracts.SourceValidationTests.test_sources_require_a_list_of_dicts) ... ok\ntest_supported_tool_call_wire_preserved (test_contracts.SourceValidationTests.test_supported_tool_call_wire_preserved) ... ok\ntest_tool_fields_are_not_admitted_under_another_role (test_contracts.SourceValidationTests.test_tool_fields_are_not_admitted_under_another_role) ... ok\ntest_valid_sources_are_deep_copies_and_not_mutated (test_contracts.SourceValidationTests.test_valid_sources_are_deep_copies_and_not_mutated) ... ok\ntest_wire_digest_must_match_exact_bytes_and_lowercase (test_contracts.SourceValidationTests.test_wire_digest_must_match_exact_bytes_and_lowercase) ... ok\ntest_closed_or_forgotten_session_rejects_late_worker (test_engine.EngineTests.test_closed_or_forgotten_session_rejects_late_worker) ... ok\ntest_config_model_egress_requires_explicit_pin_and_opt_in (test_engine.EngineTests.test_config_model_egress_requires_explicit_pin_and_opt_in) ... ok\ntest_duplicate_text_has_distinct_sources (test_engine.EngineTests.test_duplicate_text_has_distinct_sources) ... ok\ntest_expired_observer_result_not_published (test_engine.EngineTests.test_expired_observer_result_not_published) ... ok\ntest_human_forget_cli_dry_run_confirm_and_restart (test_engine.EngineTests.test_human_forget_cli_dry_run_confirm_and_restart) ... ok\ntest_incremental_observation_appends_coverage_without_duplicates (test_engine.EngineTests.test_incremental_observation_appends_coverage_without_duplicates) ... ok\ntest_interrupted_turn_does_not_observe (test_engine.EngineTests.test_interrupted_turn_does_not_observe) ... ok\ntest_mismatched_or_edited_source_never_projects_old_notes (test_engine.EngineTests.test_mismatched_or_edited_source_never_projects_old_notes) ... ok\ntest_native_abc_and_request_only_compaction (test_engine.EngineTests.test_native_abc_and_request_only_compaction) ... ok\ntest_no_projection_when_evidence_wrapper_would_grow_request (test_engine.EngineTests.test_no_projection_when_evidence_wrapper_would_grow_request) ... ok\ntest_observe_project_original_recall_and_restart (test_engine.EngineTests.test_observe_project_original_recall_and_restart) ... ok\ntest_rendered_observations_fit_the_declared_log_budget (test_engine.EngineTests.test_rendered_observations_fit_the_declared_log_budget) ... ok\ntest_scope_tool_arguments_rejected_and_other_session_empty (test_engine.EngineTests.test_scope_tool_arguments_rejected_and_other_session_empty) ... ok\ntest_source_revision_during_worker_cannot_publish_stale_evidence (test_engine.EngineTests.test_source_revision_during_worker_cannot_publish_stale_evidence) ... ok\ntest_system_and_reasoning_not_saved (test_engine.EngineTests.test_system_and_reasoning_not_saved) ... ok\ntest_tool_pairs_and_latest_turn_stay_intact (test_engine.EngineTests.test_tool_pairs_and_latest_turn_stay_intact) ... ok\ntest_unobserved_append_does_not_rewrite_memory_prefix (test_engine.EngineTests.test_unobserved_append_does_not_rewrite_memory_prefix) ... ok\ntest_unsupported_attachments_do_not_enter_store_or_observer (test_engine.EngineTests.test_unsupported_attachments_do_not_enter_store_or_observer) ... ok\ntest_actual_host_post_turn_and_request_selection_preserve_transcript (test_host_integration.HostIntegrationTests.test_actual_host_post_turn_and_request_selection_preserve_transcript) ... ok\ntest_create_only_install_and_real_user_plugin_discovery (test_host_integration.HostIntegrationTests.test_create_only_install_and_real_user_plugin_discovery) ... ok\ntest_installer_refuses_symlink_without_destination_write (test_host_integration.HostIntegrationTests.test_installer_refuses_symlink_without_destination_write) ... ok\ntest_categories_and_relative_priority_are_conservative (test_observer.ExtractiveObserverTests.test_categories_and_relative_priority_are_conservative) ... ok\ntest_duplicate_text_preserves_both_source_identities (test_observer.ExtractiveObserverTests.test_duplicate_text_preserves_both_source_identities) ... ok\ntest_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence (test_observer.ExtractiveObserverTests.test_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence) ... ok\ntest_exact_whole_quote_identity_and_attribution_for_each_source (test_observer.ExtractiveObserverTests.test_exact_whole_quote_identity_and_attribution_for_each_source) ... ok\ntest_invalid_timestamp_or_source_is_rejected_atomically (test_observer.ExtractiveObserverTests.test_invalid_timestamp_or_source_is_rejected_atomically) ... ok\ntest_long_unicode_and_negative_qualifiers_are_not_truncated (test_observer.ExtractiveObserverTests.test_long_unicode_and_negative_qualifiers_are_not_truncated) ... ok\ntest_misleading_assistant_claim_stays_an_assistant_statement (test_observer.ExtractiveObserverTests.test_misleading_assistant_claim_stays_an_assistant_statement) ... ok\ntest_output_does_not_alias_input_and_repeat_is_stable (test_observer.ExtractiveObserverTests.test_output_does_not_alias_input_and_repeat_is_stable) ... ok\ntest_plans_never_promoted_to_outcome (test_observer.ExtractiveObserverTests.test_plans_never_promoted_to_outcome) ... ok\ntest_tool_output_cannot_override_role_or_priority (test_observer.ExtractiveObserverTests.test_tool_output_cannot_override_role_or_priority) ... ok\ntest_callback_mutation_cannot_change_snapshotted_source_attribution (test_observer.ModelObserverTests.test_callback_mutation_cannot_change_snapshotted_source_attribution) ... ok\ntest_completion_error_is_sanitized_and_never_retried_or_falls_back (test_observer.ModelObserverTests.test_completion_error_is_sanitized_and_never_retried_or_falls_back) ... ok\ntest_constructor_types_limits_and_callable (test_observer.ModelObserverTests.test_constructor_types_limits_and_callable) ... ok\ntest_distinct_sources_with_same_quote_are_not_deduplicated (test_observer.ModelObserverTests.test_distinct_sources_with_same_quote_are_not_deduplicated) ... ok\ntest_duplicate_keys_are_rejected_at_every_object_depth (test_observer.ModelObserverTests.test_duplicate_keys_are_rejected_at_every_object_depth) ... ok\ntest_duplicate_observation_identity_rejects_whole_batch (test_observer.ModelObserverTests.test_duplicate_observation_identity_rejects_whole_batch) ... ok\ntest_empty_input_or_only_blank_text_never_calls_model (test_observer.ModelObserverTests.test_empty_input_or_only_blank_text_never_calls_model) ... ok\ntest_empty_result_for_eligible_input_is_a_failure (test_observer.ModelObserverTests.test_empty_result_for_eligible_input_is_a_failure) ... ok\ntest_every_item_field_is_required (test_observer.ModelObserverTests.test_every_item_field_is_required) ... ok\ntest_incremental_source_slice_preserves_nonzero_ordinals (test_observer.ModelObserverTests.test_incremental_source_slice_preserves_nonzero_ordinals) ... ok\ntest_input_budget_counts_system_payload_metadata_and_json_escaping (test_observer.ModelObserverTests.test_input_budget_counts_system_payload_metadata_and_json_escaping) ... ok\ntest_invalid_later_item_is_atomic_and_sources_remain_unchanged (test_observer.ModelObserverTests.test_invalid_later_item_is_atomic_and_sources_remain_unchanged) ... ok\ntest_invalid_source_or_timestamp_never_calls_model (test_observer.ModelObserverTests.test_invalid_source_or_timestamp_never_calls_model) ... ok\ntest_json_only_no_fences_prose_trailing_objects_or_top_level_arrays (test_observer.ModelObserverTests.test_json_only_no_fences_prose_trailing_objects_or_top_level_arrays) ... ok\ntest_kind_and_priority_validation (test_observer.ModelObserverTests.test_kind_and_priority_validation) ... ok\ntest_lone_surrogate_response_is_rejected (test_observer.ModelObserverTests.test_lone_surrogate_response_is_rejected) ... ok\ntest_model_cannot_choose_ids_role_timestamp_or_completion_state (test_observer.ModelObserverTests.test_model_cannot_choose_ids_role_timestamp_or_completion_state) ... ok\ntest_model_response_errors_do_not_echo_payload_or_exception_details (test_observer.ModelObserverTests.test_model_response_errors_do_not_echo_payload_or_exception_details) ... ok\ntest_nonfinite_numbers_and_deep_json_are_rejected (test_observer.ModelObserverTests.test_nonfinite_numbers_and_deep_json_are_rejected) ... ok\ntest_observers_have_no_network_or_process_side_effects (test_observer.ModelObserverTests.test_observers_have_no_network_or_process_side_effects) ... ok\ntest_output_budget_enforced_before_json_parsing (test_observer.ModelObserverTests.test_output_budget_enforced_before_json_parsing) ... ok\ntest_payload_excludes_wire_arguments_and_internal_metadata (test_observer.ModelObserverTests.test_payload_excludes_wire_arguments_and_internal_metadata) ... ok\ntest_prompt_states_untrusted_boundary_and_quote_only_contract (test_observer.ModelObserverTests.test_prompt_states_untrusted_boundary_and_quote_only_contract) ... ok\ntest_response_must_be_nonblank_string (test_observer.ModelObserverTests.test_response_must_be_nonblank_string) ... ok\ntest_substring_matching_is_exact_not_paraphrase_or_normalization (test_observer.ModelObserverTests.test_substring_matching_is_exact_not_paraphrase_or_normalization) ... ok\ntest_top_level_keys_required_and_unknown_keys_rejected (test_observer.ModelObserverTests.test_top_level_keys_required_and_unknown_keys_rejected) ... ok\ntest_unknown_ids_are_never_trimmed_normalized_or_guessed (test_observer.ModelObserverTests.test_unknown_ids_are_never_trimmed_normalized_or_guessed) ... ok\ntest_valid_batch_assigns_authoritative_fields (test_observer.ModelObserverTests.test_valid_batch_assigns_authoritative_fields) ... ok\ntest_stale_observer_cannot_replace_a_newer_publication (test_publication.PublicationRaceTests.test_stale_observer_cannot_replace_a_newer_publication) ... ok\ntest_old_worker_failure_cannot_replace_ingestion_error (test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error) ... ok\ntest_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) ... ok\ntest_queued_work_is_cancelled_on_actor_route_switch (test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch) ... ok\ntest_rejected_replacement_invalidates_inflight_and_restart_recall (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall) ... ok\ntest_rejected_replacement_removes_published_sources_without_tombstone (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone) ... ok\ntest_route_roundtrip_before_observer_completion_denies_old_epoch (test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch) ... ok\ntest_route_switch_during_provider_resolution_denies_create (test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create) ... ok\ntest_closing_second_store_does_not_unlock_first (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_second_store_does_not_unlock_first) ... ok\ntest_closing_store_preserves_lock_owned_outside_memory_store (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_store_preserves_lock_owned_outside_memory_store) ... ok\ntest_constructor_sqlite_busy_cleanup_preserves_lock (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_constructor_sqlite_busy_cleanup_preserves_lock) ... ok\ntest_failed_constructor_does_not_unlock_existing_connection (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_failed_constructor_does_not_unlock_existing_connection) ... ok\ntest_append_preserves_coverage_but_old_revision_cannot_publish (test_store.MemoryStoreTests.test_append_preserves_coverage_but_old_revision_cannot_publish) ... ok\ntest_argument_types_and_no_namespace_rewriting (test_store.MemoryStoreTests.test_argument_types_and_no_namespace_rewriting) ... ok\ntest_concurrent_first_open_waits_for_complete_publication (test_store.MemoryStoreTests.test_concurrent_first_open_waits_for_complete_publication) ... ok\ntest_crash_before_commit_recovers_prior_snapshot (test_store.MemoryStoreTests.test_crash_before_commit_recovers_prior_snapshot) ... ok\ntest_creation_rejects_replaced_staging_inode (test_store.MemoryStoreTests.test_creation_rejects_replaced_staging_inode) ... ok\ntest_directory_inode_and_private_permissions_rechecked (test_store.MemoryStoreTests.test_directory_inode_and_private_permissions_rechecked) ... ok\ntest_exact_prefix_rejection_and_active_order (test_store.MemoryStoreTests.test_exact_prefix_rejection_and_active_order) ... ok\ntest_existing_database_uses_no_raw_file_descriptors (test_store.MemoryStoreTests.test_existing_database_uses_no_raw_file_descriptors) ... ok\ntest_forget_tombstone_shared_connections_and_restart (test_store.MemoryStoreTests.test_forget_tombstone_shared_connections_and_restart) ... ok\ntest_initial_state_and_idempotence_restart_and_defensive_copy (test_store.MemoryStoreTests.test_initial_state_and_idempotence_restart_and_defensive_copy) ... ok\ntest_invalid_observations_and_active_ids_are_atomic (test_store.MemoryStoreTests.test_invalid_observations_and_active_ids_are_atomic) ... ok\ntest_invalid_persisted_payload_fails_closed_without_content_in_errors (test_store.MemoryStoreTests.test_invalid_persisted_payload_fails_closed_without_content_in_errors) ... ok\ntest_invalid_sources_are_atomic (test_store.MemoryStoreTests.test_invalid_sources_are_atomic) ... ok\ntest_multisource_observation_is_removed_if_one_reference_changes (test_store.MemoryStoreTests.test_multisource_observation_is_removed_if_one_reference_changes) ... ok\ntest_namespace_mismatch_denies_without_altering_owner (test_store.MemoryStoreTests.test_namespace_mismatch_denies_without_altering_owner) ... ok\ntest_observation_size_limit_is_atomic (test_store.MemoryStoreTests.test_observation_size_limit_is_atomic) ... ok\ntest_private_creation_closes_raw_descriptor_before_publication (test_store.MemoryStoreTests.test_private_creation_closes_raw_descriptor_before_publication) ... ok\ntest_private_modes_and_symlink_hardlink_refusal (test_store.MemoryStoreTests.test_private_modes_and_symlink_hardlink_refusal) ... ok\ntest_real_process_concurrent_initialization_and_writes (test_store.MemoryStoreTests.test_real_process_concurrent_initialization_and_writes) ... ok\ntest_real_process_stale_worker_cannot_resurrect_forgetting (test_store.MemoryStoreTests.test_real_process_stale_worker_cannot_resurrect_forgetting) ... ok\ntest_real_sqlite_page_limit_rolls_back_and_connection_remains_usable (test_store.MemoryStoreTests.test_real_sqlite_page_limit_rolls_back_and_connection_remains_usable) ... ok\ntest_recall_and_search_bounded_inputs (test_store.MemoryStoreTests.test_recall_and_search_bounded_inputs) ... ok\ntest_recall_pagination_scope_unicode_and_missing (test_store.MemoryStoreTests.test_recall_pagination_scope_unicode_and_missing) ... ok\ntest_regular_file_inode_replacement_fails_closed (test_store.MemoryStoreTests.test_regular_file_inode_replacement_fails_closed) ... ok\ntest_removed_source_payload_is_not_retained_on_disk (test_store.MemoryStoreTests.test_removed_source_payload_is_not_retained_on_disk) ... ok\ntest_revision_undo_removal_and_reorder_invalidate_exact_prefix (test_store.MemoryStoreTests.test_revision_undo_removal_and_reorder_invalidate_exact_prefix) ... ok\ntest_search_literal_scoped_bounded_and_deterministic (test_store.MemoryStoreTests.test_search_literal_scoped_bounded_and_deterministic) ... ok\ntest_shared_instance_thread_safety_and_closed_lifecycle (test_store.MemoryStoreTests.test_shared_instance_thread_safety_and_closed_lifecycle) ... ok\ntest_sidecar_symlink_and_path_replacement_fail_closed (test_store.MemoryStoreTests.test_sidecar_symlink_and_path_replacement_fail_closed) ... ok\ntest_size_limit_atomic_rollback_and_reopen (test_store.MemoryStoreTests.test_size_limit_atomic_rollback_and_reopen) ... ok\ntest_unicode_casefold_search_preserves_original_offsets (test_store.MemoryStoreTests.test_unicode_casefold_search_preserves_original_offsets) ... ok\n\n----------------------------------------------------------------------\nRan 152 tests in 3.406s\n\nOK"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 HERMES_DISABLE_LAZY_INSTALLS=1 python3 tools/run_tests.py --hermes-repo /Users/mini/.hermes/hermes-agent",
+      "cwd": "/Users/mini/workspace/hermes-observational-memory",
+      "exit_code": 0,
+      "count": 152,
+      "seconds": 3.749,
+      "executed_test_ids": [
+        "test_backend.BackendTests.test_auto_unverified_and_whitespace_routes_are_refused",
+        "test_backend.BackendTests.test_exception_is_sanitized_and_profile_reset",
+        "test_backend.BackendTests.test_model_output_bound_and_tool_call_rejection",
+        "test_backend.BackendTests.test_pinned_profile_route_no_tools_and_usage",
+        "test_backend.BackendTests.test_sensitive_payload_is_refused_before_provider_resolution",
+        "test_backend.BackendTests.test_unavailable_or_changed_model_has_no_call_or_fallback",
+        "test_contracts.CanonicalJSONTests.test_canonical_encoding_and_independent_digest",
+        "test_contracts.CanonicalJSONTests.test_digest_requires_a_dict",
+        "test_contracts.CanonicalJSONTests.test_rejects_cycles_and_excessive_nesting",
+        "test_contracts.CanonicalJSONTests.test_rejects_non_json_types_without_coercion",
+        "test_contracts.CanonicalJSONTests.test_rejects_unpaired_unicode_surrogate",
+        "test_contracts.CanonicalJSONTests.test_repeated_noncyclic_container_is_valid",
+        "test_contracts.ObservationValidationTests.test_all_three_roles_have_immutable_attribution",
+        "test_contracts.ObservationValidationTests.test_batch_rejects_duplicates_and_is_atomic_without_mutation",
+        "test_contracts.ObservationValidationTests.test_checks_metadata_on_the_returned_snapshot",
+        "test_contracts.ObservationValidationTests.test_empty_observations_and_invalid_containers",
+        "test_contracts.ObservationValidationTests.test_every_required_field_and_unknown_generated_states",
+        "test_contracts.ObservationValidationTests.test_exact_substrings_and_defensive_copy",
+        "test_contracts.ObservationValidationTests.test_identity_covers_evidence_kind_and_set_of_sources",
+        "test_contracts.ObservationValidationTests.test_identity_does_not_depend_on_priority_or_timestamp",
+        "test_contracts.ObservationValidationTests.test_mixed_role_references_fail_even_when_quote_matches",
+        "test_contracts.ObservationValidationTests.test_quote_normalization_and_whitespace_only_are_forbidden",
+        "test_contracts.ObservationValidationTests.test_references_must_exist_and_each_contain_exact_quote",
+        "test_contracts.ObservationValidationTests.test_reused_text_keeps_distinct_source_identities",
+        "test_contracts.ObservationValidationTests.test_timestamp_requires_valid_explicit_utc_and_seconds",
+        "test_contracts.ObservationValidationTests.test_types_ranges_and_identity_checked",
+        "test_contracts.ReflectionTests.test_actual_utc_recency_not_lexical_timestamp_order",
+        "test_contracts.ReflectionTests.test_budget_counts_full_rendering_including_metadata_and_newlines",
+        "test_contracts.ReflectionTests.test_high_priority_facts_before_low_priority_recent_fact",
+        "test_contracts.ReflectionTests.test_latest_log_entry_breaks_equal_timestamp_ties",
+        "test_contracts.ReflectionTests.test_priority_classes_and_history_preserved",
+        "test_contracts.ReflectionTests.test_reflection_budget_validation_and_zero",
+        "test_contracts.ReflectionTests.test_render_and_reflect_reject_bad_metadata_even_at_zero_budget",
+        "test_contracts.ReflectionTests.test_render_includes_every_metadata_field_and_escapes_hostile_text",
+        "test_contracts.ReflectionTests.test_skip_oversize_item_without_truncating_or_erasing_it",
+        "test_contracts.SourceValidationTests.test_all_source_field_types_are_checked",
+        "test_contracts.SourceValidationTests.test_attachments_hidden_reasoning_and_unknown_wire_fields_fail",
+        "test_contracts.SourceValidationTests.test_checks_the_serialized_snapshot_not_later_caller_mutation",
+        "test_contracts.SourceValidationTests.test_duplicate_identity_or_ordinal_and_reordered_ordinals_fail",
+        "test_contracts.SourceValidationTests.test_errors_do_not_expose_source_text",
+        "test_contracts.SourceValidationTests.test_incremental_slice_can_start_above_zero_and_have_gaps",
+        "test_contracts.SourceValidationTests.test_malformed_tool_calls_fail",
+        "test_contracts.SourceValidationTests.test_null_content_without_assistant_tool_call_fails",
+        "test_contracts.SourceValidationTests.test_required_and_unknown_fields",
+        "test_contracts.SourceValidationTests.test_role_and_text_cannot_be_forged_with_a_valid_digest",
+        "test_contracts.SourceValidationTests.test_sources_require_a_list_of_dicts",
+        "test_contracts.SourceValidationTests.test_supported_tool_call_wire_preserved",
+        "test_contracts.SourceValidationTests.test_tool_fields_are_not_admitted_under_another_role",
+        "test_contracts.SourceValidationTests.test_valid_sources_are_deep_copies_and_not_mutated",
+        "test_contracts.SourceValidationTests.test_wire_digest_must_match_exact_bytes_and_lowercase",
+        "test_engine.EngineTests.test_closed_or_forgotten_session_rejects_late_worker",
+        "test_engine.EngineTests.test_config_model_egress_requires_explicit_pin_and_opt_in",
+        "test_engine.EngineTests.test_duplicate_text_has_distinct_sources",
+        "test_engine.EngineTests.test_expired_observer_result_not_published",
+        "test_engine.EngineTests.test_human_forget_cli_dry_run_confirm_and_restart",
+        "test_engine.EngineTests.test_incremental_observation_appends_coverage_without_duplicates",
+        "test_engine.EngineTests.test_interrupted_turn_does_not_observe",
+        "test_engine.EngineTests.test_mismatched_or_edited_source_never_projects_old_notes",
+        "test_engine.EngineTests.test_native_abc_and_request_only_compaction",
+        "test_engine.EngineTests.test_no_projection_when_evidence_wrapper_would_grow_request",
+        "test_engine.EngineTests.test_observe_project_original_recall_and_restart",
+        "test_engine.EngineTests.test_rendered_observations_fit_the_declared_log_budget",
+        "test_engine.EngineTests.test_scope_tool_arguments_rejected_and_other_session_empty",
+        "test_engine.EngineTests.test_source_revision_during_worker_cannot_publish_stale_evidence",
+        "test_engine.EngineTests.test_system_and_reasoning_not_saved",
+        "test_engine.EngineTests.test_tool_pairs_and_latest_turn_stay_intact",
+        "test_engine.EngineTests.test_unobserved_append_does_not_rewrite_memory_prefix",
+        "test_engine.EngineTests.test_unsupported_attachments_do_not_enter_store_or_observer",
+        "test_host_integration.HostIntegrationTests.test_actual_host_post_turn_and_request_selection_preserve_transcript",
+        "test_host_integration.HostIntegrationTests.test_create_only_install_and_real_user_plugin_discovery",
+        "test_host_integration.HostIntegrationTests.test_installer_refuses_symlink_without_destination_write",
+        "test_observer.ExtractiveObserverTests.test_categories_and_relative_priority_are_conservative",
+        "test_observer.ExtractiveObserverTests.test_duplicate_text_preserves_both_source_identities",
+        "test_observer.ExtractiveObserverTests.test_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence",
+        "test_observer.ExtractiveObserverTests.test_exact_whole_quote_identity_and_attribution_for_each_source",
+        "test_observer.ExtractiveObserverTests.test_invalid_timestamp_or_source_is_rejected_atomically",
+        "test_observer.ExtractiveObserverTests.test_long_unicode_and_negative_qualifiers_are_not_truncated",
+        "test_observer.ExtractiveObserverTests.test_misleading_assistant_claim_stays_an_assistant_statement",
+        "test_observer.ExtractiveObserverTests.test_output_does_not_alias_input_and_repeat_is_stable",
+        "test_observer.ExtractiveObserverTests.test_plans_never_promoted_to_outcome",
+        "test_observer.ExtractiveObserverTests.test_tool_output_cannot_override_role_or_priority",
+        "test_observer.ModelObserverTests.test_callback_mutation_cannot_change_snapshotted_source_attribution",
+        "test_observer.ModelObserverTests.test_completion_error_is_sanitized_and_never_retried_or_falls_back",
+        "test_observer.ModelObserverTests.test_constructor_types_limits_and_callable",
+        "test_observer.ModelObserverTests.test_distinct_sources_with_same_quote_are_not_deduplicated",
+        "test_observer.ModelObserverTests.test_duplicate_keys_are_rejected_at_every_object_depth",
+        "test_observer.ModelObserverTests.test_duplicate_observation_identity_rejects_whole_batch",
+        "test_observer.ModelObserverTests.test_empty_input_or_only_blank_text_never_calls_model",
+        "test_observer.ModelObserverTests.test_empty_result_for_eligible_input_is_a_failure",
+        "test_observer.ModelObserverTests.test_every_item_field_is_required",
+        "test_observer.ModelObserverTests.test_incremental_source_slice_preserves_nonzero_ordinals",
+        "test_observer.ModelObserverTests.test_input_budget_counts_system_payload_metadata_and_json_escaping",
+        "test_observer.ModelObserverTests.test_invalid_later_item_is_atomic_and_sources_remain_unchanged",
+        "test_observer.ModelObserverTests.test_invalid_source_or_timestamp_never_calls_model",
+        "test_observer.ModelObserverTests.test_json_only_no_fences_prose_trailing_objects_or_top_level_arrays",
+        "test_observer.ModelObserverTests.test_kind_and_priority_validation",
+        "test_observer.ModelObserverTests.test_lone_surrogate_response_is_rejected",
+        "test_observer.ModelObserverTests.test_model_cannot_choose_ids_role_timestamp_or_completion_state",
+        "test_observer.ModelObserverTests.test_model_response_errors_do_not_echo_payload_or_exception_details",
+        "test_observer.ModelObserverTests.test_nonfinite_numbers_and_deep_json_are_rejected",
+        "test_observer.ModelObserverTests.test_observers_have_no_network_or_process_side_effects",
+        "test_observer.ModelObserverTests.test_output_budget_enforced_before_json_parsing",
+        "test_observer.ModelObserverTests.test_payload_excludes_wire_arguments_and_internal_metadata",
+        "test_observer.ModelObserverTests.test_prompt_states_untrusted_boundary_and_quote_only_contract",
+        "test_observer.ModelObserverTests.test_response_must_be_nonblank_string",
+        "test_observer.ModelObserverTests.test_substring_matching_is_exact_not_paraphrase_or_normalization",
+        "test_observer.ModelObserverTests.test_top_level_keys_required_and_unknown_keys_rejected",
+        "test_observer.ModelObserverTests.test_unknown_ids_are_never_trimmed_normalized_or_guessed",
+        "test_observer.ModelObserverTests.test_valid_batch_assigns_authoritative_fields",
+        "test_publication.PublicationRaceTests.test_stale_observer_cannot_replace_a_newer_publication",
+        "test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error",
+        "test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources",
+        "test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch",
+        "test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall",
+        "test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone",
+        "test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch",
+        "test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_second_store_does_not_unlock_first",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_store_preserves_lock_owned_outside_memory_store",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_constructor_sqlite_busy_cleanup_preserves_lock",
+        "test_sqlite_lock_safety.SQLiteLockSafetyTests.test_failed_constructor_does_not_unlock_existing_connection",
+        "test_store.MemoryStoreTests.test_append_preserves_coverage_but_old_revision_cannot_publish",
+        "test_store.MemoryStoreTests.test_argument_types_and_no_namespace_rewriting",
+        "test_store.MemoryStoreTests.test_concurrent_first_open_waits_for_complete_publication",
+        "test_store.MemoryStoreTests.test_crash_before_commit_recovers_prior_snapshot",
+        "test_store.MemoryStoreTests.test_creation_rejects_replaced_staging_inode",
+        "test_store.MemoryStoreTests.test_directory_inode_and_private_permissions_rechecked",
+        "test_store.MemoryStoreTests.test_exact_prefix_rejection_and_active_order",
+        "test_store.MemoryStoreTests.test_existing_database_uses_no_raw_file_descriptors",
+        "test_store.MemoryStoreTests.test_forget_tombstone_shared_connections_and_restart",
+        "test_store.MemoryStoreTests.test_initial_state_and_idempotence_restart_and_defensive_copy",
+        "test_store.MemoryStoreTests.test_invalid_observations_and_active_ids_are_atomic",
+        "test_store.MemoryStoreTests.test_invalid_persisted_payload_fails_closed_without_content_in_errors",
+        "test_store.MemoryStoreTests.test_invalid_sources_are_atomic",
+        "test_store.MemoryStoreTests.test_multisource_observation_is_removed_if_one_reference_changes",
+        "test_store.MemoryStoreTests.test_namespace_mismatch_denies_without_altering_owner",
+        "test_store.MemoryStoreTests.test_observation_size_limit_is_atomic",
+        "test_store.MemoryStoreTests.test_private_creation_closes_raw_descriptor_before_publication",
+        "test_store.MemoryStoreTests.test_private_modes_and_symlink_hardlink_refusal",
+        "test_store.MemoryStoreTests.test_real_process_concurrent_initialization_and_writes",
+        "test_store.MemoryStoreTests.test_real_process_stale_worker_cannot_resurrect_forgetting",
+        "test_store.MemoryStoreTests.test_real_sqlite_page_limit_rolls_back_and_connection_remains_usable",
+        "test_store.MemoryStoreTests.test_recall_and_search_bounded_inputs",
+        "test_store.MemoryStoreTests.test_recall_pagination_scope_unicode_and_missing",
+        "test_store.MemoryStoreTests.test_regular_file_inode_replacement_fails_closed",
+        "test_store.MemoryStoreTests.test_removed_source_payload_is_not_retained_on_disk",
+        "test_store.MemoryStoreTests.test_revision_undo_removal_and_reorder_invalidate_exact_prefix",
+        "test_store.MemoryStoreTests.test_search_literal_scoped_bounded_and_deterministic",
+        "test_store.MemoryStoreTests.test_shared_instance_thread_safety_and_closed_lifecycle",
+        "test_store.MemoryStoreTests.test_sidecar_symlink_and_path_replacement_fail_closed",
+        "test_store.MemoryStoreTests.test_size_limit_atomic_rollback_and_reopen",
+        "test_store.MemoryStoreTests.test_unicode_casefold_search_preserves_original_offsets"
+      ],
+      "static_ids_match": true,
+      "raw_output": "test_auto_unverified_and_whitespace_routes_are_refused (test_backend.BackendTests.test_auto_unverified_and_whitespace_routes_are_refused) ... ok\ntest_exception_is_sanitized_and_profile_reset (test_backend.BackendTests.test_exception_is_sanitized_and_profile_reset) ... ok\ntest_model_output_bound_and_tool_call_rejection (test_backend.BackendTests.test_model_output_bound_and_tool_call_rejection) ... ok\ntest_pinned_profile_route_no_tools_and_usage (test_backend.BackendTests.test_pinned_profile_route_no_tools_and_usage) ... ok\ntest_sensitive_payload_is_refused_before_provider_resolution (test_backend.BackendTests.test_sensitive_payload_is_refused_before_provider_resolution) ... ok\ntest_unavailable_or_changed_model_has_no_call_or_fallback (test_backend.BackendTests.test_unavailable_or_changed_model_has_no_call_or_fallback) ... ok\ntest_canonical_encoding_and_independent_digest (test_contracts.CanonicalJSONTests.test_canonical_encoding_and_independent_digest) ... ok\ntest_digest_requires_a_dict (test_contracts.CanonicalJSONTests.test_digest_requires_a_dict) ... ok\ntest_rejects_cycles_and_excessive_nesting (test_contracts.CanonicalJSONTests.test_rejects_cycles_and_excessive_nesting) ... ok\ntest_rejects_non_json_types_without_coercion (test_contracts.CanonicalJSONTests.test_rejects_non_json_types_without_coercion) ... ok\ntest_rejects_unpaired_unicode_surrogate (test_contracts.CanonicalJSONTests.test_rejects_unpaired_unicode_surrogate) ... ok\ntest_repeated_noncyclic_container_is_valid (test_contracts.CanonicalJSONTests.test_repeated_noncyclic_container_is_valid) ... ok\ntest_all_three_roles_have_immutable_attribution (test_contracts.ObservationValidationTests.test_all_three_roles_have_immutable_attribution) ... ok\ntest_batch_rejects_duplicates_and_is_atomic_without_mutation (test_contracts.ObservationValidationTests.test_batch_rejects_duplicates_and_is_atomic_without_mutation) ... ok\ntest_checks_metadata_on_the_returned_snapshot (test_contracts.ObservationValidationTests.test_checks_metadata_on_the_returned_snapshot) ... ok\ntest_empty_observations_and_invalid_containers (test_contracts.ObservationValidationTests.test_empty_observations_and_invalid_containers) ... ok\ntest_every_required_field_and_unknown_generated_states (test_contracts.ObservationValidationTests.test_every_required_field_and_unknown_generated_states) ... ok\ntest_exact_substrings_and_defensive_copy (test_contracts.ObservationValidationTests.test_exact_substrings_and_defensive_copy) ... ok\ntest_identity_covers_evidence_kind_and_set_of_sources (test_contracts.ObservationValidationTests.test_identity_covers_evidence_kind_and_set_of_sources) ... ok\ntest_identity_does_not_depend_on_priority_or_timestamp (test_contracts.ObservationValidationTests.test_identity_does_not_depend_on_priority_or_timestamp) ... ok\ntest_mixed_role_references_fail_even_when_quote_matches (test_contracts.ObservationValidationTests.test_mixed_role_references_fail_even_when_quote_matches) ... ok\ntest_quote_normalization_and_whitespace_only_are_forbidden (test_contracts.ObservationValidationTests.test_quote_normalization_and_whitespace_only_are_forbidden) ... ok\ntest_references_must_exist_and_each_contain_exact_quote (test_contracts.ObservationValidationTests.test_references_must_exist_and_each_contain_exact_quote) ... ok\ntest_reused_text_keeps_distinct_source_identities (test_contracts.ObservationValidationTests.test_reused_text_keeps_distinct_source_identities) ... ok\ntest_timestamp_requires_valid_explicit_utc_and_seconds (test_contracts.ObservationValidationTests.test_timestamp_requires_valid_explicit_utc_and_seconds) ... ok\ntest_types_ranges_and_identity_checked (test_contracts.ObservationValidationTests.test_types_ranges_and_identity_checked) ... ok\ntest_actual_utc_recency_not_lexical_timestamp_order (test_contracts.ReflectionTests.test_actual_utc_recency_not_lexical_timestamp_order) ... ok\ntest_budget_counts_full_rendering_including_metadata_and_newlines (test_contracts.ReflectionTests.test_budget_counts_full_rendering_including_metadata_and_newlines) ... ok\ntest_high_priority_facts_before_low_priority_recent_fact (test_contracts.ReflectionTests.test_high_priority_facts_before_low_priority_recent_fact) ... ok\ntest_latest_log_entry_breaks_equal_timestamp_ties (test_contracts.ReflectionTests.test_latest_log_entry_breaks_equal_timestamp_ties) ... ok\ntest_priority_classes_and_history_preserved (test_contracts.ReflectionTests.test_priority_classes_and_history_preserved) ... ok\ntest_reflection_budget_validation_and_zero (test_contracts.ReflectionTests.test_reflection_budget_validation_and_zero) ... ok\ntest_render_and_reflect_reject_bad_metadata_even_at_zero_budget (test_contracts.ReflectionTests.test_render_and_reflect_reject_bad_metadata_even_at_zero_budget) ... ok\ntest_render_includes_every_metadata_field_and_escapes_hostile_text (test_contracts.ReflectionTests.test_render_includes_every_metadata_field_and_escapes_hostile_text) ... ok\ntest_skip_oversize_item_without_truncating_or_erasing_it (test_contracts.ReflectionTests.test_skip_oversize_item_without_truncating_or_erasing_it) ... ok\ntest_all_source_field_types_are_checked (test_contracts.SourceValidationTests.test_all_source_field_types_are_checked) ... ok\ntest_attachments_hidden_reasoning_and_unknown_wire_fields_fail (test_contracts.SourceValidationTests.test_attachments_hidden_reasoning_and_unknown_wire_fields_fail) ... ok\ntest_checks_the_serialized_snapshot_not_later_caller_mutation (test_contracts.SourceValidationTests.test_checks_the_serialized_snapshot_not_later_caller_mutation) ... ok\ntest_duplicate_identity_or_ordinal_and_reordered_ordinals_fail (test_contracts.SourceValidationTests.test_duplicate_identity_or_ordinal_and_reordered_ordinals_fail) ... ok\ntest_errors_do_not_expose_source_text (test_contracts.SourceValidationTests.test_errors_do_not_expose_source_text) ... ok\ntest_incremental_slice_can_start_above_zero_and_have_gaps (test_contracts.SourceValidationTests.test_incremental_slice_can_start_above_zero_and_have_gaps) ... ok\ntest_malformed_tool_calls_fail (test_contracts.SourceValidationTests.test_malformed_tool_calls_fail) ... ok\ntest_null_content_without_assistant_tool_call_fails (test_contracts.SourceValidationTests.test_null_content_without_assistant_tool_call_fails) ... ok\ntest_required_and_unknown_fields (test_contracts.SourceValidationTests.test_required_and_unknown_fields) ... ok\ntest_role_and_text_cannot_be_forged_with_a_valid_digest (test_contracts.SourceValidationTests.test_role_and_text_cannot_be_forged_with_a_valid_digest) ... ok\ntest_sources_require_a_list_of_dicts (test_contracts.SourceValidationTests.test_sources_require_a_list_of_dicts) ... ok\ntest_supported_tool_call_wire_preserved (test_contracts.SourceValidationTests.test_supported_tool_call_wire_preserved) ... ok\ntest_tool_fields_are_not_admitted_under_another_role (test_contracts.SourceValidationTests.test_tool_fields_are_not_admitted_under_another_role) ... ok\ntest_valid_sources_are_deep_copies_and_not_mutated (test_contracts.SourceValidationTests.test_valid_sources_are_deep_copies_and_not_mutated) ... ok\ntest_wire_digest_must_match_exact_bytes_and_lowercase (test_contracts.SourceValidationTests.test_wire_digest_must_match_exact_bytes_and_lowercase) ... ok\ntest_closed_or_forgotten_session_rejects_late_worker (test_engine.EngineTests.test_closed_or_forgotten_session_rejects_late_worker) ... ok\ntest_config_model_egress_requires_explicit_pin_and_opt_in (test_engine.EngineTests.test_config_model_egress_requires_explicit_pin_and_opt_in) ... ok\ntest_duplicate_text_has_distinct_sources (test_engine.EngineTests.test_duplicate_text_has_distinct_sources) ... ok\ntest_expired_observer_result_not_published (test_engine.EngineTests.test_expired_observer_result_not_published) ... ok\ntest_human_forget_cli_dry_run_confirm_and_restart (test_engine.EngineTests.test_human_forget_cli_dry_run_confirm_and_restart) ... ok\ntest_incremental_observation_appends_coverage_without_duplicates (test_engine.EngineTests.test_incremental_observation_appends_coverage_without_duplicates) ... ok\ntest_interrupted_turn_does_not_observe (test_engine.EngineTests.test_interrupted_turn_does_not_observe) ... ok\ntest_mismatched_or_edited_source_never_projects_old_notes (test_engine.EngineTests.test_mismatched_or_edited_source_never_projects_old_notes) ... ok\ntest_native_abc_and_request_only_compaction (test_engine.EngineTests.test_native_abc_and_request_only_compaction) ... ok\ntest_no_projection_when_evidence_wrapper_would_grow_request (test_engine.EngineTests.test_no_projection_when_evidence_wrapper_would_grow_request) ... ok\ntest_observe_project_original_recall_and_restart (test_engine.EngineTests.test_observe_project_original_recall_and_restart) ... ok\ntest_rendered_observations_fit_the_declared_log_budget (test_engine.EngineTests.test_rendered_observations_fit_the_declared_log_budget) ... ok\ntest_scope_tool_arguments_rejected_and_other_session_empty (test_engine.EngineTests.test_scope_tool_arguments_rejected_and_other_session_empty) ... ok\ntest_source_revision_during_worker_cannot_publish_stale_evidence (test_engine.EngineTests.test_source_revision_during_worker_cannot_publish_stale_evidence) ... ok\ntest_system_and_reasoning_not_saved (test_engine.EngineTests.test_system_and_reasoning_not_saved) ... ok\ntest_tool_pairs_and_latest_turn_stay_intact (test_engine.EngineTests.test_tool_pairs_and_latest_turn_stay_intact) ... ok\ntest_unobserved_append_does_not_rewrite_memory_prefix (test_engine.EngineTests.test_unobserved_append_does_not_rewrite_memory_prefix) ... ok\ntest_unsupported_attachments_do_not_enter_store_or_observer (test_engine.EngineTests.test_unsupported_attachments_do_not_enter_store_or_observer) ... ok\ntest_actual_host_post_turn_and_request_selection_preserve_transcript (test_host_integration.HostIntegrationTests.test_actual_host_post_turn_and_request_selection_preserve_transcript) ... ok\ntest_create_only_install_and_real_user_plugin_discovery (test_host_integration.HostIntegrationTests.test_create_only_install_and_real_user_plugin_discovery) ... ok\ntest_installer_refuses_symlink_without_destination_write (test_host_integration.HostIntegrationTests.test_installer_refuses_symlink_without_destination_write) ... ok\ntest_categories_and_relative_priority_are_conservative (test_observer.ExtractiveObserverTests.test_categories_and_relative_priority_are_conservative) ... ok\ntest_duplicate_text_preserves_both_source_identities (test_observer.ExtractiveObserverTests.test_duplicate_text_preserves_both_source_identities) ... ok\ntest_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence (test_observer.ExtractiveObserverTests.test_empty_blank_and_assistant_tool_calls_have_no_quotable_evidence) ... ok\ntest_exact_whole_quote_identity_and_attribution_for_each_source (test_observer.ExtractiveObserverTests.test_exact_whole_quote_identity_and_attribution_for_each_source) ... ok\ntest_invalid_timestamp_or_source_is_rejected_atomically (test_observer.ExtractiveObserverTests.test_invalid_timestamp_or_source_is_rejected_atomically) ... ok\ntest_long_unicode_and_negative_qualifiers_are_not_truncated (test_observer.ExtractiveObserverTests.test_long_unicode_and_negative_qualifiers_are_not_truncated) ... ok\ntest_misleading_assistant_claim_stays_an_assistant_statement (test_observer.ExtractiveObserverTests.test_misleading_assistant_claim_stays_an_assistant_statement) ... ok\ntest_output_does_not_alias_input_and_repeat_is_stable (test_observer.ExtractiveObserverTests.test_output_does_not_alias_input_and_repeat_is_stable) ... ok\ntest_plans_never_promoted_to_outcome (test_observer.ExtractiveObserverTests.test_plans_never_promoted_to_outcome) ... ok\ntest_tool_output_cannot_override_role_or_priority (test_observer.ExtractiveObserverTests.test_tool_output_cannot_override_role_or_priority) ... ok\ntest_callback_mutation_cannot_change_snapshotted_source_attribution (test_observer.ModelObserverTests.test_callback_mutation_cannot_change_snapshotted_source_attribution) ... ok\ntest_completion_error_is_sanitized_and_never_retried_or_falls_back (test_observer.ModelObserverTests.test_completion_error_is_sanitized_and_never_retried_or_falls_back) ... ok\ntest_constructor_types_limits_and_callable (test_observer.ModelObserverTests.test_constructor_types_limits_and_callable) ... ok\ntest_distinct_sources_with_same_quote_are_not_deduplicated (test_observer.ModelObserverTests.test_distinct_sources_with_same_quote_are_not_deduplicated) ... ok\ntest_duplicate_keys_are_rejected_at_every_object_depth (test_observer.ModelObserverTests.test_duplicate_keys_are_rejected_at_every_object_depth) ... ok\ntest_duplicate_observation_identity_rejects_whole_batch (test_observer.ModelObserverTests.test_duplicate_observation_identity_rejects_whole_batch) ... ok\ntest_empty_input_or_only_blank_text_never_calls_model (test_observer.ModelObserverTests.test_empty_input_or_only_blank_text_never_calls_model) ... ok\ntest_empty_result_for_eligible_input_is_a_failure (test_observer.ModelObserverTests.test_empty_result_for_eligible_input_is_a_failure) ... ok\ntest_every_item_field_is_required (test_observer.ModelObserverTests.test_every_item_field_is_required) ... ok\ntest_incremental_source_slice_preserves_nonzero_ordinals (test_observer.ModelObserverTests.test_incremental_source_slice_preserves_nonzero_ordinals) ... ok\ntest_input_budget_counts_system_payload_metadata_and_json_escaping (test_observer.ModelObserverTests.test_input_budget_counts_system_payload_metadata_and_json_escaping) ... ok\ntest_invalid_later_item_is_atomic_and_sources_remain_unchanged (test_observer.ModelObserverTests.test_invalid_later_item_is_atomic_and_sources_remain_unchanged) ... ok\ntest_invalid_source_or_timestamp_never_calls_model (test_observer.ModelObserverTests.test_invalid_source_or_timestamp_never_calls_model) ... ok\ntest_json_only_no_fences_prose_trailing_objects_or_top_level_arrays (test_observer.ModelObserverTests.test_json_only_no_fences_prose_trailing_objects_or_top_level_arrays) ... ok\ntest_kind_and_priority_validation (test_observer.ModelObserverTests.test_kind_and_priority_validation) ... ok\ntest_lone_surrogate_response_is_rejected (test_observer.ModelObserverTests.test_lone_surrogate_response_is_rejected) ... ok\ntest_model_cannot_choose_ids_role_timestamp_or_completion_state (test_observer.ModelObserverTests.test_model_cannot_choose_ids_role_timestamp_or_completion_state) ... ok\ntest_model_response_errors_do_not_echo_payload_or_exception_details (test_observer.ModelObserverTests.test_model_response_errors_do_not_echo_payload_or_exception_details) ... ok\ntest_nonfinite_numbers_and_deep_json_are_rejected (test_observer.ModelObserverTests.test_nonfinite_numbers_and_deep_json_are_rejected) ... ok\ntest_observers_have_no_network_or_process_side_effects (test_observer.ModelObserverTests.test_observers_have_no_network_or_process_side_effects) ... ok\ntest_output_budget_enforced_before_json_parsing (test_observer.ModelObserverTests.test_output_budget_enforced_before_json_parsing) ... ok\ntest_payload_excludes_wire_arguments_and_internal_metadata (test_observer.ModelObserverTests.test_payload_excludes_wire_arguments_and_internal_metadata) ... ok\ntest_prompt_states_untrusted_boundary_and_quote_only_contract (test_observer.ModelObserverTests.test_prompt_states_untrusted_boundary_and_quote_only_contract) ... ok\ntest_response_must_be_nonblank_string (test_observer.ModelObserverTests.test_response_must_be_nonblank_string) ... ok\ntest_substring_matching_is_exact_not_paraphrase_or_normalization (test_observer.ModelObserverTests.test_substring_matching_is_exact_not_paraphrase_or_normalization) ... ok\ntest_top_level_keys_required_and_unknown_keys_rejected (test_observer.ModelObserverTests.test_top_level_keys_required_and_unknown_keys_rejected) ... ok\ntest_unknown_ids_are_never_trimmed_normalized_or_guessed (test_observer.ModelObserverTests.test_unknown_ids_are_never_trimmed_normalized_or_guessed) ... ok\ntest_valid_batch_assigns_authoritative_fields (test_observer.ModelObserverTests.test_valid_batch_assigns_authoritative_fields) ... ok\ntest_stale_observer_cannot_replace_a_newer_publication (test_publication.PublicationRaceTests.test_stale_observer_cannot_replace_a_newer_publication) ... ok\ntest_old_worker_failure_cannot_replace_ingestion_error (test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error) ... ok\ntest_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) ... ok\ntest_queued_work_is_cancelled_on_actor_route_switch (test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch) ... ok\ntest_rejected_replacement_invalidates_inflight_and_restart_recall (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall) ... ok\ntest_rejected_replacement_removes_published_sources_without_tombstone (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone) ... ok\ntest_route_roundtrip_before_observer_completion_denies_old_epoch (test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch) ... ok\ntest_route_switch_during_provider_resolution_denies_create (test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create) ... ok\ntest_closing_second_store_does_not_unlock_first (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_second_store_does_not_unlock_first) ... ok\ntest_closing_store_preserves_lock_owned_outside_memory_store (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_closing_store_preserves_lock_owned_outside_memory_store) ... ok\ntest_constructor_sqlite_busy_cleanup_preserves_lock (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_constructor_sqlite_busy_cleanup_preserves_lock) ... ok\ntest_failed_constructor_does_not_unlock_existing_connection (test_sqlite_lock_safety.SQLiteLockSafetyTests.test_failed_constructor_does_not_unlock_existing_connection) ... ok\ntest_append_preserves_coverage_but_old_revision_cannot_publish (test_store.MemoryStoreTests.test_append_preserves_coverage_but_old_revision_cannot_publish) ... ok\ntest_argument_types_and_no_namespace_rewriting (test_store.MemoryStoreTests.test_argument_types_and_no_namespace_rewriting) ... ok\ntest_concurrent_first_open_waits_for_complete_publication (test_store.MemoryStoreTests.test_concurrent_first_open_waits_for_complete_publication) ... ok\ntest_crash_before_commit_recovers_prior_snapshot (test_store.MemoryStoreTests.test_crash_before_commit_recovers_prior_snapshot) ... ok\ntest_creation_rejects_replaced_staging_inode (test_store.MemoryStoreTests.test_creation_rejects_replaced_staging_inode) ... ok\ntest_directory_inode_and_private_permissions_rechecked (test_store.MemoryStoreTests.test_directory_inode_and_private_permissions_rechecked) ... ok\ntest_exact_prefix_rejection_and_active_order (test_store.MemoryStoreTests.test_exact_prefix_rejection_and_active_order) ... ok\ntest_existing_database_uses_no_raw_file_descriptors (test_store.MemoryStoreTests.test_existing_database_uses_no_raw_file_descriptors) ... ok\ntest_forget_tombstone_shared_connections_and_restart (test_store.MemoryStoreTests.test_forget_tombstone_shared_connections_and_restart) ... ok\ntest_initial_state_and_idempotence_restart_and_defensive_copy (test_store.MemoryStoreTests.test_initial_state_and_idempotence_restart_and_defensive_copy) ... ok\ntest_invalid_observations_and_active_ids_are_atomic (test_store.MemoryStoreTests.test_invalid_observations_and_active_ids_are_atomic) ... ok\ntest_invalid_persisted_payload_fails_closed_without_content_in_errors (test_store.MemoryStoreTests.test_invalid_persisted_payload_fails_closed_without_content_in_errors) ... ok\ntest_invalid_sources_are_atomic (test_store.MemoryStoreTests.test_invalid_sources_are_atomic) ... ok\ntest_multisource_observation_is_removed_if_one_reference_changes (test_store.MemoryStoreTests.test_multisource_observation_is_removed_if_one_reference_changes) ... ok\ntest_namespace_mismatch_denies_without_altering_owner (test_store.MemoryStoreTests.test_namespace_mismatch_denies_without_altering_owner) ... ok\ntest_observation_size_limit_is_atomic (test_store.MemoryStoreTests.test_observation_size_limit_is_atomic) ... ok\ntest_private_creation_closes_raw_descriptor_before_publication (test_store.MemoryStoreTests.test_private_creation_closes_raw_descriptor_before_publication) ... ok\ntest_private_modes_and_symlink_hardlink_refusal (test_store.MemoryStoreTests.test_private_modes_and_symlink_hardlink_refusal) ... ok\ntest_real_process_concurrent_initialization_and_writes (test_store.MemoryStoreTests.test_real_process_concurrent_initialization_and_writes) ... ok\ntest_real_process_stale_worker_cannot_resurrect_forgetting (test_store.MemoryStoreTests.test_real_process_stale_worker_cannot_resurrect_forgetting) ... ok\ntest_real_sqlite_page_limit_rolls_back_and_connection_remains_usable (test_store.MemoryStoreTests.test_real_sqlite_page_limit_rolls_back_and_connection_remains_usable) ... ok\ntest_recall_and_search_bounded_inputs (test_store.MemoryStoreTests.test_recall_and_search_bounded_inputs) ... ok\ntest_recall_pagination_scope_unicode_and_missing (test_store.MemoryStoreTests.test_recall_pagination_scope_unicode_and_missing) ... ok\ntest_regular_file_inode_replacement_fails_closed (test_store.MemoryStoreTests.test_regular_file_inode_replacement_fails_closed) ... ok\ntest_removed_source_payload_is_not_retained_on_disk (test_store.MemoryStoreTests.test_removed_source_payload_is_not_retained_on_disk) ... ok\ntest_revision_undo_removal_and_reorder_invalidate_exact_prefix (test_store.MemoryStoreTests.test_revision_undo_removal_and_reorder_invalidate_exact_prefix) ... ok\ntest_search_literal_scoped_bounded_and_deterministic (test_store.MemoryStoreTests.test_search_literal_scoped_bounded_and_deterministic) ... ok\ntest_shared_instance_thread_safety_and_closed_lifecycle (test_store.MemoryStoreTests.test_shared_instance_thread_safety_and_closed_lifecycle) ... ok\ntest_sidecar_symlink_and_path_replacement_fail_closed (test_store.MemoryStoreTests.test_sidecar_symlink_and_path_replacement_fail_closed) ... ok\ntest_size_limit_atomic_rollback_and_reopen (test_store.MemoryStoreTests.test_size_limit_atomic_rollback_and_reopen) ... ok\ntest_unicode_casefold_search_preserves_original_offsets (test_store.MemoryStoreTests.test_unicode_casefold_search_preserves_original_offsets) ... ok\n\n----------------------------------------------------------------------\nRan 152 tests in 3.749s\n\nOK"
+    }
+  ],
+  "independent_probe": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 HERMES_DISABLE_LAZY_INSTALLS=1 python3 /Users/mini/.hermes/cache/scratch/om-independent-review-02-probe.py",
+    "cwd": "/Users/mini/workspace/hermes-observational-memory",
+    "exit_code": 0,
+    "historical_scratch_script_path": "/Users/mini/.hermes/cache/scratch/om-independent-review-02-probe.py",
+    "script_sha256": "4f11ae1ade86c3626b36d7873aad2a31d75d475ce3032a852d8a5d90d0cb7b69",
+    "source": "\"\"\"Independent bounded review-02 probes: synthetic state, no provider calls.\"\"\"\nimport os, sys\nfrom pathlib import Path\nROOT = Path('/Users/mini/workspace/hermes-observational-memory')\nHOST = Path('/Users/mini/.hermes/hermes-agent')\nsys.dont_write_bytecode = True\nos.environ['PYTHONDONTWRITEBYTECODE'] = '1'\nos.environ['HERMES_DISABLE_LAZY_INSTALLS'] = '1'\nsys.path.insert(0, str(ROOT / 'tools'))\nfrom runtime import bootstrap_hermes\n_, scratch = bootstrap_hermes(str(HOST))\nimport ast, copy, hashlib, io, json, sqlite3, tempfile, threading, unittest\nfrom types import SimpleNamespace\nfrom unittest.mock import patch\nos.environ['TMPDIR'] = str(scratch)\ntempfile.tempdir = str(scratch)\nreport = {'synthetic_only': True, 'network_attempts': 0, 'events': []}\ndef deny(*args, **kw):\n    report['network_attempts'] += 1\n    raise AssertionError('Independent review prohibits network')\nwith tempfile.TemporaryDirectory(prefix='om-review-02-', dir=scratch) as temp:\n    os.environ['HERMES_HOME'] = temp\n    os.environ['OM_TEST_HOME'] = temp\n    os.environ['HERMES_DISABLE_MCP'] = '1'\n    with patch('socket.socket.connect', deny), patch('socket.socket.connect_ex', deny):\n        sys.path.insert(0, str(ROOT))\n        sys.path.insert(0, str(ROOT / 'tests'))\n        from observational.engine import EngineConfig, ObservationalEngine, normalize_sources\n        from observational.contracts import canonical_json, reflect, validate_observations\n        from observational.store import MemoryStore\n        from agent.conversation_loop import _notify_context_engine_turn_complete, _apply_context_engine_selection\n        from test_review_regressions import ReviewRegressionTests\n        from test_engine import conversation\n        def receipt_validation():\n            tree = ast.parse((ROOT / 'tools/replay.py').read_text())\n            fixture_node = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'fixture')\n            scope = {}\n            exec(compile(ast.Module(body=[fixture_node], type_ignores=[]), '<source-bound replay fixture only>', 'exec'), scope)\n            history = scope['fixture']()\n            sources = normalize_sources(history)\n            latest = {'role': 'user', 'content': 'What are the current project, corrected meeting date, verified send status, whether the planned send is done, and outbound permission?'}\n            request = [{'role': 'system', 'content': 'Synthetic fixture: do not perform actions.'}] + history + [latest]\n            manifest = json.loads((ROOT / 'docs/evidence/review-candidate-02.json').read_text())\n            output = {}\n            for mode in ('model', 'offline'):\n                path = ROOT / ('docs/evidence/' + mode + '-replay-03.json')\n                raw = path.read_bytes()\n                r = json.loads(raw)\n                assert hashlib.sha256(raw).hexdigest() == manifest['replay_receipts'][mode]['sha256']\n                assert len(r['source_sha256']) == 6\n                for name, digest in r['source_sha256'].items():\n                    assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == digest == manifest['sha256'][name]\n                assert r['source_count'] == len(sources)\n                assert r['observation_count'] == len(r['observations'])\n                assert r['active_observation_count'] == len(r['active_ids'])\n                covered = r['covered_source_count']\n                assert covered == next(i for i, s in enumerate(sources) if i > 0 and s['message_uid'] == 'synthetic-u-5')\n                validate_observations(r['observations'], sources[:covered])\n                assert reflect(r['observations'], 8000) == r['active_ids']\n                state = {'observations': r['observations'], 'active_ids': r['active_ids'], 'covered_ids': [s['id'] for s in sources[:covered]]}\n                engine = ObservationalEngine(config=EngineConfig())\n                rendered = engine._render(state)\n                assert rendered == r['active_memory_text']\n                selected = request[:1] + [{'role':'assistant','content':rendered}] + request[1+covered:]\n                assert r['original_chars'] == len(canonical_json(request))\n                assert r['selected_chars'] == len(canonical_json(selected))\n                assert r['reduction_percent_chars'] == round((1-r['selected_chars']/r['original_chars'])*100,2)\n                assert all(r[k] is True for k in ['pass','synthetic_only','exact_source_recall','original_transcript_unchanged','repeated_selection_equal','restart_equal','forgotten_tombstone'])\n                assert r['private_history_read'] is False and r['live_configuration_changed'] is False\n                if mode == 'model':\n                    expected = {'project':'Cedar','meeting_date':'2026-10-16','verified_send':False,'proposed_send_is_done':False,'outbound_authorized':False}\n                    assert r['expected_answers'] == r['baseline_answers'] == r['observed_answers'] == expected\n                    for key in ('calls','prompt_tokens','completion_tokens','total_tokens'):\n                        assert r['whole_probe_usage'][key] == r['observer_usage'][key] + r['actor_usage'][key]\n                    assert r['whole_probe_usage']['total_tokens'] == r['whole_probe_usage']['prompt_tokens'] + r['whole_probe_usage']['completion_tokens']\n                output[mode] = {'sha256':hashlib.sha256(raw).hexdigest(), 'runtime_files_verified':6, 'source_count':len(sources),'validated_quotes':len(r['observations']),'active_count':len(r['active_ids']),'covered_source_count':covered,'rendering_exact':True,'counts_chars_and_usage_match':True,'new_model_calls':0}\n            return output\n        report['receipts'] = receipt_validation()\n        original_auth = ObservationalEngine._authorize_model_call\n        original_turn = ObservationalEngine.on_turn_complete\n        original_update = ObservationalEngine.update_model\n        original_status = ObservationalEngine.get_status\n        original_tool = ObservationalEngine.handle_tool_call\n        phase = {'name':'instrumented_regressions'}\n        def event(kind, engine, **kw):\n            report['events'].append({'kind':kind,'phase':phase['name'],'session':engine.session_id,**kw})\n        def auth(self, epoch, store):\n            with self._lock:\n                values = {'captured_epoch':epoch,'current_epoch':self._epoch,'same_store':store is self.store,'route_mismatch':self._route_mismatch,'snapshot_unavailable':self._snapshot_unavailable}\n                try:\n                    original_auth(self, epoch, store)\n                except Exception:\n                    event('authorization', self, result='denied', **values)\n                    raise\n                else:\n                    event('authorization', self, result='admitted', **values)\n        def turn(self, messages, *args, **kw):\n            original_turn(self, messages, *args, **kw)\n            with self._lock:\n                state = self.store.read()\n                event('snapshot',self,epoch=self._epoch,pending=self._pending,error=self._last_error,unavailable=self._snapshot_unavailable,revision=state['revision'],sources=len(state['sources']),observations=len(state['observations']),disabled=state['disabled'])\n        def update(self,*args,**kw):\n            old_epoch = self._epoch\n            original_update(self,*args,**kw)\n            event('route_update',self,previous_epoch=old_epoch,epoch=self._epoch,pending=self._pending,mismatch=self._route_mismatch,error=self._last_error)\n        def status(self):\n            result=original_status(self)\n            event('status',self,error=result['last_error'],sources=result['source_count'],observations=result['observation_count'],discarded=result['discarded_runs'])\n            return result\n        def tool(self,name,args,**kw):\n            raw=original_tool(self,name,args,**kw)\n            parsed=json.loads(raw)\n            event('tool',self,tool=name,error=parsed.get('error'),result_count=len(parsed.get('results',[])),source_id=args.get('source_id'))\n            return raw\n        with patch.object(ObservationalEngine,'_authorize_model_call',auth), patch.object(ObservationalEngine,'on_turn_complete',turn), patch.object(ObservationalEngine,'update_model',update), patch.object(ObservationalEngine,'get_status',status), patch.object(ObservationalEngine,'handle_tool_call',tool):\n            stream=io.StringIO()\n            suite=unittest.defaultTestLoader.loadTestsFromTestCase(ReviewRegressionTests)\n            result=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite)\n            report['regression_rerun']={'tests':result.testsRun,'successful':result.wasSuccessful(),'raw_output':stream.getvalue()}\n            assert result.testsRun == 7 and result.wasSuccessful()\n            phase['name']='rejected_model_snapshot_then_same_engine_recovery'\n            home=Path(temp)/'model-recovery';home.mkdir()\n            cfg=EngineConfig(observer_mode='model',allow_model_calls=True,provider='openai-codex',model='gpt-6-astra',observe_min_chars=1,max_batch_chars=200000,observation_budget_chars=8000)\n            engine=ObservationalEngine(config=cfg)\n            engine.on_session_start('model-recovery',hermes_home=home,model='gpt-6-astra',provider='openai-codex')\n            entered,release=threading.Event(),threading.Event()\n            resolve_count=0\n            calls=[]\n            def create(**kw):\n                payload=json.loads(kw['messages'][1]['content'])\n                calls.append(payload)\n                return ReviewRegressionTests.response(kw)\n            def resolver(*args,**kw):\n                global resolve_count\n                resolve_count += 1\n                if resolve_count==1:\n                    entered.set()\n                    if not release.wait(10): raise AssertionError('resolver release missing')\n                return ReviewRegressionTests.client(create),'gpt-6-astra'\n            agent=SimpleNamespace(context_compressor=engine,session_id=engine.session_id)\n            logger=SimpleNamespace(warning=lambda *a,**k:None)\n            try:\n                with patch('agent.auxiliary_client.resolve_provider_client',resolver):\n                    history=conversation(size=160);old_id=normalize_sources(history)[0]['id']\n                    _notify_context_engine_turn_complete(agent,history,logger=logger,interrupted=False,failed=False)\n                    assert entered.wait(5)\n                    invalid=copy.deepcopy(history[2:])+[{'role':'user','content':[{'type':'text','text':'SYNTHETIC replacement'}]},{'role':'assistant','content':'Received.'}]\n                    invalid_before=copy.deepcopy(invalid)\n                    _notify_context_engine_turn_complete(agent,invalid,logger=logger,interrupted=False,failed=False)\n                    invalid_state=engine.store.read()\n                    invalid_error=engine.get_status()['last_error']\n                    assert invalid_state['sources']==invalid_state['observations']==[] and not invalid_state['disabled']\n                    assert invalid_error=='unsupported_or_sensitive_input'\n                    assert 'error' in json.loads(engine.handle_tool_call('om_recall',{'source_id':old_id}))\n                    request=invalid+[{'role':'user','content':'Current only.'}]\n                    assert _apply_context_engine_selection(agent,request,invalid,request[-1],logger=logger)==request\n                    assert invalid==invalid_before\n                    fresh=copy.deepcopy(history[2:])\n                    _notify_context_engine_turn_complete(agent,fresh,logger=logger,interrupted=False,failed=False)\n                    release.set()\n                    assert engine.wait_until_idle(10)\n                    current=engine.store.read()\n                    assert len(calls)==1 and resolve_count==2\n                    assert all(s['source_id']!=old_id and 'Turn 0.' not in s['text'] for s in calls[0]['sources'])\n                    assert current['sources']==normalize_sources(fresh) and current['observations']\n                    assert engine.get_status()['last_error'] is None\n                    report['same_engine_recovery']={'resolver_calls':resolve_count,'completion_calls':len(calls),'rejected_snapshot_error':invalid_error,'rejected_snapshot_revision':invalid_state['revision'],'final_revision':current['revision'],'final_sources':len(current['sources']),'final_observations':len(current['observations']),'old_source_excluded_from_payload':True,'canonical_input_unchanged':True,'fresh_snapshot_admitted_after_old_job_denied':True}\n            finally:\n                release.set();engine.on_session_end(engine.session_id,[]);assert engine.wait_until_idle(10)\n            phase['name']='documented_storage_invalidation_failure_boundary'\n            home=Path(temp)/'storage-fault';home.mkdir()\n            engine=ObservationalEngine(config=EngineConfig(observe_min_chars=1,max_batch_chars=200000,observation_budget_chars=8000))\n            engine.on_session_start('storage-fault',hermes_home=home,model='synthetic')\n            try:\n                history=conversation(size=160)\n                engine.on_turn_complete(history);assert engine.wait_until_idle(10)\n                old_id=normalize_sources(history)[0]['id']\n                original_request=history+[{'role':'user','content':'What was said?'}]\n                assert engine.select_context(original_request) is not None\n                with patch.object(engine.store,'sync_sources',side_effect=OSError('SYNTHETIC injected invalidation failure')):\n                    engine.on_turn_complete([])\n                fault=engine.store.read()\n                assert fault['sources'] and not fault['disabled']\n                assert engine.get_status()['last_error']=='source_invalidation_failed'\n                assert engine.select_context(original_request) is None\n                assert 'error' in json.loads(engine.handle_tool_call('om_recall',{'source_id':old_id}))\n                assert 'error' in json.loads(engine.handle_tool_call('om_search',{'query':'Turn 0'}))\n                assert json.loads(engine.handle_tool_call('om_status',{}))['last_error']=='source_invalidation_failed'\n                report['storage_failure_boundary']={'error':'source_invalidation_failed','retained_sources':len(fault['sources']),'retained_observations':len(fault['observations']),'current_engine_tools_and_selection_blocked':True,'disabled':fault['disabled'],'deletion_claimed':False,'restart_or_recovery_certified':False}\n            finally:\n                engine.on_session_end(engine.session_id,[]);assert engine.wait_until_idle(10)\n        report['runtime']={'python':sys.version.split()[0],'sqlite':sqlite3.sqlite_version}\n        assert report['network_attempts']==0\n    owned_temp_path=temp\nassert not Path(owned_temp_path).exists()\nreport['synthetic_state_cleaned']=True\nreport['pass']=True\nprint(json.dumps(report,indent=2))\n",
+    "instructions": "Extract this exact embedded source into a uniquely named .py under /Users/mini/.hermes/cache/scratch and run with PYTHONDONTWRITEBYTECODE=1 HERMES_DISABLE_LAZY_INSTALLS=1 python3 <path>. The standard repository bootstrap selects the installed managed interpreter. Only fixture() is extracted from replay.py; its top level and provider calls are never executed.",
+    "runtime": {
+      "python": "3.14.7",
+      "sqlite": "3.53.1"
+    },
+    "results": {
+      "synthetic_only": true,
+      "network_attempts": 0,
+      "events": [
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 2,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 1
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 3,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-True-structured",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 3,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 4,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-unpaired",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 3,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 4,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-sensitive",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 3,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 4,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-oversize",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 3,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 4,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-empty",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "result": "admitted",
+          "captured_epoch": 1,
+          "current_epoch": 1,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "result": "admitted",
+          "captured_epoch": 1,
+          "current_epoch": 1,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 2,
+          "sources": 14,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "route_update",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "previous_epoch": 1,
+          "epoch": 2,
+          "pending": false,
+          "mismatch": true,
+          "error": "pinned_model_does_not_match_actor"
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "error": "pinned_model_does_not_match_actor",
+          "sources": 14,
+          "observations": 0,
+          "discarded": 1
+        },
+        {
+          "kind": "route_update",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "previous_epoch": 2,
+          "epoch": 3,
+          "pending": false,
+          "mismatch": false,
+          "error": "pinned_model_does_not_match_actor"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "epoch": 3,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 2,
+          "sources": 14,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "result": "admitted",
+          "captured_epoch": 3,
+          "current_epoch": 3,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-queue",
+          "result": "admitted",
+          "captured_epoch": 3,
+          "current_epoch": 3,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 2,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 1
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 3,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-False-False-structured",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 3,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "tool",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 4,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "replace-True-False-structured",
+          "error": null,
+          "sources": 10,
+          "observations": 6,
+          "discarded": 0
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "route-roundtrip",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "route_update",
+          "phase": "instrumented_regressions",
+          "session": "route-roundtrip",
+          "previous_epoch": 1,
+          "epoch": 2,
+          "pending": false,
+          "mismatch": true,
+          "error": "pinned_model_does_not_match_actor"
+        },
+        {
+          "kind": "route_update",
+          "phase": "instrumented_regressions",
+          "session": "route-roundtrip",
+          "previous_epoch": 2,
+          "epoch": 3,
+          "pending": false,
+          "mismatch": false,
+          "error": "pinned_model_does_not_match_actor"
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-roundtrip",
+          "result": "denied",
+          "captured_epoch": 1,
+          "current_epoch": 3,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "instrumented_regressions",
+          "session": "route-resolve",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-resolve",
+          "result": "admitted",
+          "captured_epoch": 1,
+          "current_epoch": 1,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "route_update",
+          "phase": "instrumented_regressions",
+          "session": "route-resolve",
+          "previous_epoch": 1,
+          "epoch": 2,
+          "pending": false,
+          "mismatch": true,
+          "error": "pinned_model_does_not_match_actor"
+        },
+        {
+          "kind": "authorization",
+          "phase": "instrumented_regressions",
+          "session": "route-resolve",
+          "result": "denied",
+          "captured_epoch": 1,
+          "current_epoch": 2,
+          "same_store": true,
+          "route_mismatch": true,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "status",
+          "phase": "instrumented_regressions",
+          "session": "route-resolve",
+          "error": "pinned_model_does_not_match_actor",
+          "sources": 12,
+          "observations": 0,
+          "discarded": 1
+        },
+        {
+          "kind": "snapshot",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "result": "admitted",
+          "captured_epoch": 1,
+          "current_epoch": 1,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "epoch": 2,
+          "pending": false,
+          "error": "unsupported_or_sensitive_input",
+          "unavailable": true,
+          "revision": 2,
+          "sources": 0,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "error": "unsupported_or_sensitive_input",
+          "sources": 0,
+          "observations": 0,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "snapshot",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "epoch": 2,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 3,
+          "sources": 10,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "result": "denied",
+          "captured_epoch": 1,
+          "current_epoch": 2,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "result": "admitted",
+          "captured_epoch": 2,
+          "current_epoch": 2,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "authorization",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "result": "admitted",
+          "captured_epoch": 2,
+          "current_epoch": 2,
+          "same_store": true,
+          "route_mismatch": false,
+          "snapshot_unavailable": false
+        },
+        {
+          "kind": "status",
+          "phase": "rejected_model_snapshot_then_same_engine_recovery",
+          "session": "model-recovery",
+          "error": null,
+          "sources": 10,
+          "observations": 1,
+          "discarded": 1
+        },
+        {
+          "kind": "snapshot",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "epoch": 1,
+          "pending": true,
+          "error": null,
+          "unavailable": false,
+          "revision": 1,
+          "sources": 12,
+          "observations": 0,
+          "disabled": false
+        },
+        {
+          "kind": "snapshot",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "epoch": 2,
+          "pending": false,
+          "error": "source_invalidation_failed",
+          "unavailable": true,
+          "revision": 2,
+          "sources": 12,
+          "observations": 8,
+          "disabled": false
+        },
+        {
+          "kind": "status",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "error": "source_invalidation_failed",
+          "sources": 12,
+          "observations": 8,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "tool": "om_recall",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": "s_22077e665b9d10c6488cf479e2f4f38f"
+        },
+        {
+          "kind": "tool",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "tool": "om_search",
+          "error": "Invalid request or source unavailable in this session",
+          "result_count": 0,
+          "source_id": null
+        },
+        {
+          "kind": "status",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "error": "source_invalidation_failed",
+          "sources": 12,
+          "observations": 8,
+          "discarded": 0
+        },
+        {
+          "kind": "tool",
+          "phase": "documented_storage_invalidation_failure_boundary",
+          "session": "storage-fault",
+          "tool": "om_status",
+          "error": null,
+          "result_count": 0,
+          "source_id": null
+        }
+      ],
+      "receipts": {
+        "model": {
+          "sha256": "78d9242bcc5f4fd8934ff9fc213c68708daf1dac9c625ec63e30e01376fa280d",
+          "runtime_files_verified": 6,
+          "source_count": 14,
+          "validated_quotes": 5,
+          "active_count": 5,
+          "covered_source_count": 10,
+          "rendering_exact": true,
+          "counts_chars_and_usage_match": true,
+          "new_model_calls": 0
+        },
+        "offline": {
+          "sha256": "5ecc4c79c95a9af620fa9e5133098d6e67b29a2bcd9e98bc49e9e9acc5aa361e",
+          "runtime_files_verified": 6,
+          "source_count": 14,
+          "validated_quotes": 10,
+          "active_count": 6,
+          "covered_source_count": 10,
+          "rendering_exact": true,
+          "counts_chars_and_usage_match": true,
+          "new_model_calls": 0
+        }
+      },
+      "regression_rerun": {
+        "tests": 7,
+        "successful": true,
+        "raw_output": "test_old_worker_failure_cannot_replace_ingestion_error (test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error) ... ok\ntest_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) ... ok\ntest_queued_work_is_cancelled_on_actor_route_switch (test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch) ... ok\ntest_rejected_replacement_invalidates_inflight_and_restart_recall (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall) ... ok\ntest_rejected_replacement_removes_published_sources_without_tombstone (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone) ... ok\ntest_route_roundtrip_before_observer_completion_denies_old_epoch (test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch) ... ok\ntest_route_switch_during_provider_resolution_denies_create (test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.228s\n\nOK\n"
+      },
+      "same_engine_recovery": {
+        "resolver_calls": 2,
+        "completion_calls": 1,
+        "rejected_snapshot_error": "unsupported_or_sensitive_input",
+        "rejected_snapshot_revision": 2,
+        "final_revision": 4,
+        "final_sources": 10,
+        "final_observations": 1,
+        "old_source_excluded_from_payload": true,
+        "canonical_input_unchanged": true,
+        "fresh_snapshot_admitted_after_old_job_denied": true
+      },
+      "storage_failure_boundary": {
+        "error": "source_invalidation_failed",
+        "retained_sources": 12,
+        "retained_observations": 8,
+        "current_engine_tools_and_selection_blocked": true,
+        "disabled": false,
+        "deletion_claimed": false,
+        "restart_or_recovery_certified": false
+      },
+      "runtime": {
+        "python": "3.14.7",
+        "sqlite": "3.53.1"
+      },
+      "synthetic_state_cleaned": true,
+      "pass": true
+    },
+    "event_count": 99,
+    "script_removed": true,
+    "synthetic_state_cleaned": true,
+    "instrumentation_boundary": "The seven repair tests were rerun unchanged; temporary in-process wrappers recorded authorization tokens, snapshots, health/errors and tool results while calling the original methods. Two additional bounded independent probes checked same-engine recovery during a blocked resolver and the documented storage-invalidation failure boundary. Provider objects were synthetic; socket connections denied. This instrumentation is not shipped code."
+  },
+  "repair_author_claims_verified": {
+    "notes_path": "docs/reviews/repair-02.md",
+    "exact_delta_and_predecessor_archive_verified": true,
+    "red_green_and_full_logs": {
+      "red": {
+        "path": "docs/review-regressions-red.log",
+        "tests": 7,
+        "seconds": 0.142,
+        "passed": false,
+        "sha256": "35ceb544e05a53b7c7d36dc079d86b16f68f6074a85053e49eb0b5b802900ba0",
+        "failure_sections": [
+          "test_old_worker_failure_cannot_replace_ingestion_error (test_review_regressions.ReviewRegressionTests.test_old_worker_failure_cannot_replace_ingestion_error)",
+          "test_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) (kind='unpaired')",
+          "test_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) (kind='sensitive')",
+          "test_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) (kind='oversize')",
+          "test_other_rejected_snapshot_shapes_reconcile_obsolete_sources (test_review_regressions.ReviewRegressionTests.test_other_rejected_snapshot_shapes_reconcile_obsolete_sources) (kind='empty')",
+          "test_queued_work_is_cancelled_on_actor_route_switch (test_review_regressions.ReviewRegressionTests.test_queued_work_is_cancelled_on_actor_route_switch)",
+          "test_rejected_replacement_invalidates_inflight_and_restart_recall (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_invalidates_inflight_and_restart_recall)",
+          "test_rejected_replacement_removes_published_sources_without_tombstone (test_review_regressions.ReviewRegressionTests.test_rejected_replacement_removes_published_sources_without_tombstone)",
+          "test_route_roundtrip_before_observer_completion_denies_old_epoch (test_review_regressions.ReviewRegressionTests.test_route_roundtrip_before_observer_completion_denies_old_epoch)",
+          "test_route_switch_during_provider_resolution_denies_create (test_review_regressions.ReviewRegressionTests.test_route_switch_during_provider_resolution_denies_create)"
+        ],
+        "exception_types": [
+          "AssertionError"
+        ]
+      },
+      "green": {
+        "path": "docs/review-regressions-green.log",
+        "tests": 7,
+        "seconds": 0.195,
+        "passed": true,
+        "sha256": "9a5148d33a35c8bab8fee71af9a491ece756c326bbfe65c88f1477f40dd3b641",
+        "failure_sections": [],
+        "exception_types": []
+      },
+      "all": {
+        "path": "docs/test-run-03.log",
+        "tests": 152,
+        "seconds": 3.388,
+        "passed": true,
+        "sha256": "536e752ea79089ef8bb4bb133fd55b90ca1ff505af32e46499c690dfd72399f3",
+        "failure_sections": [],
+        "exception_types": []
+      }
+    },
+    "historical_red_interpretation": "Seven executed test methods with ten assertion-failure sections including subtests; queue mismatch caused a second synthetic call, R2 variants retained twelve obsolete sources, pre-resolver/resolve-pause paths also failed assertions. These are preserved author receipts, not a newly rerun historical RED.",
+    "current_regressions_independently_executed": true,
+    "test_oracles_reviewed_in_full": true,
+    "captured_epoch_and_error_preservation_independently_inspected": true,
+    "model_replay_boundary": "Retained prior source-bound model receipt analyzed, not a newly executed hosted call."
+  },
+  "replay_evidence": {
+    "receipts": {
+      "model": {
+        "sha256": "78d9242bcc5f4fd8934ff9fc213c68708daf1dac9c625ec63e30e01376fa280d",
+        "runtime_files_verified": 6,
+        "source_count": 14,
+        "validated_quotes": 5,
+        "active_count": 5,
+        "covered_source_count": 10,
+        "rendering_exact": true,
+        "counts_chars_and_usage_match": true,
+        "new_model_calls": 0
+      },
+      "offline": {
+        "sha256": "5ecc4c79c95a9af620fa9e5133098d6e67b29a2bcd9e98bc49e9e9acc5aa361e",
+        "runtime_files_verified": 6,
+        "source_count": 14,
+        "validated_quotes": 10,
+        "active_count": 6,
+        "covered_source_count": 10,
+        "rendering_exact": true,
+        "counts_chars_and_usage_match": true,
+        "new_model_calls": 0
+      }
+    },
+    "checks": [
+      "Both receipt SHA-256 values match the current manifest",
+      "Both contain the six exact current runtime-source hashes",
+      "Exact source-defined synthetic fixture extracted through AST, with no replay top-level execution",
+      "Every observation quote, source identity and role attribution validates against the covered fixture sources",
+      "Declared counts and coverage agree",
+      "Deterministic reflection and complete active_memory_text match the current renderer",
+      "Original/selected character counts and reduction arithmetic agree",
+      "Model expected/baseline/observed answer objects match the explicit fixture oracle",
+      "Whole-probe usage equals observer plus actor usage and token arithmetic reconciles"
+    ],
+    "hosted_calls_in_this_review": 0,
+    "receipt_recorded_model_calls": 3,
+    "receipt_recorded_total_tokens": 8934,
+    "interpretation": "Prior declared-fixture model integration evidence, not independent broad accuracy/cost certification. Its injected-observer fixture does not replace the default engine/backend authorization tests. The offline receipt has no actor-answer accuracy comparison. Receipt flags for recall/restart/forgetting are recorded assertions; fresh regression tests independently exercise those behaviors."
+  },
+  "nonblocking_limitations": [
+    "First-review SQLite lock characterization still applies: observer-result deadline check precedes possibly blocking storage, so no total publication latency guarantee.",
+    "Arbitrary injected Python threads cannot be forcibly killed; no hard transport-cancellation or billing-token cap is certified.",
+    "Source-exact quotes prove attribution, not external truth, complete qualifiers, lossless reflection or perfect prompt-injection resistance.",
+    "POSIX private storage on tested macOS, not encryption/DLP, Windows/network-filesystem assurance, same-UID/privileged sabotage protection, forensic SSD erasure or provider/backup deletion.",
+    "Session-only request shaping, not archive ingestion, cross-session memory, durable/emergency compression or a LongMemEval/cost-superiority result; host hooks remain best-effort and unsupported requests can exceed provider limits.",
+    "Storage invalidation failure blocks the current engine but can retain durable old data; restarting is not proof of deletion and storage-failure recovery is not certified.",
+    "Source/host/candidate bound review, not a new Claude/Opus review, live operation or final release-ZIP execution."
+  ],
+  "changes": {
+    "implementation_files_modified": [],
+    "test_files_modified": [],
+    "persistent_files_written": [
+      "docs/reviews/independent-review-02.md",
+      "docs/reviews/independent-review-02.json"
+    ],
+    "scratch_probe_written_then_removed": "/Users/mini/.hermes/cache/scratch/om-independent-review-02-probe.py",
+    "historical_reports_overwritten": false,
+    "live_profile_config_data_credentials_network_installs_or_gateway_actions": false
+  },
+  "approval_boundary": "PASS closes only OM-R1/OM-R2 and the scoped current regression acceptance on this frozen candidate. Final packaging/extracted release-ZIP execution, installation/activation and parent delivery closure remain with the parent.",
+  "companion_markdown_sha256": "3db87c880d68a5063a0cae4bb056992d1da50ef3837e284ee74fe6af5be6225d"
+}
